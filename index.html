@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="BMD Group — Consultoría de negocios, mentorías comerciales y ejecución comercial de proyectos inmobiliarios. Diagnóstico gratuito. Trujillo, Perú."/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="BMD Group | Consultoría Comercial y Estratégica"/>
+<meta property="og:description" content="¿Tu empresa vende lo que realmente merece vender? Consultoría para emprendedores, pymes y equipos comerciales. Diagnóstico gratuito sin compromiso."/>
+<title>BMD Group | Consultoría Comercial y Estratégica — Trujillo, Perú</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E2C47A;
+    --gold-dim: rgba(201,168,76,0.15);
+    --navy: #070C1A;
+    --navy2: #0D1425;
+    --navy3: #111B30;
+    --white: #F5F0E8;
+    --gray: #8A9BB0;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 6%;
+    background: rgba(7,12,26,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+    transition: all .3s;
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: .05em;
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--white); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: .85rem;
+    font-weight: 500;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: .5rem 1.2rem;
+    border-radius: 2px;
+    font-weight: 600 !important;
+    transition: background .2s !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 2px; background: var(--white); display: block; transition: .3s; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 10rem 6% 6rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 40% at 10% 80%, rgba(201,168,76,0.04) 0%, transparent 50%);
+  }
+  .hero-line {
+    position: absolute; top: 0; right: 25%;
+    width: 1px; height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(201,168,76,0.2), transparent);
+    z-index: 0;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 720px; }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: .6rem;
+    font-size: .75rem; font-weight: 600; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 1.8rem;
+  }
+  .hero-tag::before {
+    content: ''; display: block;
+    width: 30px; height: 1px; background: var(--gold);
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+    font-weight: 600;
+    line-height: 1.12;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+  }
+  h1 em { color: var(--gold); font-style: normal; }
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--gray);
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+  .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: .6rem;
+    background: var(--gold);
+    color: var(--navy);
+    padding: .85rem 2rem;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: .95rem;
+    text-decoration: none;
+    transition: background .2s, transform .2s;
+    letter-spacing: .02em;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: .6rem;
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--gold);
+    padding: .85rem 2rem;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: .95rem;
+    text-decoration: none;
+    transition: all .2s;
+  }
+  .btn-secondary:hover { background: var(--gold-dim); border-color: var(--gold); }
+  .hero-stats {
+    display: flex; gap: 3rem; margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .stat-label { font-size: .78rem; color: var(--gray); text-transform: uppercase; letter-spacing: .1em; margin-top: .3rem; }
+
+  /* ── SECTIONS ── */
+  section { padding: 6rem 6%; }
+  .section-tag {
+    display: inline-flex; align-items: center; gap: .6rem;
+    font-size: .72rem; font-weight: 600; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  .section-tag::before { content: ''; display: block; width: 24px; height: 1px; background: var(--gold); }
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  h2 em { color: var(--gold); font-style: normal; }
+
+  /* ── PAIN POINTS ── */
+  #dolor { background: var(--navy2); }
+  .dolor-intro { max-width: 600px; margin-bottom: 3.5rem; }
+  .dolor-intro p { color: var(--gray); font-size: 1.05rem; margin-top: .8rem; }
+  .dolor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .dolor-card {
+    background: var(--navy3);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-left: 3px solid var(--gold);
+    padding: 1.8rem;
+    border-radius: 2px;
+    transition: border-color .2s, transform .2s;
+  }
+  .dolor-card:hover { border-left-color: var(--gold-light); transform: translateY(-3px); }
+  .dolor-icon {
+    width: 64px; height: 64px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 1.2rem;
+    background: linear-gradient(135deg, rgba(201,168,76,0.18) 0%, rgba(201,168,76,0.06) 100%);
+    border: 1px solid rgba(201,168,76,0.35);
+    border-radius: 14px;
+    color: var(--gold);
+    box-shadow: inset 0 0 24px rgba(201,168,76,0.08);
+  }
+  .dolor-icon svg { width: 32px; height: 32px; fill: var(--gold); }
+  .dolor-card h3 { font-family: var(--serif); font-size: 1.2rem; margin-bottom: .5rem; }
+  .dolor-card p { color: var(--gray); font-size: .9rem; line-height: 1.6; }
+
+  /* ── SERVICIOS ── */
+  #servicios { background: var(--navy); }
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .servicio-card {
+    background: var(--navy3);
+    border: 1px solid rgba(201,168,76,0.1);
+    padding: 2rem;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color .3s, transform .2s;
+  }
+  .servicio-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    opacity: 0; transition: opacity .3s;
+  }
+  .servicio-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); }
+  .servicio-card:hover::before { opacity: 1; }
+  .servicio-num {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(201,168,76,0.1);
+    line-height: 1;
+    margin-bottom: .5rem;
+  }
+  .servicio-card h3 { font-family: var(--serif); font-size: 1.25rem; margin-bottom: .8rem; color: var(--white); }
+  .servicio-card p { color: var(--gray); font-size: .88rem; line-height: 1.65; }
+
+  /* ── METODOLOGÍA ── */
+  #metodologia { background: var(--navy2); }
+  .metod-container { display: flex; flex-direction: column; gap: 0; margin-top: 3rem; }
+  .metod-step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    align-items: start;
+  }
+  .metod-step:last-child { border-bottom: none; }
+  .metod-num {
+    font-family: var(--serif);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    opacity: .3;
+    line-height: 1;
+    text-align: right;
+  }
+  .metod-content h3 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: .8rem; }
+  .metod-content p { color: var(--gray); font-size: .95rem; line-height: 1.7; }
+  .metod-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+  .tag {
+    background: var(--gold-dim);
+    color: var(--gold);
+    font-size: .75rem;
+    font-weight: 500;
+    padding: .3rem .8rem;
+    border-radius: 20px;
+    letter-spacing: .05em;
+  }
+
+  /* ── SOBRE BRUNO ── */
+  #bruno { background: var(--navy); }
+  .bruno-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 5rem;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .bruno-img-wrap {
+    position: relative;
+  }
+  .bruno-img-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--navy3);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--gray);
+    font-size: .85rem;
+    text-align: center;
+    padding: 2rem;
+  }
+  .bruno-img-placeholder .avatar-icon {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: var(--gold-dim);
+    border: 2px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem;
+  }
+  .bruno-accent {
+    position: absolute;
+    bottom: -20px; right: -20px;
+    width: 120px; height: 120px;
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 2px;
+    z-index: -1;
+  }
+  .bruno-content .subtitle {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+    font-style: italic;
+  }
+  .bruno-content p { color: var(--gray); font-size: .95rem; line-height: 1.75; margin-bottom: 1rem; }
+  .creds { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
+  .cred {
+    background: var(--navy3);
+    border: 1px solid rgba(201,168,76,0.2);
+    padding: .4rem 1rem;
+    border-radius: 2px;
+    font-size: .78rem;
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: .05em;
+  }
+
+  /* ── COACHING ── */
+  #coaching { background: var(--navy2); }
+  .coaching-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .coaching-card {
+    background: var(--navy);
+    border: 1px solid rgba(201,168,76,0.15);
+    padding: 2.5rem;
+    border-radius: 2px;
+    position: relative;
+  }
+  .coaching-card.featured {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, var(--navy) 0%, rgba(201,168,76,0.05) 100%);
+  }
+  .coaching-badge {
+    position: absolute; top: -12px; left: 2rem;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .3rem .8rem;
+    border-radius: 2px;
+  }
+  .coaching-card h3 { font-family: var(--serif); font-size: 1.4rem; margin-bottom: .6rem; }
+  .coaching-card .price {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin: 1rem 0;
+  }
+  .coaching-card .price span { font-size: 1rem; color: var(--gray); font-family: var(--sans); font-weight: 400; }
+  .coaching-card p { color: var(--gray); font-size: .88rem; line-height: 1.65; margin-bottom: 1.5rem; }
+  .coaching-features { list-style: none; margin-bottom: 2rem; }
+  .coaching-features li {
+    display: flex; align-items: center; gap: .6rem;
+    color: var(--gray); font-size: .88rem;
+    padding: .4rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .coaching-features li::before { content: '✓'; color: var(--gold); font-weight: 700; }
+
+  /* ── CONSULTORÍA PRECIOS ── */
+  #precios { background: var(--navy); }
+  .precio-card {
+    background: var(--navy3);
+    border: 1px solid rgba(201,168,76,0.15);
+    padding: 3rem;
+    border-radius: 2px;
+    max-width: 680px;
+    margin: 3rem auto 0;
+    text-align: center;
+  }
+  .precio-card h3 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: .5rem; }
+  .precio-card .price-range {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin: 1rem 0;
+    line-height: 1;
+  }
+  .precio-card p { color: var(--gray); font-size: .95rem; max-width: 480px; margin: 0 auto 1.5rem; }
+  .precio-features { list-style: none; text-align: left; max-width: 360px; margin: 1.5rem auto 2rem; }
+  .precio-features li {
+    display: flex; align-items: flex-start; gap: .7rem;
+    color: var(--gray); font-size: .9rem;
+    padding: .5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .precio-features li::before { content: '—'; color: var(--gold); flex-shrink: 0; }
+  .diagnostico-box {
+    background: linear-gradient(135deg, rgba(201,168,76,0.1), rgba(201,168,76,0.03));
+    border: 1px solid var(--gold);
+    padding: 2rem;
+    border-radius: 2px;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  .diagnostico-box p { color: var(--white); font-size: 1rem; }
+  .diagnostico-box strong { color: var(--gold); }
+
+  /* ── CTA FINAL ── */
+  #cta {
+    background: linear-gradient(135deg, var(--navy2) 0%, var(--navy3) 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  #cta::before {
+    content: 'BMD';
+    position: absolute;
+    font-family: var(--serif);
+    font-size: 18rem;
+    font-weight: 700;
+    color: rgba(201,168,76,0.03);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  #cta .section-tag { justify-content: center; }
+  #cta h2 { font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 1rem; }
+  #cta p { color: var(--gray); max-width: 520px; margin: 0 auto 2.5rem; font-size: 1.05rem; line-height: 1.7; }
+  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 3rem 6%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .footer-brand .nav-logo { font-size: 1.8rem; display: block; margin-bottom: .8rem; }
+  .footer-brand p { color: var(--gray); font-size: .85rem; line-height: 1.7; }
+  footer h4 { font-family: var(--serif); font-size: 1rem; margin-bottom: 1rem; color: var(--gold); }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: .5rem; }
+  .footer-links a { color: var(--gray); text-decoration: none; font-size: .88rem; transition: color .2s; }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-contact p { color: var(--gray); font-size: .88rem; margin-bottom: .6rem; display: flex; align-items: center; gap: .5rem; }
+  .footer-bottom {
+    background: var(--navy);
+    border-top: 1px solid rgba(255,255,255,0.04);
+    padding: 1.2rem 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-bottom p { color: var(--gray); font-size: .78rem; }
+
+  /* ── WHATSAPP CTA FLOAT ── */
+  .wa-float {
+    position: fixed;
+    top: 50%; right: 1.5rem;
+    transform: translateY(-50%);
+    z-index: 99;
+    background: #25D366;
+    color: #fff;
+    padding: .7rem 1rem .7rem .8rem;
+    border-radius: 999px;
+    display: inline-flex; align-items: center; gap: .55rem;
+    text-decoration: none;
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: .82rem;
+    letter-spacing: .02em;
+    box-shadow: 0 6px 22px rgba(37,211,102,0.45);
+    transition: transform .2s, box-shadow .2s, background .2s;
+    animation: pulse-wa 2s infinite;
+  }
+  .wa-float:hover {
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 8px 30px rgba(37,211,102,0.6);
+    background: #1ebe57;
+  }
+  @keyframes pulse-wa {
+    0%,100% { box-shadow: 0 6px 22px rgba(37,211,102,0.45); }
+    50% { box-shadow: 0 6px 34px rgba(37,211,102,0.65); }
+  }
+  .wa-float svg { width: 22px; height: 22px; fill: white; flex-shrink: 0; }
+  .wa-float .wa-label { white-space: nowrap; }
+  @media (max-width: 600px) {
+    .wa-float {
+      top: 55%;
+      right: .9rem;
+      padding: .65rem .9rem .65rem .75rem;
+      font-size: .78rem;
+    }
+    .wa-float svg { width: 20px; height: 20px; }
+  }
+
+  /* ── FADE IN ── */
+  .fade-in {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+      background: var(--navy);
+      justify-content: center; align-items: center;
+      gap: 2.5rem; z-index: 200;
+    }
+    .nav-links.open a { font-size: 1.2rem; }
+    .hamburger { display: flex; z-index: 300; }
+    .bruno-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .coaching-grid { grid-template-columns: 1fr; }
+    footer { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-stats { gap: 2rem; }
+    .metod-step { grid-template-columns: 50px 1fr; gap: 1rem; }
+  }
+  @media (max-width: 600px) {
+    nav { padding: 1rem 5%; }
+    section { padding: 4rem 5%; }
+    .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+    footer { padding: 3rem 5%; }
+    .footer-bottom { flex-direction: column; gap: .5rem; text-align: center; }
+    #cta::before { font-size: 8rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;"><img src="assets/image-01.jpg" alt="BMD Group" style="height:56px;width:56px;object-fit:contain;border-radius:50%;"/><span style="font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--gold);">BMD <span style="color:var(--white);">Group</span></span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#quienes-somos">Nosotros</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#metodologia">Metodología</a></li>
+    <li><a href="#bruno">Fundador</a></li>
+    <li><a href="#libro">Libro</a></li>
+    <li><a href="#testimonios">Testimonios</a></li>
+    <li><a href="#equipo">Equipo</a></li>
+    <li><a href="#cta" class="nav-cta">Diagnóstico Gratis</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-line"></div>
+  <div class="hero-content fade-in">
+    <div style="margin-bottom:1.5rem;"><img src="assets/image-01.jpg" alt="BMD Group Logo" style="height:100px;width:100px;object-fit:contain;border-radius:50%;"/></div><div class="hero-tag">Consultoría Estratégica · Trujillo, Perú</div>
+    <h1>¿Tu empresa vende lo que<br/>realmente <em>merece vender?</em></h1>
+    <p class="hero-sub">De la estrategia a la ejecución, para emprendedores, pymes y líderes comerciales. Resultados medibles en 6 meses.</p>
+    <div class="btn-group">
+      <a href="https://wa.me/51922529675?text=Hola%20Bruno,%20quiero%20solicitar%20mi%20diagn%C3%B3stico%20gratuito" target="_blank" class="btn-primary">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.984-1.407A9.94 9.94 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.031-1.094l-.29-.173-2.958.835.797-2.888-.19-.298A7.944 7.944 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+        Solicitar Diagnóstico Gratis
+      </a>
+      <a href="#metodologia" class="btn-secondary">Ver cómo trabajamos →</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num" data-target="20">0</div>
+        <div class="stat-label">Años de experiencia</div>
+      </div>
+      <div>
+        <div class="stat-num" data-target="20">0</div>
+        <div class="stat-label">Marcas asesoradas</div>
+      </div>
+      <div>
+        <div class="stat-num" data-target="6">0</div>
+        <div class="stat-label">Meses de acompañamiento</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIÉNES SOMOS -->
+<section id="quienes-somos" style="background:var(--navy3);">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+    <div class="fade-in">
+      <div class="section-tag">Quiénes somos</div>
+      <h2>Una firma que convierte <em>estrategia en resultados</em></h2>
+      <p style="color:var(--gray);font-size:1rem;line-height:1.75;margin:1.2rem 0;">No somos una agencia. Somos el equipo que entra contigo, ejecuta contigo y crece contigo.</p>
+      <p style="color:var(--gray);font-size:1rem;line-height:1.75;margin-bottom:1.5rem;">Trabajamos con emprendedores que quieren escalar, pequeñas y medianas empresas que quieren volver a crecer, y profesionales del ámbito comercial —ejecutivos, supervisores, mentores, jefes y gerentes de venta— que buscan llevar sus resultados al siguiente nivel.</p>
+      <p style="color:var(--gray);font-size:1rem;line-height:1.75;margin-bottom:1.5rem;">Operamos en tres frentes: consultoría de negocios, mentorías para líderes comerciales y ejecución comercial de proyectos inmobiliarios con equipo propio.</p>
+      <p style="color:var(--white);font-size:.95rem;font-style:italic;border-left:3px solid var(--gold);padding-left:1.2rem;line-height:1.7;">"En BMD no vendemos fórmulas: diseñamos e implementamos estructuras que convierten esfuerzo en estrategia y crecimiento en una realidad sostenida en el tiempo."</p>
+    </div>
+    <div class="fade-in" style="display:flex;flex-direction:column;gap:1.5rem;">
+      <div style="background:var(--navy2);border:1px solid rgba(201,168,76,0.15);border-left:3px solid var(--gold);padding:1.8rem;border-radius:2px;">
+        <h3 style="font-family:var(--serif);font-size:1.1rem;color:var(--gold);margin-bottom:.7rem;">Misión</h3>
+        <p style="color:var(--gray);font-size:.9rem;line-height:1.65;">Transformar negocios con estrategia real, ejecución comprometida y resultados medibles.</p>
+      </div>
+      <div style="background:var(--navy2);border:1px solid rgba(201,168,76,0.15);border-left:3px solid var(--gold);padding:1.8rem;border-radius:2px;">
+        <h3 style="font-family:var(--serif);font-size:1.1rem;color:var(--gold);margin-bottom:.7rem;">Visión</h3>
+        <p style="color:var(--gray);font-size:.9rem;line-height:1.65;">Ser la firma de consultoría más confiable del norte del Perú para empresas que quieren crecer con estructura.</p>
+      </div>
+      <div style="background:var(--navy2);border:1px solid rgba(201,168,76,0.15);border-left:3px solid var(--gold);padding:1.8rem;border-radius:2px;">
+        <h3 style="font-family:var(--serif);font-size:1.1rem;color:var(--gold);margin-bottom:.8rem;">Valores</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+          <span class="tag">Orientación a resultados</span>
+          <span class="tag">Estrategia y método</span>
+          <span class="tag">Excelencia profesional</span>
+          <span class="tag">Integridad</span>
+          <span class="tag">Compromiso</span>
+          <span class="tag">Liderazgo humano</span>
+          <span class="tag">Confidencialidad</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- MARCAS -->
+<section id="marcas" style="background:var(--navy);padding:4rem 6%;text-align:center;">
+  <div class="fade-in" style="margin-bottom:2.5rem;">
+    <div class="section-tag" style="justify-content:center;">Marcas que ya trabajaron con nosotros</div>
+    <p style="color:var(--gray);font-size:.95rem;max-width:520px;margin:.6rem auto 0;">De emprendimientos a empresas consolidadas, en rubros muy distintos.</p>
+  </div>
+  <div class="fade-in" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1.5rem 2.5rem;opacity:1;filter:none;">
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc41f0579c_6.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc40948bd4_7.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3f96e55d_8.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3ec4f96b_9.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3d6648b1_10.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3c5585b0_11.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3afef323_12.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3873e0b9_13.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc372072c0_14.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc35b4d540_15.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc33f52ff6_16.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc32163baf_17.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2fc26e93_18.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2da61a3b_19.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2c011f24_20.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2a60e4ec_21.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc293c1ed7_22.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc273be7d3_23.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc26208cce_24.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc24d9b845_25.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+  </div>
+</section>
+
+<!-- DOLOR -->
+<section id="dolor">
+  <div class="dolor-intro fade-in">
+    <div class="section-tag">¿Te identificas?</div>
+    <h2>Síntomas que <em>cuestan dinero</em> cada día que pasan</h2>
+    <p>Si reconoces alguno de estos síntomas, ya es momento de actuar.</p>
+  </div>
+  <div class="dolor-grid">
+    <div class="dolor-card fade-in">
+      <div class="dolor-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3v18h18v-2H5V3H3zm4 12l4-4 3 3 5-5v3h2V7h-6v2h3l-4 4-3-3-5.41 5.41L7 15z"/></svg>
+      </div>
+      <h3>Ventas estancadas o en caída</h3>
+      <p>El esfuerzo existe. Los resultados, no.</p>
+    </div>
+    <div class="dolor-card fade-in">
+      <div class="dolor-icon">🔄</div>
+      <h3>Procesos sin orden ni métricas</h3>
+      <p>Sin procesos ni KPIs no hay forma de mejorar lo que no se mide.</p>
+    </div>
+    <div class="dolor-card fade-in">
+      <div class="dolor-icon">📢</div>
+      <h3>Marketing que no convierte</h3>
+      <p>Inviertes en publicidad, pero los clientes que llegan no compran.</p>
+    </div>
+    <div class="dolor-card fade-in">
+      <div class="dolor-icon">👥</div>
+      <h3>Equipo sin dirección ni motivación</h3>
+      <p>El talento está, pero nadie lo conduce hacia resultados.</p>
+    </div>
+    <div class="dolor-card fade-in">
+      <div class="dolor-icon">🏗️</div>
+      <h3>Crecimiento sin estructura</h3>
+      <p>Todo depende de ti. Y eso te tiene al límite.</p>
+    </div>
+    <div class="dolor-card fade-in">
+      <div class="dolor-icon">🧭</div>
+      <h3>Falta de estrategia clara</h3>
+      <p>Apagas incendios todo el día, sin una ruta clara que te lleve a algún lado.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="fade-in">
+    <div class="section-tag">Qué hacemos</div>
+    <h2>Soluciones integradas para <em>cada etapa</em> de tu negocio</h2>
+  </div>
+  <div class="servicios-grid">
+    <div class="servicio-card fade-in">
+      <div class="servicio-num">01</div>
+      <h3>Consultoría Comercial</h3>
+      <p>Diagnóstico + estrategia + ejecución. 6 meses para resultados reales.</p>
+    </div>
+    <div class="servicio-card fade-in">
+      <div class="servicio-num">02</div>
+      <h3>Estrategia de Marketing</h3>
+      <p>Marca que posiciona. Pauta que convierte. Sin ruido, con propósito.</p>
+    </div>
+    <div class="servicio-card fade-in">
+      <div class="servicio-num">03</div>
+      <h3>Desarrollo Inmobiliario</h3>
+      <p>Estrategia comercial especializada para proyectos horizontales y verticales.</p>
+    </div>
+    <div class="servicio-card fade-in">
+      <div class="servicio-num">04</div>
+      <h3>Gestión Administrativa</h3>
+      <p>El negocio funciona aunque no estés. Eso es estructura real.</p>
+    </div>
+    <div class="servicio-card fade-in">
+      <div class="servicio-num">05</div>
+      <h3>Reclutamiento y Selección</h3>
+      <p>El talento correcto, en el lugar correcto.</p>
+    </div>
+    <div class="servicio-card fade-in">
+      <div class="servicio-num">06</div>
+      <h3>Coaching de Equipos</h3>
+      <p>Equipos que venden, lideran y no se rinden.</p>
+    </div>
+    <div class="servicio-card fade-in">
+      <div class="servicio-num">07</div>
+      <h3>Ejecución Comercial Inmobiliaria</h3>
+      <p>Fuerza de ventas in-house que comercializa tu proyecto bajo el Método de Venta Letal, con el respaldo de BMD Group.</p>
+    </div>
+  </div>
+</section>
+
+<!-- METODOLOGÍA -->
+<section id="metodologia">
+  <div class="fade-in">
+    <div class="section-tag">Cómo trabajamos</div>
+    <h2>Un método probado en <em>tres etapas</em></h2>
+  </div>
+  <div class="metod-container">
+    <div class="metod-step fade-in">
+      <div class="metod-num">01</div>
+      <div class="metod-content">
+        <h3>Diagnóstico Estratégico</h3>
+        <p>Antes de proponer, entendemos. Identificamos exactamente dónde está el problema y qué hay que construir.</p>
+        <div class="metod-tags">
+          <span class="tag">Modelo de negocio</span>
+          <span class="tag">Procesos comerciales</span>
+          <span class="tag">Análisis de equipo</span>
+          <span class="tag">KPIs actuales</span>
+        </div>
+      </div>
+    </div>
+    <div class="metod-step fade-in">
+      <div class="metod-num">02</div>
+      <div class="metod-content">
+        <h3>Plan Estratégico</h3>
+        <p>Convertimos el diagnóstico en un plan claro: estrategia, procesos, roles y KPIs. Todo alineado a un mismo norte.</p>
+        <div class="metod-tags">
+          <span class="tag">Estrategia comercial</span>
+          <span class="tag">Embudos de venta</span>
+          <span class="tag">Plan de marketing</span>
+          <span class="tag">Objetivos medibles</span>
+        </div>
+      </div>
+    </div>
+    <div class="metod-step fade-in">
+      <div class="metod-num">03</div>
+      <div class="metod-content">
+        <h3>Ejecución y Acompañamiento</h3>
+        <p>La estrategia sin ejecución no sirve. Implementamos contigo, medimos resultados y ajustamos en tiempo real. 2 sesiones por semana.</p>
+        <div class="metod-tags">
+          <span class="tag">Coaching de ventas</span>
+          <span class="tag">Implementación real</span>
+          <span class="tag">Ajustes tácticos</span>
+          <span class="tag">Mejora continua</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE BRUNO -->
+<section id="bruno">
+  <div class="fade-in">
+    <div class="section-tag">Quién te acompaña</div>
+    <h2>Bruno Noriega — <em>Fundador & CGO</em></h2>
+  </div>
+  <div class="bruno-grid">
+    <div class="bruno-img-wrap fade-in">
+      <img src="assets/image-02.png" alt="Bruno Noriega" style="width:100%;border-radius:2px;border:1px solid rgba(201,168,76,0.2);display:block;"/>
+      <div class="bruno-accent"></div>
+    </div>
+    <div class="bruno-content fade-in">
+      <p class="subtitle">"Los negocios no crecen por intuición. Crecen por estrategia, método y personas correctamente dirigidas."</p>
+      <p>Más de <strong style="color:var(--gold)">20 años</strong> transformando equipos y negocios. Licenciado en Administración de Empresas, certificado en Coaching Comercial, Ventas de Alto Impacto y Marketing Digital.</p>
+      <p>Lideré equipos en <strong style="color:var(--white);">empresas transnacionales</strong> con decisiones que impactaron millones en facturación. Eso me dio algo que ningún MBA enseña: visión estratégica real, forjada en campo.</p>
+      <p><strong style="color:var(--gold);">Ganador de premios nacionales</strong> en ventas y liderazgo — no por los números, sino por transformar equipos y culturas enteras.</p>
+      <p>Fundé BMD Group con una convicción simple: las empresas medianas merecen la misma calidad de consultoría que las grandes corporaciones. Sin humo, sin teorías vacías — hombro a hombro con tu equipo.</p>
+      <div class="creds">
+        <span class="cred">Lic. Administración de Empresas</span>
+        <span class="cred">Coaching Comercial</span>
+        <span class="cred">Ventas de Alto Impacto</span>
+        <span class="cred">Liderazgo Organizacional</span>
+        <span class="cred">Marketing Digital</span>
+        <span class="cred">Desarrollo Inmobiliario Horizontal</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIBRO -->
+<section id="libro" style="background:var(--navy2);">
+  <div class="container">
+    <div class="section-tag">Mi Libro</div>
+    <div style="display:flex;align-items:center;gap:4rem;flex-wrap:wrap;margin-top:2.5rem;">
+      <div style="flex:0 0 auto;text-align:center;">
+        <div style="position:relative;display:inline-block;">
+          <div style="position:absolute;inset:-8px;background:radial-gradient(ellipse,rgba(201,168,76,0.25),transparent 70%);border-radius:8px;"></div>
+          <img src="assets/image-03.jpg" alt="Ventas en Frecuencia" 
+               style="width:220px;border-radius:6px;box-shadow:0 24px 60px rgba(0,0,0,0.6),0 0 0 1px rgba(201,168,76,0.2);position:relative;z-index:1;"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div style="display:none;width:220px;height:320px;background:linear-gradient(135deg,#070C1A,#111B30);border:1px solid rgba(201,168,76,0.3);border-radius:6px;align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:2rem;text-align:center;">
+            <div style="font-size:2rem;">📖</div>
+            <div style="font-family:var(--serif);font-size:1.1rem;color:var(--gold);font-weight:700;">VENTAS EN FRECUENCIA</div>
+            <div style="font-size:.75rem;color:var(--gray);">Bruno Noriega Montenegro</div>
+          </div>
+        </div>
+      </div>
+      <div style="flex:1;min-width:280px;">
+        <h2 style="font-family:var(--serif);font-size:2.2rem;font-weight:700;color:var(--white);margin-bottom:.5rem;line-height:1.2;">
+          Ventas en <span style="color:var(--gold);">Frecuencia</span>
+        </h2>
+        <p style="font-size:.85rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:1.5rem;">
+          El libro que cambia la forma en que vendes — para siempre.
+        </p>
+        <p style="color:var(--gray);line-height:1.8;margin-bottom:1.5rem;font-size:.95rem;">
+          Este libro nació de 20 años en el campo — no en un aula.
+          Lo escribí para el vendedor que trabaja duro pero no termina de despegar. Para el emprendedor que tiene algo bueno pero no sabe cómo comunicarlo. Para quien quiere construir una carrera comercial sólida, no solo cerrar una venta.
+          21 capítulos. Una sola transformación.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;">
+          <div style="display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--gray);">
+            <span style="color:var(--gold);">✦</span> 331 páginas
+          </div>
+          <div style="display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--gray);">
+            <span style="color:var(--gold);">✦</span> 21 capítulos
+          </div>
+          <div style="display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--gray);">
+            <span style="color:var(--gold);">✦</span> Primera edición 2026
+          </div>
+        </div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="https://pay.hotmart.com/P105882962I?off=xnjjdr51" target="_blank"
+             style="display:inline-flex;align-items:center;gap:.6rem;background:var(--gold);color:var(--navy);padding:.8rem 1.8rem;border-radius:2px;font-weight:700;font-size:.9rem;text-decoration:none;letter-spacing:.05em;transition:background .2s;"
+             onmouseover="this.style.background='#E2C47A'" onmouseout="this.style.background='#C9A84C'">
+            🔥 Comprar en Hotmart
+          </a>
+          <!-- BOTÓN AMAZON: reactivar cuando exista el link real del Kindle
+<a href="https://amazon.com" target="_blank"
+             style="display:inline-flex;align-items:center;gap:.6rem;background:transparent;color:var(--gold);padding:.8rem 1.8rem;border-radius:2px;font-weight:600;font-size:.9rem;text-decoration:none;letter-spacing:.05em;border:1px solid rgba(201,168,76,0.4);transition:all .2s;"
+             onmouseover="this.style.borderColor='var(--gold)';this.style.background='rgba(201,168,76,0.08)'" 
+             onmouseout="this.style.borderColor='rgba(201,168,76,0.4)';this.style.background='transparent'">
+            📦 Ver en Amazon Kindle
+          </a>
+-->
+        </div>
+        <div style="margin-top:2rem;padding:1.5rem 2rem;border-left:3px solid var(--gold);background:rgba(201,168,76,0.06);border-radius:0 4px 4px 0;">
+          <p style="font-size:.95rem;color:var(--gold);font-weight:600;letter-spacing:.08em;margin:0 0 .6rem;text-transform:uppercase;">Ventas en Frecuencia no es solo un libro</p>
+          <p style="font-size:1rem;line-height:1.7;color:var(--gray);margin:0;">Es una filosofía comercial. Un movimiento de vendedores que eligieron construir relaciones reales en lugar de perseguir transacciones. Si vendes con propósito, ya formas parte de esto.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASOS DE ÉXITO CON VIDEOS -->
+<section id="casos-video">
+  <div class="fade-in">
+    <div class="section-tag">Transformaciones reales</div>
+    <h2>Así se ve la consultoría <em>en acción</em></h2>
+    <p style="color:var(--gray);max-width:620px;margin:.8rem 0 0;font-size:.95rem;">Coaching comercial, mentorías estratégicas y transformación de equipos. Resultados que hablan por sí solos.</p>
+  </div>
+  
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:2.5rem;">
+    
+    <!-- CASO 1: KAZATOR -->
+    <div class="fade-in" style="background:var(--navy2);border:1px solid rgba(201,168,76,0.15);border-radius:2px;overflow:hidden;">
+      <div style="position:relative;width:100%;padding-bottom:56.25%;background:#000;">
+        <video style="position:absolute;top:0;left:0;width:100%;height:100%;" controls poster="">
+          <source src="assets/video-kazator.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div style="padding:2rem;">
+        <div style="display:inline-block;background:rgba(201,168,76,0.15);border:1px solid var(--gold);border-radius:2px;padding:.25rem .7rem;margin-bottom:1rem;">
+          <span style="color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.08em;">STRATEGY PRICING</span>
+        </div>
+        <h3 style="font-family:var(--serif);font-size:1.3rem;margin-bottom:.5rem;">Kazator</h3>
+        <p style="color:var(--gray);font-size:.9rem;line-height:1.7;margin-bottom:1rem;">Coaching comercial personalizado en estrategia de precios para el sector B2B. Estructura sólida y comprobada que genera incremento predecible y escalable en operaciones comerciales.</p>
+        <p style="color:var(--gold);font-size:.85rem;font-weight:600;">Resultado: Modelo de pricing sostenible y automatizado</p>
+      </div>
+    </div>
+
+    <!-- CASO 2: CONDOMINIOS PERUANOS -->
+    <div class="fade-in" style="background:var(--navy2);border:1px solid rgba(201,168,76,0.15);border-radius:2px;overflow:hidden;">
+      <div style="position:relative;width:100%;padding-bottom:56.25%;background:#000;">
+        <video style="position:absolute;top:0;left:0;width:100%;height:100%;" controls>
+          <source src="assets/video-ampc.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div style="padding:2rem;">
+        <div style="display:inline-block;background:rgba(201,168,76,0.15);border:1px solid var(--gold);border-radius:2px;padding:.25rem .7rem;margin-bottom:1rem;">
+          <span style="color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.08em;">AMPC & MENTALIDAD</span>
+        </div>
+        <h3 style="font-family:var(--serif);font-size:1.3rem;margin-bottom:.5rem;">Condominios Peruanos</h3>
+        <p style="color:var(--gray);font-size:.9rem;line-height:1.7;margin-bottom:1rem;">Coaching comercial en Actitud Mental Positiva Comercial. Entrenamiento de mentalidad y optimización de microhábitos para equipos de ventas en proyectos inmobiliarios.</p>
+        <p style="color:var(--gold);font-size:.85rem;font-weight:600;">Resultado: Equipos enfocados, mentalidad ganadora, ventas consistentes</p>
+      </div>
+    </div>
+
+    <!-- CASO 3: JL VÁSQUEZ -->
+    <div class="fade-in" style="background:var(--navy2);border:1px solid rgba(201,168,76,0.15);border-radius:2px;overflow:hidden;">
+      <div style="position:relative;width:100%;padding-bottom:56.25%;background:#000;">
+        <video style="position:absolute;top:0;left:0;width:100%;height:100%;" controls>
+          <source src="assets/video-jl-vasquez.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div style="padding:2rem;">
+        <div style="display:inline-block;background:rgba(201,168,76,0.15);border:1px solid var(--gold);border-radius:2px;padding:.25rem .7rem;margin-bottom:1rem;">
+          <span style="color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.08em;">VENTA LETAL</span>
+        </div>
+        <h3 style="font-family:var(--serif);font-size:1.3rem;margin-bottom:.5rem;">Grupo Vásquez JL</h3>
+        <p style="color:var(--gray);font-size:.9rem;line-height:1.7;margin-bottom:1rem;">Coaching grupal intensivo en Venta Letal. Método especializado que garantiza crecimiento sostenible y escalable de equipos comerciales con precisión continua.</p>
+        <p style="color:var(--gold);font-size:.85rem;font-weight:600;">Resultado: Equipos de venta de alto rendimiento, crecimiento escalable</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section id="testimonios" style="background:var(--navy2);">
+  <div class="fade-in" style="text-align:center;margin-bottom:3rem;">
+    <div class="section-tag" style="justify-content:center;">Testimonios</div>
+    <h2>Lo que dicen quienes <em>ya confiaron en BMD</em></h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+
+
+
+    <!-- Testimonio 1: Enjaín Muebles -->
+    <div class="fade-in" style="background:var(--navy3);border:1px solid rgba(201,168,76,0.2);padding:2rem;border-radius:2px;position:relative;">
+      <div style="position:absolute;top:1.2rem;right:1.5rem;background:var(--gold-dim);border:1px solid var(--gold);border-radius:2px;padding:.25rem .7rem;">
+        <span style="color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.08em;">EQUIPO FORTALECIDO</span>
+      </div>
+      <div style="color:var(--gold);font-size:3rem;line-height:1;margin-bottom:.5rem;font-family:var(--serif);">"</div>
+      <p style="color:var(--white);font-size:.95rem;line-height:1.8;margin-bottom:1rem;font-style:italic;">Reclutamiento de talento + coaching estratégico transformaron nuestro equipo. Incorporamos perfiles alineados a nuestra cultura y vimos crecimiento directo en ventas. Una de las mejores decisiones que tomamos como empresa.</p>
+      <div style="display:flex;align-items:center;gap:.8rem;border-top:1px solid rgba(255,255,255,0.05);padding-top:1rem;">
+        <div style="width:44px;height:44px;border-radius:4px;background:var(--gold-dim);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.7rem;color:var(--gold);flex-shrink:0;font-family:var(--serif);text-align:center;line-height:1.2;">EJ</div>
+        <div>
+          <p style="font-weight:700;font-size:.9rem;color:var(--white);">Enjaín Muebles</p>
+          <p style="font-size:.78rem;color:var(--gold);">Mueblería · La Libertad, Perú</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonio 2: Kazator -->
+    <div class="fade-in" style="background:var(--navy3);border:1px solid rgba(201,168,76,0.2);padding:2rem;border-radius:2px;position:relative;">
+      <div style="position:absolute;top:1.2rem;right:1.5rem;background:var(--gold-dim);border:1px solid var(--gold);border-radius:2px;padding:.25rem .7rem;">
+        <span style="color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.08em;">SISTEMA COMERCIAL AUTOMATIZADO</span>
+      </div>
+      <div style="color:var(--gold);font-size:3rem;line-height:1;margin-bottom:.5rem;font-family:var(--serif);">"</div>
+      <p style="color:var(--white);font-size:.95rem;line-height:1.8;margin-bottom:1rem;font-style:italic;">Strategy Pricing + automatización comercial transformó nuestras decisiones. Pasamos de operar por intuición a datos reales. Hoy tenemos un modelo escalable: precios sustentados, embudo medible, equipo alineado a KPIs.</p>
+      <div style="display:flex;align-items:center;gap:.8rem;border-top:1px solid rgba(255,255,255,0.05);padding-top:1rem;">
+        <div style="width:44px;height:44px;border-radius:4px;background:var(--gold-dim);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.78rem;color:var(--gold);flex-shrink:0;font-family:var(--serif);letter-spacing:.05em;">KZ</div>
+        <div>
+          <p style="font-weight:700;font-size:.9rem;color:var(--white);">Dirección Comercial · Kazator</p>
+          <p style="font-size:.78rem;color:var(--gold);">Estrategia, Pricing & Automatización Comercial</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonio 3: Sinergia Grupo Inmobiliario -->
+    <div class="fade-in" style="background:var(--navy3);border:1px solid rgba(201,168,76,0.2);padding:2rem;border-radius:2px;position:relative;">
+      <div style="position:absolute;top:1.2rem;right:1.5rem;background:var(--gold-dim);border:1px solid var(--gold);border-radius:2px;padding:.25rem .7rem;">
+        <span style="color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.08em;">IPC MEJORADO</span>
+      </div>
+      <div style="color:var(--gold);font-size:3rem;line-height:1;margin-bottom:.5rem;font-family:var(--serif);">"</div>
+      <p style="color:var(--white);font-size:.95rem;line-height:1.8;margin-bottom:1rem;font-style:italic;">Estrategia comercial + rediseño de comunicación mejoraron nuestro IPC. Pasamos de terrenos sin movimiento a atraer compradores calificados. Resultados medibles desde el primer mes.</p>
+      <div style="display:flex;align-items:center;gap:.8rem;border-top:1px solid rgba(255,255,255,0.05);padding-top:1rem;">
+        <div style="width:44px;height:44px;border-radius:4px;background:var(--gold-dim);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.7rem;color:var(--gold);flex-shrink:0;font-family:var(--serif);text-align:center;line-height:1.2;">SIN</div>
+        <div>
+          <p style="font-weight:700;font-size:.9rem;color:var(--white);">Sinergia Grupo Inmobiliario</p>
+          <p style="font-size:.78rem;color:var(--gold);">Desarrollo inmobiliario · Perú</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p class="fade-in" style="text-align:center;color:var(--gray);font-size:.82rem;margin-top:2rem;">* Los testimonios reflejan experiencias reales de clientes. Los nombres se mantienen en reserva por confidencialidad.</p>
+</section>
+
+
+<!-- VIDEOS -->
+<section id="videos" style="background:var(--navy);">
+  <div class="fade-in" style="text-align:center;margin-bottom:3rem;">
+    <div class="section-tag" style="justify-content:center;">Bruno en Acción</div>
+    <h2>Así se ve una mentoría <em>comercial corporativa</em></h2>
+    <p style="color:var(--gray);max-width:520px;margin:.8rem auto 0;font-size:.95rem;">Sin guiones ni poses. Coaching real, mentorías reales, resultados reales.</p>
+  </div>
+
+  <!-- Video principal destacado -->
+  <div class="fade-in" style="max-width:820px;margin:0 auto 2.5rem;background:var(--navy3);border:1px solid rgba(201,168,76,0.3);border-radius:2px;overflow:hidden;">
+    <video controls playsinline preload="metadata"
+      style="width:100%;display:block;max-height:500px;object-fit:cover;background:#000;">
+      <source src="assets/video-01.mp4" type="video/mp4"/>
+    </video>
+    <div style="padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+      <span class="tag">Coaching Comercial en Vivo</span>
+      <p style="color:var(--gray);font-size:.85rem;margin:0;">Sesión real de acompañamiento con equipo de ventas.</p>
+    </div>
+  </div>
+
+  <!-- Grid de videos secundarios -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-bottom:2rem;">
+        
+        
+        <div class="fade-in" style="background:var(--navy3);border:1px solid rgba(201,168,76,0.15);border-radius:2px;overflow:hidden;">
+      <video controls playsinline preload="metadata"
+        style="width:100%;display:block;max-height:340px;object-fit:cover;background:#000;">
+        <source src="assets/video-02.mp4" type="video/mp4"/>
+      </video>
+      <div style="padding:1rem 1.2rem;">
+        <span class="tag" style="margin-bottom:.4rem;display:inline-block;">Sistema Comercial Estandarizado</span>
+        <p style="color:var(--gray);font-size:.83rem;line-height:1.6;">Implementación de sistemas y procesos comerciales estandarizados.</p>
+      </div>
+    </div>
+        <div class="fade-in" style="background:var(--navy3);border:1px solid rgba(201,168,76,0.15);border-radius:2px;overflow:hidden;">
+      <video controls playsinline preload="metadata"
+        style="width:100%;display:block;max-height:340px;object-fit:cover;background:#000;">
+        <source src="assets/video-03.mp4" type="video/mp4"/>
+      </video>
+      <div style="padding:1rem 1.2rem;">
+        <span class="tag" style="margin-bottom:.4rem;display:inline-block;">Trayectoria Comercial</span>
+        <p style="color:var(--gray);font-size:.83rem;line-height:1.6;">Muestra de la trayectoria de mentorías y procesos comerciales realizados.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Verisure: trayectoria transnacional -->
+  <div class="fade-in" style="background:linear-gradient(135deg,var(--navy2),var(--navy3));border:1px solid rgba(201,168,76,0.2);border-radius:2px;overflow:hidden;max-width:700px;margin:0 auto 2.5rem;">
+    <div style="padding:1rem 1.5rem;border-bottom:1px solid rgba(201,168,76,0.12);display:flex;align-items:center;gap:.8rem;">
+      <span class="tag">Trayectoria en Empresa Transnacional</span>
+      <p style="color:var(--gray);font-size:.8rem;margin:0;">Trabajo en Equipo</p>
+    </div>
+    <video controls playsinline preload="metadata"
+      style="width:100%;display:block;max-height:340px;object-fit:cover;background:#000;">
+      <source src="assets/video-04.mp4" type="video/mp4"/>
+    </video>
+    <div style="padding:1rem 1.5rem;">
+      <p style="color:var(--gray);font-size:.83rem;line-height:1.6;">Una muestra de la sinergia comercial que permite la celebración de 50 mil clientes.</p>
+    </div>
+  </div>
+
+  <!-- Video vertical reciente -->
+  <div class="fade-in" style="background:linear-gradient(135deg,var(--navy2),var(--navy3));border:1px solid rgba(201,168,76,0.25);border-radius:2px;overflow:hidden;max-width:350px;margin:0 auto 3rem;">
+    <div style="padding:1rem 1.5rem;border-bottom:1px solid rgba(201,168,76,0.12);">
+      <span class="tag">Coaching Comercial · Venta Letal</span>
+    </div>
+    <video controls playsinline preload="metadata"
+      style="width:100%;display:block;background:#000;aspect-ratio:478/850;">
+      <source src="assets/video-05.mp4" type="video/mp4"/>
+    </video>
+    <div style="padding:1rem 1.5rem;">
+      <p style="color:var(--gray);font-size:.83rem;line-height:1.6;">Coaching Comercial Venta Letal a ejecutivos de Grupo Vásquez JL S.A.C.</p>
+    </div>
+  </div>
+
+  <!-- Galería: BMD en campo -->
+  <div class="fade-in" style="text-align:center;margin-bottom:1.5rem;">
+    <div class="section-tag" style="justify-content:center;">BMD en campo</div>
+    <p style="color:var(--gray);max-width:520px;margin:.8rem auto 0;font-size:.95rem;">Activaciones, capacitaciones y equipos en operación. Donde realmente se decide una venta.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:2.5rem;">
+
+    <figure class="fade-in" style="margin:0;background:var(--navy3);border:1px solid rgba(201,168,76,0.15);border-radius:2px;overflow:hidden;">
+      <img src="assets/campo-01.png" alt="Equipo comercial de BMD Group en activación de campo" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;"/>
+      <figcaption style="padding:.85rem 1rem;color:var(--gray);font-size:.8rem;line-height:1.5;">Activación comercial en campo con equipo en punto de venta.</figcaption>
+    </figure>
+
+    <figure class="fade-in" style="margin:0;background:var(--navy3);border:1px solid rgba(201,168,76,0.15);border-radius:2px;overflow:hidden;">
+      <img src="assets/campo-02.png" alt="Capacitación comercial a equipo de ventas" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;"/>
+      <figcaption style="padding:.85rem 1rem;color:var(--gray);font-size:.8rem;line-height:1.5;">Capacitación comercial presencial a equipo de ventas.</figcaption>
+    </figure>
+
+    <figure class="fade-in" style="margin:0;background:var(--navy3);border:1px solid rgba(201,168,76,0.15);border-radius:2px;overflow:hidden;">
+      <img src="assets/campo-03.png" alt="Equipo comercial en proyecto inmobiliario" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;"/>
+      <figcaption style="padding:.85rem 1rem;color:var(--gray);font-size:.8rem;line-height:1.5;">Equipo comercial desplegado en proyecto inmobiliario.</figcaption>
+    </figure>
+
+    <figure class="fade-in" style="margin:0;background:var(--navy3);border:1px solid rgba(201,168,76,0.15);border-radius:2px;overflow:hidden;">
+      <img src="assets/campo-04.png" alt="Presentación comercial de proyecto inmobiliario" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;"/>
+      <figcaption style="padding:.85rem 1rem;color:var(--gray);font-size:.8rem;line-height:1.5;">Presentación comercial de proyecto ante equipo y aliados.</figcaption>
+    </figure>
+
+  </div>
+
+  <div class="fade-in" style="text-align:center;">
+    <p style="color:var(--gray);font-size:.88rem;margin-bottom:1rem;">Síguenos para más contenido</p>
+    <a href="https://www.tiktok.com/@bmdgroupconsultora" target="_blank" class="btn-secondary"
+      style="display:inline-flex;align-items:center;gap:.6rem;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.76a4.85 4.85 0 01-1.02-.07z"/></svg>
+      @bmdgroupconsultora en TikTok
+    </a>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section style="background:var(--navy2);padding:4rem 6%;">
+  <div class="fade-in" style="max-width:600px;margin:0 auto;text-align:center;">
+    <div style="display:inline-flex;align-items:center;gap:.6rem;font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.8rem;">
+      <span style="display:block;width:30px;height:1px;background:var(--gold);"></span>
+      Newsletters
+    </div>
+    <h2 style="font-size:2rem;margin-bottom:1rem;">Recibe estrategia directa en tu correo</h2>
+    <p style="color:var(--gray);margin-bottom:2rem;font-size:1rem;line-height:1.7;">Tips sobre ventas, liderazgo y ejecución comercial. Sin spam, solo contenido que impacta en tu negocio.</p>
+    <div style="display:flex;gap:.8rem;margin-bottom:1.5rem;">
+      <input type="email" placeholder="Tu correo" style="flex:1;padding:.85rem 1.2rem;background:rgba(255,255,255,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:2px;color:var(--white);font-size:.95rem;" required/>
+      <button style="background:var(--gold);color:var(--navy);padding:.85rem 2rem;border:none;border-radius:2px;font-weight:600;cursor:pointer;transition:background .2s;">Suscribirse</button>
+    </div>
+    <p style="color:var(--gray);font-size:.8rem;">Respetamos tu privacidad. Puedes desuscribirte cuando quieras.</p>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta">
+  <div class="fade-in">
+    <div class="section-tag">El siguiente paso</div>
+    <h2>El mejor momento para actuar<br/>es <em>ahora mismo</em></h2>
+    <p>20 minutos. Sin costo. Sin compromiso.
+Solo claridad y un plan real para tu negocio.</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/51922529675?text=Hola%20Bruno,%20quiero%20solicitar%20mi%20diagn%C3%B3stico%20gratuito" target="_blank" class="btn-primary">
+        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.984-1.407A9.94 9.94 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.031-1.094l-.29-.173-2.958.835.797-2.888-.19-.298A7.944 7.944 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+        Escribir por WhatsApp
+      </a>
+      <a href="mailto:gerencia@bmdgroup.org.pe?subject=Diagn%C3%B3stico%20Gratuito%20BMD%20Group&body=Hola%20Bruno%2C%20me%20interesa%20solicitar%20mi%20diagn%C3%B3stico%20gratuito." class="btn-secondary">Escribir por correo</a>
+    </div>
+  </div>
+</section>
+
+<!-- EQUIPO -->
+<section id="equipo" style="background:var(--navy2);">
+  <div class="fade-in" style="text-align:center;margin-bottom:3.5rem;">
+    <div class="section-tag" style="justify-content:center;">Nuestro Equipo</div>
+    <h2>Un equipo <em>multidisciplinario</em> en cada área clave</h2>
+    <p style="color:var(--gray);max-width:580px;margin:.8rem auto 0;font-size:1rem;">Estrategas, especialistas y ejecutores propios. No tercerizamos la excelencia — la traemos con nosotros.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;">
+
+    <div class="servicio-card fade-in" style="text-align:center;">
+      <img src="assets/image-02.png" alt="Equipo BMD" style="width:90px;height:90px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);margin:0 auto 1.2rem;display:block;"/>
+      <div class="tag" style="margin-bottom:.8rem;">CEO &amp; Founder</div>
+      <h3 style="font-family:var(--serif);font-size:1.15rem;margin-bottom:.3rem;">Bruno Noriega M.</h3>
+      <p style="color:var(--gold);font-size:.8rem;margin-bottom:.9rem;font-weight:500;">Chief Growth Officer &amp; Marketing Digital</p>
+      <p style="color:var(--gray);font-size:.85rem;line-height:1.6;">+20 años en estrategia comercial B2B/B2C, liderazgo de equipos y consultoría. Dirige personalmente el frente de marketing digital: estrategia de marca, pauta, embudos de captación y contenido comercial para proyectos inmobiliarios.</p>
+    </div>
+
+    <div class="servicio-card fade-in" style="text-align:center;">
+      <img src="assets/image-05.png" alt="Equipo BMD" style="width:90px;height:90px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);margin:0 auto 1.2rem;display:block;"/>
+      <div class="tag" style="margin-bottom:.8rem;">Contabilidad & Tributario</div>
+      <h3 style="font-family:var(--serif);font-size:1.15rem;margin-bottom:.3rem;">Marco H. Cerna V.</h3>
+      <p style="color:var(--gold);font-size:.8rem;margin-bottom:.9rem;font-weight:500;">Contador Público Colegiado</p>
+      <p style="color:var(--gray);font-size:.85rem;line-height:1.6;">+12 años en tributación, contabilidad financiera, planillas y legislación laboral. Auditorías SUNAT, planeamiento tributario y estados financieros.</p>
+    </div>
+
+    <div class="servicio-card fade-in" style="text-align:center;">
+      <img src="assets/image-06.jpg" alt="María Fernanda Monchéss Alza" style="width:90px;height:90px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);margin:0 auto 1.2rem;display:block;"/>
+      <div class="tag" style="margin-bottom:.8rem;">Gestión Comercial Inmobiliaria</div>
+      <h3 style="font-family:var(--serif);font-size:1.15rem;margin-bottom:.3rem;">María Fernanda Monchéss Alza</h3>
+      <p style="color:var(--gold);font-size:.8rem;margin-bottom:.9rem;font-weight:500;">Especialista en Gestión Comercial Inmobiliaria</p>
+      <p style="color:var(--gray);font-size:.85rem;line-height:1.6;">Estrategia comercial inmobiliaria, gestión de cartera de proyectos, calificación de leads y cierre consultivo. Experiencia en desarrollos horizontales y proyectos residenciales de alta rotación.</p>
+    </div>
+
+    <div class="servicio-card fade-in" style="text-align:center;">
+      <img src="assets/image-07.jpg" alt="Arturo Linares" style="width:90px;height:90px;border-radius:50%;object-fit:cover;border:2px solid var(--gold);margin:0 auto 1.2rem;display:block;"/>
+      <div class="tag" style="margin-bottom:.8rem;">Líder Comercial</div>
+      <h3 style="font-family:var(--serif);font-size:1.15rem;margin-bottom:.3rem;">Arturo Linares</h3>
+      <p style="color:var(--gold);font-size:.8rem;margin-bottom:.9rem;font-weight:500;">Jefe de Ventas</p>
+      <p style="color:var(--gray);font-size:.85rem;line-height:1.6;">Conducción y formación del equipo comercial in-house de BMD Group, con ejecución de ventas de proyectos inmobiliarios aliados. Gestión de indicadores y cierre bajo el Método de Venta Letal.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="#hero" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;"><img src="assets/image-01.jpg" alt="BMD Group" style="height:56px;width:56px;object-fit:contain;border-radius:50%;"/><span style="font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--gold);">BMD <span style="color:var(--white);">Group</span></span></a>
+    <p>Consultoría de negocios, mentorías comerciales y ejecución de ventas inmobiliarias. Ética, método y compromiso en cada proyecto.</p>
+  </div>
+  <div>
+    <h4>Servicios</h4>
+    <ul class="footer-links">
+      <li><a href="#servicios">Consultoría Comercial</a></li>
+      <li><a href="#servicios">Estrategia de Marketing</a></li>
+      <li><a href="#servicios">Desarrollo Inmobiliario</a></li>
+      <li><a href="#servicios">Ejecución Comercial Inmobiliaria</a></li>
+      <li><a href="#servicios">Gestión Administrativa</a></li>
+      <li><a href="#casos-video">Casos de Éxito</a></li>
+    </ul>
+  </div>
+  <div class="footer-contact">
+    <h4>Contacto</h4>
+    <p>📍 Trujillo, La Libertad · Perú</p>
+    <p>📱 <a href="tel:+51933815686" style="color:var(--gray);text-decoration:none;">+51 933 815 686</a> <span style="color:var(--gold);font-size:.75rem;">(llamadas)</span></p><p>💬 <a href="https://wa.me/51922529675" target="_blank" style="color:var(--gray);text-decoration:none;">+51 922 529 675</a> <span style="color:var(--gold);font-size:.75rem;">(WhatsApp Business)</span></p>
+    <p>✉️ <a href="mailto:gerencia@bmdgroup.org.pe" style="color:var(--gray);text-decoration:none;">gerencia@bmdgroup.org.pe</a></p>
+    <p>📸 @bmd.consultoracomercial</p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <p>© 2025 BMD Group. Todos los derechos reservados.</p>
+</div>
+
+<!-- WHATSAPP CTA FLOAT -->
+<a href="https://wa.me/51922529675?text=Hola%20Bruno,%20quiero%20solicitar%20mi%20diagn%C3%B3stico%20gratuito" target="_blank" class="wa-float" title="Comunicarse por WhatsApp" aria-label="Comunicarse por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.984-1.407A9.94 9.94 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.031-1.094l-.29-.173-2.958.835.797-2.888-.19-.298A7.944 7.944 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
+  </svg>
+  <span class="wa-label">Comunicarse por WhatsApp</span>
+</a>
+
+<script>
+  // MENU
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+  });
+
+  // FADE IN ON SCROLL
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // COUNTER ANIMATION
+  function animateCounter(el, target, duration = 1800) {
+    let start = 0;
+    const step = target / (duration / 16);
+    const timer = setInterval(() => {
+      start += step;
+      if (start >= target) { el.textContent = target + (target === 6 ? '' : '+'); clearInterval(timer); }
+      else el.textContent = Math.floor(start) + (target === 6 ? '' : '+');
+    }, 16);
+  }
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const target = parseInt(e.target.dataset.target);
+        animateCounter(e.target, target);
+        counterObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+
+  // NAV SCROLL EFFECT
+  window.addEventListener('scroll', () => {
+    document.getElementById('navbar').style.padding = window.scrollY > 50 ? '.8rem 6%' : '1.2rem 6%';
+  });
+</script>
+
+  <div id="music-ctrl" style="position:fixed;bottom:5.5rem;right:2rem;z-index:98;">
+    <button onclick="toggleMusic()" id="music-btn"
+      style="background:rgba(7,12,26,0.85);border:1px solid rgba(201,168,76,0.4);
+             color:var(--gold);width:44px;height:44px;border-radius:50%;
+             cursor:pointer;font-size:1.1rem;display:flex;align-items:center;
+             justify-content:center;backdrop-filter:blur(8px);transition:all .2s;"
+      title="Activar música ambiente">🔇</button>
+  </div>
+  <audio id="bg-music" loop>
+    <source src="assets/audio-01.mp3" type="audio/mp3"/>
+  </audio>
+  <script>
+    var _playing=false,_audio=document.getElementById('bg-music');
+    _audio.volume=0.15;
+    function toggleMusic(){
+      var btn=document.getElementById('music-btn');
+      if(_playing){_audio.pause();btn.textContent='🔇';_playing=false;}
+      else{_audio.play().then(function(){btn.textContent='🔊';_playing=true;}).catch(function(){});}
+    }
+  </script>
+
+</body>
+</html>
