@@ -52,7 +52,9 @@
     text-decoration: none;
   }
   .nav-logo span { color: var(--white); }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links { display: flex; gap: 1.6rem; list-style: none; align-items: center; }
+  .nav-links a { white-space: nowrap; }
+  @media (max-width: 1320px) { .nav-links { gap: 1.1rem; } .nav-links a { font-size: .76rem; letter-spacing: .05em; } .nav-cta { padding: .5rem .9rem; } }
   .nav-links a {
     color: var(--gray);
     text-decoration: none;
@@ -212,6 +214,31 @@
   .dolor-icon svg { width: 32px; height: 32px; fill: var(--gold); }
   .dolor-card h3 { font-family: var(--serif); font-size: 1.2rem; margin-bottom: .5rem; }
   .dolor-card p { color: var(--gray); font-size: .9rem; line-height: 1.6; }
+
+  /* ── MENTORÍAS ── */
+  #mentorias { background: var(--navy2); }
+  .mentorias-formatos { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
+  .mentorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+  .mentoria-card {
+    background: var(--navy3);
+    border: 1px solid rgba(201,168,76,0.12);
+    padding: 1.6rem 1.6rem 1.4rem;
+    border-radius: 2px;
+    display: flex; flex-direction: column;
+    transition: border-color .3s, transform .2s;
+  }
+  .mentoria-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-3px); }
+  .mentoria-card.destacada { border-left: 3px solid var(--gold); }
+  .mentoria-cat { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: .6rem; }
+  .mentoria-card h3 { font-family: var(--serif); font-size: 1.25rem; margin-bottom: .5rem; }
+  .mentoria-card p { color: var(--gray); font-size: .88rem; line-height: 1.6; flex: 1; }
+  .mentoria-link { margin-top: 1rem; font-size: .82rem; font-weight: 600; color: var(--gold); text-decoration: none; }
+  .mentoria-link:hover { color: var(--gold-light); }
 
   /* ── SERVICIOS ── */
   #servicios { background: var(--navy); }
@@ -539,6 +566,18 @@
   .fade-in.visible { opacity: 1; transform: translateY(0); }
 
   /* ── RESPONSIVE ── */
+  @media (max-width: 1250px) {
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+      background: var(--navy);
+      justify-content: center; align-items: center;
+      gap: 2.5rem; z-index: 200;
+    }
+    .nav-links.open a { font-size: 1.2rem; }
+    .hamburger { display: flex; z-index: 300; }
+  }
   @media (max-width: 900px) {
     .nav-links { display: none; }
     .nav-links.open {
@@ -574,6 +613,7 @@
   <ul class="nav-links" id="navLinks">
     <li><a href="#quienes-somos">Nosotros</a></li>
     <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#mentorias">Mentorías</a></li>
     <li><a href="#metodologia">Metodología</a></li>
     <li><a href="#bruno">Fundador</a></li>
     <li><a href="#libro">Libro</a></li>
@@ -766,6 +806,103 @@
       <p>Equipos que venden, lideran y no se rinden.</p>
     </div>
 
+  </div>
+</section>
+
+<!-- MENTORÍAS -->
+<section id="mentorias">
+  <div class="fade-in">
+    <div class="section-tag">Mentorías y talleres</div>
+    <h2>Programas para equipos que <em>quieren vender más</em></h2>
+    <p style="color:var(--gray);max-width:680px;margin:.8rem 0 0;font-size:.95rem;line-height:1.7;">Talleres prácticos de 10 a 12 horas, en sesiones distribuidas de 2 a 4 semanas, con ejemplos reales y ejercicios aplicados al día a día de tu equipo. Para empresas que buscan acompañamiento continuo, trabajamos en contratos de 6 meses: capacitación, retroalimentación y seguimiento.</p>
+    <div class="mentorias-formatos">
+      <span class="tag">In-company para empresas</span>
+      <span class="tag">Mentoría personalizada 1 a 1</span>
+      <span class="tag">Sesiones intensivas de 90 minutos</span>
+    </div>
+  </div>
+  <div class="mentorias-grid">
+    <div class="mentoria-card fade-in destacada">
+      <div class="mentoria-cat">Ventas</div>
+      <h3>Venta Letal</h3>
+      <p>Nuestro método de ventas y cierre de alto impacto. Diagnóstico del cliente, manejo de objeciones y cierres efectivos para equipos comerciales.</p>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Venta%20Letal" target="_blank" rel="noopener">Solicitar información →</a>
+    </div>
+    <div class="mentoria-card fade-in destacada">
+      <div class="mentoria-cat">Liderazgo</div>
+      <h3>Liderazgo Estratégico BMD</h3>
+      <p>Para jefes y supervisores: dirigir equipos comerciales con método, indicadores claros y motivación sostenida.</p>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Liderazgo%20Estrat%C3%A9gico%20BMD" target="_blank" rel="noopener">Solicitar información →</a>
+    </div>
+    <div class="mentoria-card fade-in destacada">
+      <div class="mentoria-cat">Habilidades blandas</div>
+      <h3>Habilidades Blandas para Equipos</h3>
+      <p>Trabajo en equipo, adaptabilidad y relaciones laborales que mejoran el clima y el rendimiento del equipo.</p>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Habilidades%20Blandas%20para%20Equipos" target="_blank" rel="noopener">Solicitar información →</a>
+    </div>
+    <div class="mentoria-card fade-in destacada">
+      <div class="mentoria-cat">Comunicación</div>
+      <h3>Comunicación Asertiva y Escucha Activa</h3>
+      <p>Comunicar con claridad, escuchar para entender y resolver conflictos sin desgastar al equipo.</p>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Comunicaci%C3%B3n%20Asertiva%20y%20Escucha%20Activa" target="_blank" rel="noopener">Solicitar información →</a>
+    </div>
+    <div class="mentoria-card fade-in">
+      <div class="mentoria-cat">Mentalidad</div>
+      <h3>Actitud Mental Positiva Comercial (AMPC)</h3>
+      <p>Mentalidad y microhábitos de alto rendimiento para vendedores que quieren resultados consistentes.</p>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Actitud%20Mental%20Positiva%20Comercial%20%28AMPC%29" target="_blank" rel="noopener">Solicitar información →</a>
+    </div>
+    <div class="mentoria-card fade-in">
+      <div class="mentoria-cat">Comunicación</div>
+      <h3>Oratoria Comercial</h3>
+      <p>Presentaciones y discursos de venta que generan confianza, captan atención y llevan al cierre.</p>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Oratoria%20Comercial" target="_blank" rel="noopener">Solicitar información →</a>
+    </div>
+    <div class="mentoria-card fade-in">
+      <div class="mentoria-cat">Ventas</div>
+      <h3>Negociación y Cierre B2B</h3>
+      <p>Negociar con empresas: preparación, concesiones inteligentes y técnicas para cerrar sin bajar el precio.</p>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Negociaci%C3%B3n%20y%20Cierre%20B2B" target="_blank" rel="noopener">Solicitar información →</a>
+    </div>
+    <div class="mentoria-card fade-in">
+      <div class="mentoria-cat">Digital</div>
+      <h3>Prospección por WhatsApp y Redes Sociales</h3>
+      <p>Generar y calificar prospectos con mensajes que abren conversaciones y se convierten en citas.</p>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Prospecci%C3%B3n%20por%20WhatsApp%20y%20Redes%20Sociales" target="_blank" rel="noopener">Solicitar información →</a>
+    </div>
+    <div class="mentoria-card fade-in">
+      <div class="mentoria-cat">Digital</div>
+      <h3>IA Aplicada a Ventas</h3>
+      <p>Herramientas de inteligencia artificial para prospectar, dar seguimiento y vender más en menos tiempo.</p>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20IA%20Aplicada%20a%20Ventas" target="_blank" rel="noopener">Solicitar información →</a>
+    </div>
+    <div class="mentoria-card fade-in">
+      <div class="mentoria-cat">Comunicación</div>
+      <h3>Lenguaje Corporal Intensivo</h3>
+      <p>Leer al cliente y proyectar seguridad: postura, gestos y presencia en reuniones y presentaciones.</p>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Lenguaje%20Corporal%20Intensivo" target="_blank" rel="noopener">Solicitar información →</a>
+    </div>
+    <div class="mentoria-card fade-in">
+      <div class="mentoria-cat">Marca personal</div>
+      <h3>Marca Personal para Vendedores</h3>
+      <p>Construir una presencia profesional en redes que atraiga clientes y respalde cada venta.</p>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Marca%20Personal%20para%20Vendedores" target="_blank" rel="noopener">Solicitar información →</a>
+    </div>
+    <div class="mentoria-card fade-in">
+      <div class="mentoria-cat">Desarrollo personal</div>
+      <h3>Inteligencia Emocional y Manejo del Rechazo</h3>
+      <p>Gestionar la presión, el rechazo y la frustración para mantener el rendimiento todos los meses.</p>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Inteligencia%20Emocional%20y%20Manejo%20del%20Rechazo" target="_blank" rel="noopener">Solicitar información →</a>
+    </div>
+    <div class="mentoria-card fade-in">
+      <div class="mentoria-cat">Ventas</div>
+      <h3>Postventa y Fidelización</h3>
+      <p>Convertir clientes en recompra y referidos con un proceso de seguimiento después de la venta.</p>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Postventa%20y%20Fidelizaci%C3%B3n" target="_blank" rel="noopener">Solicitar información →</a>
+    </div>
+  </div>
+  <div class="fade-in" style="text-align:center;margin-top:2.5rem;">
+    <a href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20armar%20un%20programa%20de%20mentor%C3%ADa%20para%20mi%20equipo" target="_blank" rel="noopener" class="btn-primary">Arma el programa para tu equipo</a>
   </div>
 </section>
 
@@ -1246,6 +1383,7 @@ Solo claridad y un plan real para tu negocio.</p>
       <li><a href="#servicios">Desarrollo Inmobiliario</a></li>
 
       <li><a href="#servicios">Gestión Administrativa</a></li>
+      <li><a href="#mentorias">Mentorías y Talleres</a></li>
       <li><a href="#casos-video">Casos de Éxito</a></li>
     </ul>
   </div>
