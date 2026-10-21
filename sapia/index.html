@@ -113,7 +113,17 @@
   .videos video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;border:1px solid rgba(201,168,76,.2)}
   .videos figcaption{font-size:.78rem;color:var(--gray);margin-top:.5rem}
 
-  #terrazas{background:var(--navy)}
+  #arenas{background:var(--navy)}
+  #terrazas{background:var(--navy2)}
+  .tl{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.2rem}
+  .tl div{border-top:2px solid var(--gold);padding-top:.8rem}
+  .tl b{display:block;font-family:var(--serif);font-size:1.25rem;color:var(--gold-l)}
+  .tl span{font-size:.83rem;color:var(--gray)}
+  .track{margin-top:1.5rem;display:grid;gap:1rem}
+  .track div{padding:1.1rem 1.2rem;border:1px solid rgba(201,168,76,.2);background:rgba(255,255,255,.02)}
+  .track h5{font-family:var(--serif);font-size:1.15rem;color:var(--gold-l);margin-bottom:.3rem;font-weight:500}
+  .track p{font-size:.85rem;color:#C9D1DD}
+  @media(max-width:700px){.tl{grid-template-columns:1fr}}
   .chips{display:flex;flex-wrap:wrap;gap:.5rem}
   .chips span{border:1px solid rgba(201,168,76,.35);color:#D8DEE7;font-size:.82rem;padding:.4rem .85rem;border-radius:999px}
   .mapbtn{border:0;padding:0;cursor:zoom-in;display:block;width:100%;background:none}
@@ -193,6 +203,7 @@
     <li><a href="#pilares">Nosotros</a></li>
     <li><a href="#proyectos">Proyectos</a></li>
     <li><a href="#colinas">Colinas del Golf</a></li>
+    <li><a href="#arenas">Arenas</a></li>
     <li><a href="#terrazas">Terrazas</a></li>
     <li><a href="#proceso">Cómo comprar</a></li>
     <li><a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20los%20proyectos%20de%20Sapia" target="_blank" rel="noopener">Agenda tu visita</a></li>
@@ -204,14 +215,14 @@
   <div class="hero-in reveal">
     <div class="tag">Sabiduría · Confianza · Patrimonio</div>
     <h1>Bienes raíces para construir <em>patrimonio</em> que trasciende</h1>
-    <p>Comercializamos proyectos inmobiliarios seleccionados en La Libertad: lotes de campo, lotes frente al mar y departamentos de estreno. Te acompañamos desde la primera visita hasta la firma.</p>
+    <p>Comercializamos proyectos inmobiliarios seleccionados en La Libertad: lotes de campo, lotes entre campo y playa, y departamentos de estreno. Te acompañamos desde la primera visita hasta la firma.</p>
     <div class="btns">
       <a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20agendar%20una%20visita%20con%20Sapia" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Agenda tu visita</a>
       <a class="btn btn-line" href="#proyectos">Ver proyectos →</a>
     </div>
     <div class="hero-facts">
       <div><b>3</b><span>Proyectos en cartera</span></div>
-      <div><b>300 m²</b><span>Lotes de campo desde</span></div>
+      <div><b>140 m²</b><span>Lotes desde</span></div>
       <div><b>7 días</b><span>Visitas a la semana</span></div>
     </div>
   </div>
@@ -253,18 +264,19 @@
       </div>
     </article>
     <article class="proj reveal">
-      <div class="proj-media"><div class="pattern"><svg><use href="#temple"/></svg></div><span class="badge">Frente al mar</span></div>
+      <div class="proj-media"><img src="assets/arenas-hero.jpg" alt="Maqueta de Arenas Exclusive junto al mar" loading="lazy" decoding="async"/><span class="badge">Lanzamiento</span></div>
       <div class="proj-body">
         <div class="proj-loc">Puerto Malabrigo · La Libertad</div>
         <h3>Arenas Exclusive</h3>
         <ul>
-          <li>Lotes frente al mar</li>
-          <li>Con título de propiedad</li>
-          <li>Ideal para inversión y casa de playa</li>
+          <li>Combinación de campo y playa, a filo de pista</li>
+          <li>Lotes desde 140 m², con título independizado</li>
+          <li>Membresía vitalicia a Arenas Club</li>
         </ul>
         <div class="price">Consulta disponibilidad<small>Precios y formas de pago por WhatsApp</small></div>
         <div class="btns">
           <a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20Arenas%20Exclusive" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Consultar</a>
+          <a class="btn btn-line" href="#arenas">Ver proyecto</a>
         </div>
       </div>
     </article>
@@ -332,6 +344,64 @@
         <video src="assets/colinas-club.mp4" poster="assets/colinas-club-poster.jpg" controls preload="none" playsinline></video>
         <figcaption>Poroto, la nueva élite</figcaption>
       </figure>
+    </div>
+  </div>
+</section>
+
+<section id="arenas">
+  <div class="col-head">
+    <div class="reveal">
+      <div class="tag">III Proyecto · Lanzamiento oficial</div>
+      <h2 style="margin-top:1rem">Arenas Exclusive: <em>campo y playa</em> en un solo lugar</h2>
+    </div>
+    <p class="muted reveal">Un proyecto en Malabrigo pensado para quienes desean invertir con seguridad, construir una casa de campo o de descanso, o asegurar un patrimonio con gran potencial de valorización. 300 lotes disponibles, a filo de pista y con dos accesos.</p>
+  </div>
+
+  <div class="gallery reveal" data-gal="arenas">
+    <button class="big" data-i="0"><img src="assets/arenas-hero.jpg" alt="Maqueta del proyecto junto al mar" loading="lazy" decoding="async"/></button>
+    <button data-i="1"><img src="assets/arenas-1.jpg" alt="Piscina del club" loading="lazy" decoding="async"/></button>
+    <button data-i="2"><img src="assets/arenas-2.jpg" alt="Cancha de grass sintético" loading="lazy" decoding="async"/></button>
+    <button data-i="3"><img src="assets/arenas-5.jpg" alt="Zona de descanso del club" loading="lazy" decoding="async"/></button>
+    <button data-i="4"><img src="assets/arenas-6.jpg" alt="Casa de campo construida por un propietario" loading="lazy" decoding="async"/></button>
+    <button class="wide" data-i="5"><img src="assets/arenas-4.jpg" alt="Lotes con palmeras y casas en construcción" loading="lazy" decoding="async"/></button>
+    <button class="wide" data-i="6"><img src="assets/arenas-3.jpg" alt="Casa de campo en construcción" loading="lazy" decoding="async"/></button>
+  </div>
+
+  <div class="col-info">
+    <div class="reveal">
+      <h3 style="font-size:1.6rem;margin-bottom:1.2rem">¿Por qué invertir?</h3>
+      <div class="feat">
+        <div><b>Lotes desde 140 m²</b><span>Independizados, con título individual inscrito en Registros Públicos</span></div>
+        <div><b>Campo y playa</b><span>A filo de pista, con excelente accesibilidad y dos accesos</span></div>
+        <div><b>Alta proyección de valorización</b><span>Ideal para casa de campo, de descanso o inversión</span></div>
+        <div><b>Facilidades de pago</b><span>Al contado o financiado hasta en 48 cuotas</span></div>
+      </div>
+      <h3 style="font-size:1.6rem;margin:2.2rem 0 1.2rem">Qué recibes</h3>
+      <div class="chips">
+        <span>Título independizado</span><span>Luz con transformador Hidrandina</span><span>Punto de agua en cada lote</span><span>Reservorio de agua</span><span>Dos pórticos de ingreso</span><span>Vías afirmadas</span><span>Iluminación en áreas comunes</span><span>Seis parques</span><span>Canchas de frontón</span><span>Áreas verdes</span><span>Cerco perimétrico</span><span>Membresía vitalicia a Arenas Club</span>
+      </div>
+      <div class="docs">
+        <h4>Compra con respaldo legal</h4>
+        <p>Contrato de Bien Futuro, firmado en notaría. Documentación disponible: copia literal de la empresa, vigencia de poder, ficha RUC y copia literal del terreno.</p>
+      </div>
+      <div class="btns" style="margin-top:2rem">
+        <a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20agendar%20una%20visita%20a%20Arenas%20Exclusive" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Agendar visita a Arenas</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <h3 style="font-size:1.6rem;margin-bottom:.4rem">Cronograma del proyecto</h3>
+      <div class="tl">
+        <div><b>Jul 2026</b><span>Lanzamiento oficial</span></div>
+        <div><b>Dic 2026</b><span>Los propietarios pueden iniciar su construcción</span></div>
+        <div><b>Jul 2028</b><span>Entrega oficial</span></div>
+      </div>
+      <h3 style="font-size:1.6rem;margin:2.4rem 0 .4rem">Experiencia que respalda</h3>
+      <p class="muted" style="font-size:.92rem">Arenas Exclusive es la tercera etapa de un desarrollo con obras reales y entregas cumplidas.</p>
+      <div class="track">
+        <div><h5>Primer proyecto · 141 lotes</h5><p>Lanzado en abril de 2024 y entregado el 21 de diciembre de 2025 con títulos independizados. Primera etapa 100% vendida y club completamente operativo.</p></div>
+        <div><h5>Segundo proyecto · 208 lotes</h5><p>Lanzado en febrero de 2026, con alrededor de 130 lotes vendidos y entrega programada para julio de 2027.</p></div>
+        <div><h5>Tercer proyecto · 300 lotes</h5><p>Arenas Exclusive, en lanzamiento. Oficina comercial en Edificio La Marquesa, Jr. Diego de Almagro 545, Of. 209, Trujillo.</p></div>
+      </div>
     </div>
   </div>
 </section>
