@@ -113,6 +113,12 @@
   .videos video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;border:1px solid rgba(201,168,76,.2)}
   .videos figcaption{font-size:.78rem;color:var(--gray);margin-top:.5rem}
 
+  #terrazas{background:var(--navy)}
+  .chips{display:flex;flex-wrap:wrap;gap:.5rem}
+  .chips span{border:1px solid rgba(201,168,76,.35);color:#D8DEE7;font-size:.82rem;padding:.4rem .85rem;border-radius:999px}
+  .mapbtn{border:0;padding:0;cursor:zoom-in;display:block;width:100%;background:none}
+  .mapbtn img{width:100%;max-height:520px;object-fit:cover;object-position:center 40%;border:1px solid rgba(201,168,76,.2)}
+  #terrazas .docs{margin-top:2rem}
   /* PROCESO */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem;counter-reset:s}
   .step{padding-top:1.5rem;border-top:1px solid rgba(201,168,76,.3);counter-increment:s}
@@ -187,6 +193,7 @@
     <li><a href="#pilares">Nosotros</a></li>
     <li><a href="#proyectos">Proyectos</a></li>
     <li><a href="#colinas">Colinas del Golf</a></li>
+    <li><a href="#terrazas">Terrazas</a></li>
     <li><a href="#proceso">Cómo comprar</a></li>
     <li><a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20los%20proyectos%20de%20Sapia" target="_blank" rel="noopener">Agenda tu visita</a></li>
   </ul>
@@ -238,7 +245,7 @@
           <li>Lotes desde 300 m²</li>
           <li>Inscrito en Registros Públicos, con CIRA y factibilidad de luz</li>
         </ul>
-        <div class="price">Desde US$ 46,000<small>Precio según ubicación y metraje</small></div>
+        <div class="price">Consulta disponibilidad<small>Precios y formas de pago por WhatsApp</small></div>
         <div class="btns">
           <a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20Colinas%20del%20Golf" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Consultar</a>
           <a class="btn btn-line" href="#colinas">Ver proyecto</a>
@@ -255,25 +262,26 @@
           <li>Con título de propiedad</li>
           <li>Ideal para inversión y casa de playa</li>
         </ul>
-        <div class="price">Consulta precios<small>Disponibilidad y formas de pago por WhatsApp</small></div>
+        <div class="price">Consulta disponibilidad<small>Precios y formas de pago por WhatsApp</small></div>
         <div class="btns">
           <a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20Arenas%20Exclusive" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Consultar</a>
         </div>
       </div>
     </article>
     <article class="proj reveal">
-      <div class="proj-media"><div class="pattern"><svg><use href="#temple"/></svg></div><span class="badge">Estreno</span></div>
+      <div class="proj-media"><img src="assets/terrazas-1.jpg" alt="Edificio Residencial Las Terrazas de San Isidro" loading="lazy" decoding="async" style="object-position:center 30%"/><span class="badge">Departamentos</span></div>
       <div class="proj-body">
-        <div class="proj-loc">San Isidro · La Libertad</div>
+        <div class="proj-loc">Av. Metropolitana II · Trujillo</div>
         <h3>Terrazas de San Isidro</h3>
         <ul>
-          <li>Departamentos de estreno</li>
-          <li>Áreas de 60 a 70 m²</li>
-          <li>Para vivir o para alquilar</li>
+          <li>Edificio de 14 niveles con áreas comunes</li>
+          <li>Departamentos desde 60 m², de 2 y 3 dormitorios</li>
+          <li>También tiendas y cocheras</li>
         </ul>
-        <div class="price">Consulta precios<small>Disponibilidad y formas de pago por WhatsApp</small></div>
+        <div class="price">Consulta disponibilidad<small>Precios y formas de pago por WhatsApp</small></div>
         <div class="btns">
           <a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20Terrazas%20de%20San%20Isidro" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Consultar</a>
+          <a class="btn btn-line" href="#terrazas">Ver proyecto</a>
         </div>
       </div>
     </article>
@@ -289,7 +297,7 @@
     <p class="muted reveal">Un condominio de campo en Poroto, rodeado de cerros y aire puro, con pórtico de ingreso, áreas verdes, parque y club privado. Lotes amplios para tu casa de campo o para invertir.</p>
   </div>
 
-  <div class="gallery reveal" id="gallery">
+  <div class="gallery reveal" data-gal="colinas">
     <button class="big" data-i="0"><img src="assets/colinas-1.jpg" alt="Pórtico de Colinas del Golf de día" loading="lazy" decoding="async"/></button>
     <button data-i="1"><img src="assets/colinas-2.jpg" alt="Ingreso frontal de Colinas del Golf" loading="lazy" decoding="async"/></button>
     <button data-i="2"><img src="assets/colinas-3.jpg" alt="Pórtico de noche" loading="lazy" decoding="async"/></button>
@@ -302,10 +310,10 @@
   <div class="col-info">
     <div class="reveal">
       <div class="feat">
-        <div><b>Lotes desde 300 m²</b><span>Precio según ubicación: calle, parque o esquina</span></div>
+        <div><b>Lotes desde 300 m²</b><span>Frente a calle, parque o en esquina</span></div>
         <div><b>Club privado</b><span>Áreas verdes y espacios para toda la familia</span></div>
         <div><b>Visitas todos los días</b><span>Con movilidad incluida</span></div>
-        <div><b>Desde US$ 46,000</b><span>Pregunta por las facilidades de pago</span></div>
+        <div><b>Facilidades de pago</b><span>Consulta las opciones por WhatsApp</span></div>
       </div>
       <div class="docs">
         <h4>Documentación en regla</h4>
@@ -324,6 +332,57 @@
         <video src="assets/colinas-club.mp4" poster="assets/colinas-club-poster.jpg" controls preload="none" playsinline></video>
         <figcaption>Poroto, la nueva élite</figcaption>
       </figure>
+    </div>
+  </div>
+</section>
+
+<section id="terrazas">
+  <div class="col-head">
+    <div class="reveal">
+      <div class="tag">Departamentos en Trujillo</div>
+      <h2 style="margin-top:1rem">Residencial Las Terrazas de San Isidro: <em>un nuevo espacio</em> para vivir mejor</h2>
+    </div>
+    <p class="muted reveal">Un edificio de 14 niveles en la Av. Metropolitana II, pensado para quienes buscan comodidad, funcionalidad y una ubicación privilegiada. Integra vivienda, servicios y espacios para disfrutar, trabajar y compartir.</p>
+  </div>
+
+  <div class="gallery reveal" data-gal="terrazas">
+    <button class="big" data-i="0"><img src="assets/terrazas-3.jpg" alt="Terraza con vista al atardecer" loading="lazy" decoding="async"/></button>
+    <button data-i="1"><img src="assets/terrazas-2.jpg" alt="Sala comedor de un departamento" loading="lazy" decoding="async"/></button>
+    <button data-i="2"><img src="assets/terrazas-4.jpg" alt="Terraza con jardines" loading="lazy" decoding="async"/></button>
+    <button data-i="3"><img src="assets/terrazas-5.jpg" alt="Gimnasio" loading="lazy" decoding="async"/></button>
+    <button data-i="4"><img src="assets/terrazas-8.jpg" alt="Coworking" loading="lazy" decoding="async"/></button>
+    <button class="wide" data-i="5"><img src="assets/terrazas-6.jpg" alt="Área de juegos" loading="lazy" decoding="async"/></button>
+    <button class="wide" data-i="6"><img src="assets/terrazas-10.jpg" alt="Cafetería" loading="lazy" decoding="async"/></button>
+  </div>
+
+  <div class="col-info">
+    <div class="reveal">
+      <h3 style="font-size:1.6rem;margin-bottom:1.2rem">Departamentos</h3>
+      <div class="feat">
+        <div><b>2 dormitorios · 60 m²</b><span>1 baño, sala comedor, cocina y lavandería</span></div>
+        <div><b>3 dormitorios · 73.87 a 75.55 m²</b><span>2 baños, sala comedor, cocina y lavandería</span></div>
+        <div><b>Tiendas desde 25.88 m²</b><span>11 locales frente a avenida principal</span></div>
+        <div><b>Cocheras de 12 m²</b><span>En dos niveles de sótano</span></div>
+      </div>
+      <h3 style="font-size:1.6rem;margin:2.2rem 0 1.2rem">Áreas comunes</h3>
+      <div class="chips">
+        <span>Terraza</span><span>Áreas verdes</span><span>Gimnasio</span><span>Coworking</span><span>SUM</span><span>Cafetería</span><span>Guardería</span><span>Área de juegos</span>
+      </div>
+      <div class="docs">
+        <h4>Cada nivel, una experiencia</h4>
+        <p>Sótanos: estacionamientos y servicios generales · 1° piso: tiendas, SUM, cafetería y recepción · 2° piso: terrazas, jardines y departamentos · 3° al 13° piso: departamentos · 14° piso: áreas comunes.</p>
+      </div>
+      <div class="btns" style="margin-top:2rem">
+        <a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20Terrazas%20de%20San%20Isidro" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Pedir información de Terrazas</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <button class="mapbtn" data-gal="terrazas-mapa" data-i="0"><img src="assets/terrazas-11.jpg" alt="Ubicación del proyecto en la Av. Metropolitana II, Trujillo" loading="lazy" decoding="async"/></button>
+      <h3 style="font-size:1.6rem;margin:1.5rem 0 .8rem">Una ubicación que te conecta con todo</h3>
+      <p class="muted" style="font-size:.92rem;margin-bottom:1rem">Av. Metropolitana II, Lote 17 A, Trujillo. A pocos minutos de:</p>
+      <div class="chips">
+        <span>UPN</span><span>Mall Plaza</span><span>Makro y Precio Uno</span><span>Innova Schools San Isidro</span><span>New Body San Isidro</span><span>Restaurantes</span>
+      </div>
     </div>
   </div>
 </section>
@@ -371,7 +430,7 @@
     <a href="https://bmdgroup.org.pe/" target="_blank" rel="noopener">BMD Consulting · Consultoría comercial</a>
     <a href="#proyectos">Nuestros proyectos</a>
   </div>
-  <p class="legal">© 2026 Sapia Grupo Inmobiliario · Parte de BMDT Group. Imágenes referenciales.</p>
+  <p class="legal">© 2026 Sapia Grupo Inmobiliario · Parte de BMDT Group. Imágenes, planos y áreas referenciales, sujetos a cambios por parte de cada desarrollador.</p>
 </footer>
 
 <a class="wa" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20los%20proyectos%20de%20Sapia" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg><use href="#wa"/></svg></a>
@@ -391,10 +450,10 @@
   links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-  const imgs=[...document.querySelectorAll('#gallery img')].map(i=>i.src);
-  const lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg');let cur=0;
+  const lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg');let cur=0,imgs=[];
   const show=i=>{cur=(i+imgs.length)%imgs.length;lbimg.src=imgs[cur];lb.classList.add('open')};
-  document.querySelectorAll('#gallery button').forEach(b=>b.onclick=()=>show(+b.dataset.i));
+  document.querySelectorAll('.gallery').forEach(g=>{const list=[...g.querySelectorAll('img')].map(i=>i.src);g.querySelectorAll('button').forEach(b=>b.onclick=()=>{imgs=list;show(+b.dataset.i)})});
+  document.querySelectorAll('.mapbtn').forEach(b=>b.onclick=()=>{imgs=[b.querySelector('img').src];show(0)});
   document.getElementById('lbx').onclick=()=>lb.classList.remove('open');
   document.getElementById('lbp').onclick=()=>show(cur-1);
   document.getElementById('lbn').onclick=()=>show(cur+1);
