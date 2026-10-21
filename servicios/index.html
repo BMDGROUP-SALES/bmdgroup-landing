@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BMD Servicios Generales | Construcción, remodelación y mantenimiento en Trujillo</title>
+<meta name="description" content="BMD Servicios Generales: construcción, remodelación y mantenimiento integral para colegios, empresas, locales comerciales y condominios en Trujillo. Parte de BMDT Group."/>
+<meta property="og:title" content="BMD Servicios Generales"/>
+<meta property="og:description" content="Su infraestructura, en manos expertas. Solicite su visita técnica."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --navy:#070C1A; --navy2:#0E1528; --ink:#2A3044;
+    --gold:#C9A84C; --gold-l:#E2C47A; --gold-dk:#8A6A1F; --gold-m:#B08D3C;
+    --cream:#F5F0E8; --cream2:#ECE5D8; --line:#DCD3C1; --gray:#6B6F7D; --gray-l:#A9AFBD;
+    --serif:'Cormorant Garamond',Georgia,serif; --sans:'DM Sans',system-ui,sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--cream);color:var(--navy);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
+  a{color:inherit}
+  section{padding:6rem 6%}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1}
+  h2{font-size:clamp(2rem,4vw,3rem)}
+  h1 em,h2 em{color:var(--gold-m);font-style:italic}
+  .dark h2 em,.dark h1 em{color:var(--gold)}
+  .tag{display:inline-flex;align-items:center;gap:.7rem;font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dk)}
+  .dark .tag{color:var(--gold)}
+  .tag::before{content:"";width:32px;height:1px;background:currentColor}
+  .lead{color:var(--gray);max-width:620px;margin-top:1rem}
+  .dark{background:var(--navy);color:var(--cream)}
+  .dark .lead{color:var(--gray-l)}
+  .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.8rem;border-radius:2px;font-weight:700;font-size:.9rem;text-decoration:none;letter-spacing:.02em;transition:.2s;border:0;cursor:pointer;font-family:var(--sans)}
+  .btn-gold{background:var(--gold);color:var(--navy)}
+  .btn-gold:hover{background:var(--gold-l)}
+  .btn-line{border:1px solid rgba(201,168,76,.6);color:var(--gold-l);background:transparent}
+  .btn-line:hover{background:rgba(201,168,76,.12)}
+  .btn svg{width:18px;height:18px;fill:currentColor}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:1rem 6%;transition:.3s}
+  nav.scrolled{background:rgba(7,12,26,.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,.18)}
+  .brand{display:flex;align-items:center;gap:.8rem;text-decoration:none;color:var(--cream)}
+  .brand svg{width:40px;height:40px}
+  .brand-name{font-family:var(--serif);font-size:1.6rem;font-weight:700;letter-spacing:.2em;line-height:1}
+  .brand-sub{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-top:.25rem}
+  .nav-links{display:flex;align-items:center;gap:1.8rem;list-style:none}
+  .nav-links a{text-decoration:none;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-l)}
+  .nav-links a:hover{color:var(--cream)}
+  .nav-links .btn{color:var(--navy);padding:.6rem 1.1rem;font-size:.75rem}
+  .burger{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+  .burger span{display:block;width:24px;height:2px;background:var(--gold);margin:5px 0}
+
+  #inicio{min-height:100vh;display:flex;align-items:center;position:relative;padding-top:8rem;background:
+    radial-gradient(ellipse at 85% 20%,rgba(201,168,76,.16),transparent 55%),
+    linear-gradient(160deg,#0E1528 0%,#070C1A 60%);overflow:hidden}
+  .grid-bg{position:absolute;inset:0;opacity:.22;background-image:linear-gradient(rgba(201,168,76,.25) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.25) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(90deg,transparent 30%,#000 100%)}
+  .hero-wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:4rem;align-items:center;width:100%}
+  .hero-in h1{font-size:clamp(2.6rem,6vw,4.6rem);margin:1.3rem 0}
+  .hero-in p{font-size:1.08rem;color:#C9CFDA;max-width:540px;margin-bottom:2.2rem}
+  .btns{display:flex;flex-wrap:wrap;gap:1rem}
+  .hero-facts{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:3.5rem;padding-top:2rem;border-top:1px solid rgba(201,168,76,.22)}
+  .hero-facts b{display:block;font-family:var(--serif);font-size:2rem;color:var(--gold-l);font-weight:600}
+  .hero-facts span{font-size:.78rem;letter-spacing:.08em;color:var(--gray-l)}
+  .hero-card{border:1px solid rgba(201,168,76,.3);background:rgba(255,255,255,.03);padding:2.2rem}
+  .hero-card h3{font-size:1.5rem;color:var(--gold-l);margin-bottom:1.2rem}
+  .hero-card ul{list-style:none;display:grid;gap:.85rem}
+  .hero-card li{display:flex;gap:.8rem;align-items:flex-start;color:#D9DEE7;font-size:.95rem}
+  .hero-card li svg{flex:0 0 22px;width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.6;margin-top:.1rem}
+
+  .why{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem}
+  .why div{background:#fff;border:1px solid var(--line);padding:2rem 1.6rem}
+  .why svg{width:34px;height:34px;stroke:var(--gold-m);fill:none;stroke-width:1.5;margin-bottom:1rem}
+  .why h3{font-size:1.45rem;margin-bottom:.5rem}
+  .why p{font-size:.9rem;color:var(--gray)}
+
+  #servicios{background:var(--cream2)}
+  .svc-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap}
+  .filter{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
+  .filter button{border:1px solid var(--line);background:#fff;color:var(--ink);font:600 .8rem var(--sans);padding:.5rem 1rem;border-radius:999px;cursor:pointer}
+  .filter button.on{background:var(--navy);color:var(--cream);border-color:var(--navy)}
+  .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2rem}
+  .svc{background:#fff;border:1px solid var(--line);padding:1.8rem 1.5rem;display:flex;flex-direction:column;transition:.25s}
+  .svc:hover{border-color:var(--gold);transform:translateY(-3px);box-shadow:0 14px 30px -18px rgba(7,12,26,.35)}
+  .svc.hide{display:none}
+  .svc .n{font-family:var(--serif);font-size:1rem;color:var(--gold-m);letter-spacing:.2em}
+  .svc h3{font-size:1.5rem;margin:.4rem 0 .9rem}
+  .svc ul{list-style:none;margin-bottom:1.3rem}
+  .svc li{font-size:.88rem;color:var(--gray);padding:.3rem 0 .3rem 1.2rem;position:relative}
+  .svc li::before{content:"";position:absolute;left:0;top:.75rem;width:6px;height:6px;border:1px solid var(--gold-m);transform:rotate(45deg)}
+  .svc .ask{margin-top:auto;font-size:.8rem;font-weight:700;color:var(--gold-dk);text-decoration:none;letter-spacing:.04em;background:none;border:0;cursor:pointer;text-align:left;padding:0;font-family:var(--sans)}
+  .svc .ask:hover{color:var(--navy)}
+  .note{margin-top:2rem;padding:1.2rem 1.5rem;border-left:3px solid var(--gold);background:#fff;font-size:.95rem}
+
+  .who{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem}
+  .who div{border-top:2px solid var(--gold);padding-top:1.2rem}
+  .who h3{font-size:1.5rem;color:var(--gold-l);margin-bottom:.5rem}
+  .who p{font-size:.9rem;color:var(--gray-l)}
+
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem;counter-reset:s}
+  .step{padding-top:1.5rem;border-top:1px solid var(--line);counter-increment:s}
+  .step::before{content:"0" counter(s);font-family:var(--serif);font-size:2.6rem;color:var(--gold-m);display:block;line-height:1;margin-bottom:.8rem}
+  .step h3{font-size:1.4rem;margin-bottom:.4rem}
+  .step p{font-size:.9rem;color:var(--gray)}
+
+  #contacto{background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.18),transparent 60%),var(--navy2)}
+  .ct{display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem;align-items:start}
+  .ct-info p{color:var(--gray-l);margin-top:1rem}
+  .ct-list{margin-top:2rem;display:grid;gap:1rem}
+  .ct-list div{display:flex;gap:.9rem;align-items:flex-start;font-size:.95rem;color:#D9DEE7}
+  .ct-list svg{flex:0 0 22px;width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:1.6;margin-top:.1rem}
+  .ct-list a{text-decoration:none;border-bottom:1px solid rgba(201,168,76,.4)}
+  form{background:var(--cream);color:var(--navy);padding:2.2rem;display:grid;gap:1rem}
+  form h3{font-size:1.7rem}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  label{display:grid;gap:.35rem;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+  input,select,textarea{font:400 .95rem var(--sans);padding:.8rem .9rem;border:1px solid var(--line);background:#fff;color:var(--navy);border-radius:2px;width:100%}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:-1px}
+  textarea{min-height:96px;resize:vertical}
+  .chk{display:flex;flex-wrap:wrap;gap:.45rem}
+  .chk label{display:inline-flex;align-items:center;gap:.4rem;text-transform:none;letter-spacing:0;font-weight:500;font-size:.85rem;border:1px solid var(--line);background:#fff;padding:.4rem .75rem;border-radius:999px;cursor:pointer}
+  .chk input{width:auto;accent-color:var(--gold-dk)}
+  .err{color:#A23B2A;font-size:.82rem;min-height:1em}
+  form .btn{justify-content:center;width:100%}
+  .fine{font-size:.78rem;color:var(--gray)}
+
+  footer{background:var(--navy);color:var(--gray-l);padding:3.5rem 6% 2rem;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;font-size:.9rem}
+  footer h4{font-family:var(--serif);font-size:1.2rem;color:var(--cream);margin-bottom:.8rem;font-weight:600}
+  footer a{display:block;text-decoration:none;margin:.3rem 0}
+  footer a:hover{color:var(--gold-l)}
+  .group{color:var(--gold);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;margin-top:1rem}
+  .legal{grid-column:1/-1;border-top:1px solid rgba(201,168,76,.15);padding-top:1.5rem;font-size:.78rem}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+  .reveal.on{opacity:1;transform:none}
+
+  @media(max-width:1000px){
+    .svc-grid,.why{grid-template-columns:repeat(2,1fr)}
+    .who,.steps{grid-template-columns:repeat(2,1fr)}
+    .hero-wrap,.ct{grid-template-columns:1fr}
+  }
+  @media(max-width:760px){
+    section{padding:4.5rem 16px}
+    nav{padding:1rem 16px}
+    .burger{display:block}
+    .nav-links{position:fixed;inset:64px 0 auto 0;flex-direction:column;align-items:flex-start;gap:1.2rem;background:rgba(7,12,26,.98);padding:1.5rem 16px 2rem;display:none}
+    .nav-links.open{display:flex}
+    .svc-grid,.why,.who,.steps,.row{grid-template-columns:1fr}
+    .hero-facts{gap:1.6rem}
+    footer{grid-template-columns:1fr;padding:3rem 16px 2rem}
+    form{padding:1.5rem}
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22.5" fill="none" stroke="#C9A84C" stroke-width="1.5"/><path d="M13 27l11-9 11 9" fill="none" stroke="#C9A84C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 34l11-9 11 9" fill="none" stroke="#E2C47A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity=".7"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35zM12 2a10 10 0 00-8.56 15.17L2 22l4.98-1.4A10 10 0 1012 2zm0 18a8 8 0 01-4.03-1.1l-.29-.17-2.96.84.8-2.89-.19-.3A8 8 0 1112 20z"/></symbol>
+</svg>
+
+<nav id="nav">
+  <a href="#inicio" class="brand"><svg><use href="#logo"/></svg><div><div class="brand-name">BMD</div><div class="brand-sub">Servicios Generales</div></div></a>
+  <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="links">
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#clientes">A quiénes atendemos</a></li>
+    <li><a href="#proceso">Cómo trabajamos</a></li>
+    <li><a class="btn btn-gold" href="#contacto">Solicitar visita técnica</a></li>
+  </ul>
+</nav>
+
+<section id="inicio" class="dark">
+  <div class="grid-bg"></div>
+  <div class="hero-wrap">
+    <div class="hero-in reveal">
+      <div class="tag">Construcción · Remodelación · Mantenimiento</div>
+      <h1>Su infraestructura, en <em>manos expertas</em></h1>
+      <p>Construcción, remodelación y mantenimiento integral para empresas, colegios, locales comerciales y condominios en Trujillo. Un solo aliado, de los cimientos al acabado.</p>
+      <div class="btns">
+        <a class="btn btn-gold" href="#contacto">Solicitar visita técnica</a>
+        <a class="btn btn-line" href="#servicios">Ver servicios →</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>8</b><span>Especialidades</span></div>
+        <div><b>1</b><span>Solo aliado para su obra</span></div>
+        <div><b>100%</b><span>Presupuesto detallado</span></div>
+      </div>
+    </div>
+    <div class="hero-card reveal">
+      <h3>Por qué elegirnos</h3>
+      <ul>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Equipo técnico calificado en construcción, acabados, electricidad, gasfitería y metalmecánica.</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Trabajos seguros y duraderos, con orden y limpieza en obra.</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Presupuesto detallado antes de empezar y precios justos.</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Factura electrónica para su área de compras o administración.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="nosotros">
+  <div class="reveal">
+    <div class="tag">Nosotros</div>
+    <h2>Un solo aliado para <em>toda su infraestructura</em></h2>
+    <p class="lead">Tratamos cada proyecto como propio: calidad, seguridad y cumplimiento de plazos para que su institución siga operando sin interrupciones.</p>
+  </div>
+  <div class="why">
+    <div class="reveal"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg><h3>Equipo calificado</h3><p>Técnicos en construcción, acabados, electricidad, gasfitería y metalmecánica.</p></div>
+    <div class="reveal"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg><h3>Seguridad y orden</h3><p>Trabajos duraderos, ejecutados con orden y limpieza en obra.</p></div>
+    <div class="reveal"><svg viewBox="0 0 24 24"><path d="M9 7h6M9 11h6M9 15h4M6 3h12v18H6z"/></svg><h3>Transparencia</h3><p>Presupuesto detallado antes de empezar, plazos claros y precios justos.</p></div>
+    <div class="reveal"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 9h8M8 13h8M8 17h5"/></svg><h3>Factura electrónica</h3><p>Documentación formal para su área de compras o administración.</p></div>
+  </div>
+</section>
+
+<section id="servicios">
+  <div class="svc-head reveal">
+    <div>
+      <div class="tag">Nuestros servicios</div>
+      <h2>Soluciones integrales, <em>de los cimientos al acabado</em></h2>
+    </div>
+  </div>
+  <div class="filter" id="filter" role="tablist" aria-label="Filtrar servicios">
+    <button class="on" data-f="all">Todos</button>
+    <button data-f="obra">Obra y estructuras</button>
+    <button data-f="acab">Remodelación y acabados</button>
+    <button data-f="inst">Instalaciones</button>
+  </div>
+  <div class="svc-grid" id="svcs">
+    <article class="svc" data-c="obra"><span class="n">01</span><h3>Cimientos y estructuras</h3><ul><li>Cimientos, zapatas y sobrecimientos</li><li>Muros, columnas, vigas y losas</li><li>Reforzamiento estructural</li><li>Ampliaciones con bases sólidas</li></ul><button class="ask" data-s="Cimientos y estructuras">Cotizar este servicio →</button></article>
+    <article class="svc" data-c="obra"><span class="n">02</span><h3>Construcción en general</h3><ul><li>Proyectos desde cero y ampliaciones</li><li>Mantenimiento de locales e instalaciones</li><li>Demoliciones seguras y limpieza de obra</li><li>Supervisión y ejecución de obras</li></ul><button class="ask" data-s="Construcción en general">Cotizar este servicio →</button></article>
+    <article class="svc" data-c="acab"><span class="n">03</span><h3>Remodelación integral</h3><ul><li>Cocinas, baños y servicios higiénicos</li><li>Renovación de ambientes y pisos</li><li>Cambio de techos, acabados en madera y melamina</li><li>Asesoría para aprovechar mejor cada espacio</li></ul><button class="ask" data-s="Remodelación integral">Cotizar este servicio →</button></article>
+    <article class="svc" data-c="acab"><span class="n">04</span><h3>Drywall y acabados</h3><ul><li>Tabiquería en drywall</li><li>Cielos falsos decorativos y acústicos</li><li>Planchas resistentes al fuego y la humedad</li><li>Instalación rápida y limpia</li></ul><button class="ask" data-s="Drywall y acabados">Cotizar este servicio →</button></article>
+    <article class="svc" data-c="acab"><span class="n">05</span><h3>Pintura y enchapes</h3><ul><li>Pintura de interiores, exteriores y acabados decorativos</li><li>Reparación de fisuras y humedades</li><li>Cerámica, porcelanato y revestimientos</li></ul><button class="ask" data-s="Pintura y enchapes">Cotizar este servicio →</button></article>
+    <article class="svc" data-c="inst"><span class="n">06</span><h3>Electricidad</h3><ul><li>Instalaciones nuevas y ampliaciones</li><li>Tableros, tomacorrientes y reparación de cortos</li><li>Iluminación interior y exterior</li><li>Cumplimiento de normas de seguridad</li><li>Mantenimiento preventivo y correctivo</li></ul><button class="ask" data-s="Electricidad">Cotizar este servicio →</button></article>
+    <article class="svc" data-c="inst"><span class="n">07</span><h3>Gasfitería y saneamiento</h3><ul><li>Reparación de fugas, tuberías y grifería</li><li>Tanques, bombas y sistemas de riego</li><li>Limpieza y desinfección de cisternas</li><li>Trabajos sanitarios para remodelaciones</li></ul><button class="ask" data-s="Gasfitería y saneamiento">Cotizar este servicio →</button></article>
+    <article class="svc" data-c="obra"><span class="n">08</span><h3>Estructuras metálicas</h3><ul><li>Diseño y fabricación de estructuras</li><li>Coberturas, escaleras y barandas</li><li>Rejas, portones y estructuras de seguridad</li><li>Soldadura general y reparación</li></ul><button class="ask" data-s="Estructuras metálicas">Cotizar este servicio →</button></article>
+  </div>
+  <p class="note reveal"><b>Programe sus obras en vacaciones escolares o fuera de horario de oficina.</b> Coordinamos para que su operación no se detenga.</p>
+</section>
+
+<section id="clientes" class="dark">
+  <div class="reveal">
+    <div class="tag">A quiénes atendemos</div>
+    <h2>Soluciones a la medida de <em>cada institución</em></h2>
+  </div>
+  <div class="who">
+    <div class="reveal"><h3>Colegios</h3><p>Pintura de aulas, mantenimiento y obras en vacaciones escolares.</p></div>
+    <div class="reveal"><h3>Empresas y oficinas</h3><p>Remodelación, drywall, instalaciones y mantenimiento preventivo.</p></div>
+    <div class="reveal"><h3>Locales comerciales</h3><p>Acondicionamiento, ampliaciones y estructuras metálicas.</p></div>
+    <div class="reveal"><h3>Condominios e inmuebles</h3><p>Áreas comunes, cisternas, rejas, portones y fachadas.</p></div>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="reveal">
+    <div class="tag">Cómo trabajamos</div>
+    <h2>Un proceso claro, <em>de principio a fin</em></h2>
+  </div>
+  <div class="steps">
+    <div class="step reveal"><h3>Visita técnica</h3><p>Evaluamos en sitio el trabajo a realizar.</p></div>
+    <div class="step reveal"><h3>Propuesta</h3><p>Presupuesto detallado y plazos claros.</p></div>
+    <div class="step reveal"><h3>Ejecución</h3><p>Supervisión en cada etapa de la obra.</p></div>
+    <div class="step reveal"><h3>Entrega</h3><p>Obra limpia y conforme a lo acordado.</p></div>
+  </div>
+</section>
+
+<section id="contacto" class="dark">
+  <div class="ct">
+    <div class="ct-info reveal">
+      <div class="tag">Contacto</div>
+      <h2>Solicite su <em>visita técnica</em></h2>
+      <p>Cuéntenos qué necesita y le respondemos para coordinar la visita y preparar su propuesta.</p>
+      <div class="ct-list">
+        <div><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0112 2.5a7 7 0 017 7C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Begonias Mz 1 lote 20, Golf · Trujillo, La Libertad</span></div>
+        <div><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg><a href="mailto:serviciosgenerales@bmdgroup.org.pe">serviciosgenerales@bmdgroup.org.pe</a></div>
+        <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Lunes a sábado · Visitas técnicas con cita previa</span></div>
+      </div>
+    </div>
+    <form id="form" class="reveal" novalidate>
+      <h3>Solicitud de visita técnica</h3>
+      <div class="row">
+        <label>Nombre<input id="f-nombre" autocomplete="name" required/></label>
+        <label>Institución / empresa<input id="f-emp" autocomplete="organization"/></label>
+      </div>
+      <label>Tipo de inmueble
+        <select id="f-tipo">
+          <option>Colegio</option><option>Empresa u oficina</option><option>Local comercial</option><option>Condominio o inmueble</option><option>Vivienda</option><option>Otro</option>
+        </select>
+      </label>
+      <div>
+        <label style="margin-bottom:.4rem">Servicios que necesita</label>
+        <div class="chk" id="f-svcs"></div>
+      </div>
+      <label>Detalle del trabajo<textarea id="f-msg" placeholder="Ej.: pintura de 6 aulas y cambio de luminarias en el pabellón B"></textarea></label>
+      <p class="err" id="f-err" role="alert"></p>
+      <button class="btn btn-gold" type="submit" data-ch="wa"><svg><use href="#wa"/></svg>Enviar por WhatsApp</button>
+      <button class="btn btn-line" type="submit" data-ch="mail" style="color:var(--gold-dk);border-color:var(--gold-m)">Enviar por correo</button>
+      <p class="fine">Al enviar, se abrirá su WhatsApp o su correo con la solicitud lista.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <a href="#inicio" class="brand" style="margin-bottom:1rem"><svg><use href="#logo"/></svg><div><div class="brand-name">BMD</div><div class="brand-sub">Servicios Generales</div></div></a>
+    <p>Construcción, remodelación y mantenimiento integral para empresas y colegios.</p>
+    <p class="group">Parte de BMDT Group</p>
+  </div>
+  <div>
+    <h4>Contacto</h4>
+    <p>Begonias Mz 1 lote 20, Golf · Trujillo</p>
+    <a href="mailto:serviciosgenerales@bmdgroup.org.pe">serviciosgenerales@bmdgroup.org.pe</a>
+    <a href="#contacto">Solicitar visita técnica</a>
+  </div>
+  <div>
+    <h4>Grupo</h4>
+    <a href="/">BMD Consulting · Consultoría estratégica</a>
+    <a href="/sapia/">Sapia Grupo Inmobiliario</a>
+  </div>
+  <p class="legal">© 2026 BMD Servicios Generales · Parte de BMDT Group.</p>
+</footer>
+
+<script>
+  const WA='51933815686', MAIL='serviciosgenerales@bmdgroup.org.pe';
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40),{passive:true});
+  const links=document.getElementById('links');
+  document.getElementById('burger').onclick=()=>links.classList.toggle('open');
+  links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Filtro de servicios
+  const fbtn=document.querySelectorAll('#filter button'), cards=document.querySelectorAll('.svc');
+  fbtn.forEach(b=>b.onclick=()=>{
+    fbtn.forEach(x=>x.classList.toggle('on',x===b));
+    cards.forEach(c=>c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.c!==b.dataset.f));
+  });
+
+  // Checkboxes de servicios en el formulario
+  const box=document.getElementById('f-svcs');
+  cards.forEach(c=>{
+    const s=c.querySelector('.ask').dataset.s;
+    const l=document.createElement('label');
+    l.innerHTML='<input type="checkbox" value="'+s+'"/>'+s;
+    box.appendChild(l);
+  });
+  document.querySelectorAll('.ask').forEach(b=>b.onclick=()=>{
+    const cb=box.querySelector('input[value="'+b.dataset.s+'"]'); if(cb) cb.checked=true;
+    document.getElementById('contacto').scrollIntoView({behavior:'smooth'});
+    setTimeout(()=>document.getElementById('f-nombre').focus({preventScroll:true}),700);
+  });
+
+  // Envío
+  let channel='wa';
+  document.querySelectorAll('#form [type=submit]').forEach(b=>b.addEventListener('click',()=>channel=b.dataset.ch));
+  document.getElementById('form').addEventListener('submit',e=>{
+    e.preventDefault();
+    const v=id=>document.getElementById(id).value.trim();
+    const err=document.getElementById('f-err');
+    const svcs=[...box.querySelectorAll('input:checked')].map(i=>i.value);
+    if(!v('f-nombre')){err.textContent='Ingrese su nombre.';document.getElementById('f-nombre').focus();return}
+    if(!svcs.length&&!v('f-msg')){err.textContent='Seleccione un servicio o describa el trabajo.';return}
+    err.textContent='';
+    const txt='Hola, BMD Servicios Generales. Solicito una visita técnica.\n\n'+
+      'Nombre: '+v('f-nombre')+'\n'+
+      (v('f-emp')?'Institución/empresa: '+v('f-emp')+'\n':'')+
+      'Tipo de inmueble: '+v('f-tipo')+'\n'+
+      (svcs.length?'Servicios: '+svcs.join(', ')+'\n':'')+
+      (v('f-msg')?'Detalle: '+v('f-msg'):'');
+    if(channel==='mail') location.href='mailto:'+MAIL+'?subject='+encodeURIComponent('Solicitud de visita técnica')+'&body='+encodeURIComponent(txt);
+    else window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(txt),'_blank','noopener');
+  });
+</script>
+</body>
+</html>
