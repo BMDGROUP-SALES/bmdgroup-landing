@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sapia Grupo Inmobiliario | Lotes y departamentos en La Libertad</title>
+<meta name="description" content="Sapia Grupo Inmobiliario: comercialización de bienes raíces y desarrollo inmobiliario en La Libertad. Colinas del Golf, Arenas Exclusive y Terrazas de San Isidro. Sabiduría · Confianza · Patrimonio."/>
+<meta property="og:title" content="Sapia Grupo Inmobiliario"/>
+<meta property="og:description" content="Lotes de campo, lotes frente al mar y departamentos de estreno. Agenda tu visita."/>
+<meta property="og:image" content="assets/colinas-3.jpg"/>
+<link rel="icon" href="assets/og-sapia.jpg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --navy:#06101F; --navy2:#0B1A31; --navy3:#102341;
+    --gold:#C9A84C; --gold-l:#E2C47A; --gold-d:rgba(201,168,76,.14);
+    --white:#F5F0E8; --gray:#9AA6B8;
+    --serif:'Cormorant Garamond',Georgia,serif; --sans:'Manrope',system-ui,sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--navy);color:var(--white);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
+  img,video{max-width:100%;display:block}
+  a{color:inherit}
+  section{padding:6rem 6%}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1}
+  h2{font-size:clamp(2rem,4vw,3rem)}
+  h2 em,h1 em{color:var(--gold);font-style:italic}
+  .tag{display:inline-flex;align-items:center;gap:.7rem;font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+  .tag::before{content:"";width:32px;height:1px;background:var(--gold)}
+  .muted{color:var(--gray)}
+  .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.8rem;border-radius:2px;font-weight:700;font-size:.9rem;text-decoration:none;letter-spacing:.02em;transition:.2s}
+  .btn-gold{background:var(--gold);color:var(--navy)}
+  .btn-gold:hover{background:var(--gold-l)}
+  .btn-line{border:1px solid rgba(201,168,76,.55);color:var(--gold-l)}
+  .btn-line:hover{background:var(--gold-d)}
+  .btn svg{width:18px;height:18px;fill:currentColor}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:1rem 6%;transition:.3s}
+  nav.scrolled{background:rgba(6,16,31,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(201,168,76,.15)}
+  .brand{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+  .brand svg{width:42px;height:44px}
+  .brand-name{font-family:var(--serif);font-size:1.55rem;font-weight:700;letter-spacing:.18em;color:var(--white);line-height:1}
+  .brand-sub{font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-top:.25rem}
+  .nav-links{display:flex;align-items:center;gap:1.8rem;list-style:none}
+  .nav-links a{text-decoration:none;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gray)}
+  .nav-links a:hover{color:var(--white)}
+  .nav-links .btn{color:var(--navy);padding:.6rem 1.1rem;font-size:.75rem}
+  .burger{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+  .burger span{display:block;width:24px;height:2px;background:var(--gold);margin:5px 0}
+
+  /* HERO */
+  #inicio{min-height:100vh;display:flex;align-items:center;position:relative;padding-top:8rem;background:#050c18}
+  .hero-bg{position:absolute;inset:0;background:url(assets/colinas-3.jpg) center/cover no-repeat}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,12,24,.96) 0%,rgba(5,12,24,.82) 42%,rgba(5,12,24,.35) 100%),linear-gradient(0deg,rgba(5,12,24,.9),transparent 40%)}
+  .hero-in{position:relative;max-width:680px}
+  .hero-in h1{font-size:clamp(2.6rem,6vw,4.6rem);margin:1.3rem 0}
+  .hero-in p{font-size:1.08rem;color:#C9D1DD;max-width:540px;margin-bottom:2.2rem}
+  .btns{display:flex;flex-wrap:wrap;gap:1rem}
+  .hero-facts{display:flex;flex-wrap:wrap;gap:2.5rem;margin-top:3.5rem;padding-top:2rem;border-top:1px solid rgba(201,168,76,.2)}
+  .hero-facts b{display:block;font-family:var(--serif);font-size:2rem;color:var(--gold-l);font-weight:600}
+  .hero-facts span{font-size:.78rem;letter-spacing:.08em;color:var(--gray)}
+
+  /* PILARES */
+  #pilares{background:var(--navy2)}
+  .pil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+  .pil{border:1px solid rgba(201,168,76,.18);padding:2.4rem 2rem;background:linear-gradient(180deg,rgba(201,168,76,.06),transparent)}
+  .pil .n{font-family:var(--serif);font-size:1rem;color:var(--gold);letter-spacing:.2em}
+  .pil h3{font-size:1.9rem;margin:.6rem 0 .8rem}
+  .pil p{color:var(--gray);font-size:.95rem}
+
+  /* PROYECTOS */
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+  .proj{background:var(--navy2);border:1px solid rgba(201,168,76,.16);display:flex;flex-direction:column;overflow:hidden}
+  .proj-media{height:230px;position:relative;overflow:hidden;background:var(--navy3)}
+  .proj-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .proj:hover .proj-media img{transform:scale(1.05)}
+  .proj-media .pattern{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 30% 20%,rgba(201,168,76,.18),transparent 55%),linear-gradient(160deg,#0f2443,#071325)}
+  .proj-media .pattern svg{width:84px;height:84px;opacity:.9}
+  .badge{position:absolute;top:1rem;left:1rem;background:rgba(6,16,31,.85);border:1px solid var(--gold);color:var(--gold-l);font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:.35rem .7rem}
+  .proj-body{padding:1.8rem;display:flex;flex-direction:column;flex:1}
+  .proj-loc{font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+  .proj h3{font-size:1.9rem;margin:.4rem 0 .8rem}
+  .proj ul{list-style:none;margin-bottom:1.5rem}
+  .proj li{color:var(--gray);font-size:.9rem;padding:.35rem 0 .35rem 1.3rem;position:relative}
+  .proj li::before{content:"";position:absolute;left:0;top:.85rem;width:7px;height:7px;border:1px solid var(--gold);transform:rotate(45deg)}
+  .price{font-family:var(--serif);font-size:1.35rem;color:var(--gold-l);margin-bottom:1.3rem}
+  .price small{display:block;font-family:var(--sans);font-size:.72rem;color:var(--gray);letter-spacing:.06em}
+  .proj .btns{margin-top:auto}
+  .proj .btn{padding:.75rem 1.2rem;font-size:.82rem}
+
+  /* COLINAS */
+  #colinas{background:var(--navy2)}
+  .col-head{display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:end;margin-bottom:3rem}
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:190px;gap:.7rem}
+  .gallery button{border:0;padding:0;cursor:zoom-in;overflow:hidden;background:var(--navy3)}
+  .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .gallery button:hover img{transform:scale(1.06)}
+  .gallery .big{grid-column:span 2;grid-row:span 2}
+  .gallery .wide{grid-column:span 2}
+  .col-info{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:4rem;align-items:start}
+  .feat{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .feat div{border-left:2px solid var(--gold);padding:.4rem 0 .4rem 1rem}
+  .feat b{display:block;font-size:.95rem}
+  .feat span{font-size:.83rem;color:var(--gray)}
+  .docs{margin-top:2rem;padding:1.5rem;border:1px solid rgba(201,168,76,.25);background:var(--gold-d)}
+  .docs h4{font-family:var(--serif);font-size:1.3rem;color:var(--gold-l);margin-bottom:.6rem}
+  .docs p{font-size:.88rem;color:#C9D1DD}
+  .videos{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .videos figure{margin:0}
+  .videos video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;border:1px solid rgba(201,168,76,.2)}
+  .videos figcaption{font-size:.78rem;color:var(--gray);margin-top:.5rem}
+
+  /* PROCESO */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem;counter-reset:s}
+  .step{padding-top:1.5rem;border-top:1px solid rgba(201,168,76,.3);counter-increment:s}
+  .step::before{content:"0" counter(s);font-family:var(--serif);font-size:2.6rem;color:var(--gold);display:block;line-height:1;margin-bottom:.8rem}
+  .step h3{font-size:1.35rem;margin-bottom:.5rem}
+  .step p{font-size:.9rem;color:var(--gray)}
+
+  /* CTA */
+  #contacto{text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.16),transparent 60%),var(--navy3)}
+  #contacto h2{font-size:clamp(2.2rem,5vw,3.6rem);margin:1rem auto;max-width:760px}
+  #contacto p{max-width:560px;margin:0 auto 2.2rem;color:#C9D1DD}
+  #contacto .btns{justify-content:center}
+
+  footer{padding:3.5rem 6% 2rem;border-top:1px solid rgba(201,168,76,.12);display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem}
+  footer h4{font-family:var(--serif);font-size:1.15rem;color:var(--gold);margin-bottom:1rem;font-weight:600}
+  footer p,footer a{font-size:.88rem;color:var(--gray);text-decoration:none;display:block;margin-bottom:.5rem}
+  footer a:hover{color:var(--white)}
+  .group{font-size:.72rem!important;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)!important;margin-top:1rem}
+  .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.05);padding-top:1.5rem;font-size:.78rem!important}
+
+  .wa{position:fixed;right:1.4rem;bottom:1.4rem;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+  .wa svg{width:30px;height:30px;fill:#fff}
+
+  .lb{position:fixed;inset:0;background:rgba(3,8,16,.95);z-index:100;display:none;align-items:center;justify-content:center;padding:2rem}
+  .lb.open{display:flex}
+  .lb img{max-height:88vh;max-width:92vw;object-fit:contain}
+  .lb button{position:absolute;background:none;border:0;color:var(--gold-l);font-size:2.4rem;cursor:pointer;padding:1rem;line-height:1}
+  .lb .x{top:1rem;right:1.4rem}.lb .pv{left:.5rem;top:50%;transform:translateY(-50%)}.lb .nx{right:.5rem;top:50%;transform:translateY(-50%)}
+
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+  .reveal.on{opacity:1;transform:none}
+
+  @media(max-width:1000px){
+    .nav-links{display:none;position:fixed;inset:0;background:var(--navy);flex-direction:column;justify-content:center;gap:2rem}
+    .nav-links.open{display:flex}
+    .burger{display:block;z-index:60}
+    .pil-grid,.proj-grid,.steps{grid-template-columns:1fr 1fr}
+    .col-head,.col-info{grid-template-columns:1fr;gap:2rem}
+    footer{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:640px){
+    section{padding:4.5rem 5%}
+    .pil-grid,.proj-grid,.steps,.feat{grid-template-columns:1fr}
+    .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:140px}
+    footer{grid-template-columns:1fr}
+    .hero-facts{gap:1.5rem}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="temple" viewBox="0 0 240 250">
+    <path d="M134.78,36.10 A100,100 0 1 1 105.22,36.10" fill="none" stroke="#D9B866" stroke-width="6"/>
+    <path d="M64,100 L120,62 L176,100" fill="none" stroke="#D9B866" stroke-width="12" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="4"/>
+    <path d="M68,112 L172,112" fill="none" stroke="#D9B866" stroke-width="12" stroke-linecap="square"/>
+    <path d="M84,128 L84,178" fill="none" stroke="#D9B866" stroke-width="12" stroke-linecap="square"/>
+    <path d="M120,128 L120,178" fill="none" stroke="#D9B866" stroke-width="15" stroke-linecap="square"/>
+    <path d="M156,128 L156,178" fill="none" stroke="#D9B866" stroke-width="12" stroke-linecap="square"/>
+    <path d="M64,194 L176,194" fill="none" stroke="#D9B866" stroke-width="12" stroke-linecap="square"/>
+  </symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.984-1.407A9.94 9.94 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.031-1.094l-.29-.173-2.958.835.797-2.888-.19-.298A7.944 7.944 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></symbol>
+</svg>
+
+<nav id="nav">
+  <a href="#inicio" class="brand" aria-label="Sapia Grupo Inmobiliario, inicio">
+    <svg><use href="#temple"/></svg>
+    <div><div class="brand-name">SAPIA</div><div class="brand-sub">Grupo Inmobiliario</div></div>
+  </a>
+  <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="links">
+    <li><a href="#pilares">Nosotros</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#colinas">Colinas del Golf</a></li>
+    <li><a href="#proceso">Cómo comprar</a></li>
+    <li><a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20los%20proyectos%20de%20Sapia" target="_blank" rel="noopener">Agenda tu visita</a></li>
+  </ul>
+</nav>
+
+<section id="inicio">
+  <div class="hero-bg" role="img" aria-label="Pórtico de ingreso de Colinas del Golf de noche"></div>
+  <div class="hero-in reveal">
+    <div class="tag">Sabiduría · Confianza · Patrimonio</div>
+    <h1>Bienes raíces para construir <em>patrimonio</em> que trasciende</h1>
+    <p>Comercializamos proyectos inmobiliarios seleccionados en La Libertad: lotes de campo, lotes frente al mar y departamentos de estreno. Te acompañamos desde la primera visita hasta la firma.</p>
+    <div class="btns">
+      <a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20agendar%20una%20visita%20con%20Sapia" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Agenda tu visita</a>
+      <a class="btn btn-line" href="#proyectos">Ver proyectos →</a>
+    </div>
+    <div class="hero-facts">
+      <div><b>3</b><span>Proyectos en cartera</span></div>
+      <div><b>300 m²</b><span>Lotes de campo desde</span></div>
+      <div><b>7 días</b><span>Visitas a la semana</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="pilares">
+  <div class="reveal">
+    <div class="tag">Quiénes somos</div>
+    <h2 style="margin-top:1rem;max-width:760px">Una inmobiliaria que se mueve por <em>tres pilares</em></h2>
+  </div>
+  <div class="pil-grid">
+    <div class="pil reveal"><div class="n">I</div><h3>Sabiduría</h3><p>Te asesoramos para elegir bien: ubicación, metraje, forma de pago y proyección de cada inversión.</p></div>
+    <div class="pil reveal"><div class="n">II</div><h3>Confianza</h3><p>Información clara en cada paso, documentos a la vista y un equipo que responde antes y después de la compra.</p></div>
+    <div class="pil reveal"><div class="n">III</div><h3>Patrimonio</h3><p>Inversiones pensadas para crecer con el tiempo y quedar en tu familia por generaciones.</p></div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <div class="reveal">
+    <div class="tag">Proyectos</div>
+    <h2 style="margin-top:1rem">Elige dónde construir <em>tu patrimonio</em></h2>
+  </div>
+  <div class="proj-grid">
+    <article class="proj reveal">
+      <div class="proj-media"><img src="assets/colinas-1.jpg" alt="Ingreso de Colinas del Golf" loading="lazy" decoding="async"/><span class="badge">Preventa</span></div>
+      <div class="proj-body">
+        <div class="proj-loc">Poroto · La Libertad</div>
+        <h3>Colinas del Golf</h3>
+        <ul>
+          <li>Condominio de campo con club privado</li>
+          <li>Lotes desde 300 m²</li>
+          <li>Inscrito en Registros Públicos, con CIRA y factibilidad de luz</li>
+        </ul>
+        <div class="price">Desde US$ 46,000<small>Precio según ubicación y metraje</small></div>
+        <div class="btns">
+          <a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20Colinas%20del%20Golf" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Consultar</a>
+          <a class="btn btn-line" href="#colinas">Ver proyecto</a>
+        </div>
+      </div>
+    </article>
+    <article class="proj reveal">
+      <div class="proj-media"><div class="pattern"><svg><use href="#temple"/></svg></div><span class="badge">Frente al mar</span></div>
+      <div class="proj-body">
+        <div class="proj-loc">Puerto Malabrigo · La Libertad</div>
+        <h3>Arenas Exclusive</h3>
+        <ul>
+          <li>Lotes frente al mar</li>
+          <li>Con título de propiedad</li>
+          <li>Ideal para inversión y casa de playa</li>
+        </ul>
+        <div class="price">Consulta precios<small>Disponibilidad y formas de pago por WhatsApp</small></div>
+        <div class="btns">
+          <a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20Arenas%20Exclusive" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Consultar</a>
+        </div>
+      </div>
+    </article>
+    <article class="proj reveal">
+      <div class="proj-media"><div class="pattern"><svg><use href="#temple"/></svg></div><span class="badge">Estreno</span></div>
+      <div class="proj-body">
+        <div class="proj-loc">San Isidro · La Libertad</div>
+        <h3>Terrazas de San Isidro</h3>
+        <ul>
+          <li>Departamentos de estreno</li>
+          <li>Áreas de 60 a 70 m²</li>
+          <li>Para vivir o para alquilar</li>
+        </ul>
+        <div class="price">Consulta precios<small>Disponibilidad y formas de pago por WhatsApp</small></div>
+        <div class="btns">
+          <a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20Terrazas%20de%20San%20Isidro" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Consultar</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="colinas">
+  <div class="col-head">
+    <div class="reveal">
+      <div class="tag">Proyecto destacado</div>
+      <h2 style="margin-top:1rem">Colinas del Golf: <em>vida de campo</em> con club privado</h2>
+    </div>
+    <p class="muted reveal">Un condominio de campo en Poroto, rodeado de cerros y aire puro, con pórtico de ingreso, áreas verdes, parque y club privado. Lotes amplios para tu casa de campo o para invertir.</p>
+  </div>
+
+  <div class="gallery reveal" id="gallery">
+    <button class="big" data-i="0"><img src="assets/colinas-1.jpg" alt="Pórtico de Colinas del Golf de día" loading="lazy" decoding="async"/></button>
+    <button data-i="1"><img src="assets/colinas-2.jpg" alt="Ingreso frontal de Colinas del Golf" loading="lazy" decoding="async"/></button>
+    <button data-i="2"><img src="assets/colinas-3.jpg" alt="Pórtico de noche" loading="lazy" decoding="async"/></button>
+    <button data-i="3"><img src="assets/colinas-4.jpg" alt="Pórtico iluminado" loading="lazy" decoding="async"/></button>
+    <button data-i="4"><img src="assets/colinas-5.jpg" alt="Pórtico de Colinas del Golf" loading="lazy" decoding="async"/></button>
+    <button class="wide" data-i="5"><img src="assets/colinas-6.jpg" alt="Vista aérea del parque" loading="lazy" decoding="async"/></button>
+    <button class="wide" data-i="6"><img src="assets/colinas-7.jpg" alt="Parque con zona de ejercicios" loading="lazy" decoding="async"/></button>
+  </div>
+
+  <div class="col-info">
+    <div class="reveal">
+      <div class="feat">
+        <div><b>Lotes desde 300 m²</b><span>Precio según ubicación: calle, parque o esquina</span></div>
+        <div><b>Club privado</b><span>Áreas verdes y espacios para toda la familia</span></div>
+        <div><b>Visitas todos los días</b><span>Con movilidad incluida</span></div>
+        <div><b>Desde US$ 46,000</b><span>Pregunta por las facilidades de pago</span></div>
+      </div>
+      <div class="docs">
+        <h4>Documentación en regla</h4>
+        <p>Inscripción en Registros Públicos, Certificado de Inexistencia de Restos Arqueológicos (CIRA), factibilidad de luz y resolución de expansión urbana de la Municipalidad de Poroto.</p>
+      </div>
+      <div class="btns" style="margin-top:2rem">
+        <a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20agendar%20una%20visita%20a%20Colinas%20del%20Golf" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Agendar visita a Colinas</a>
+      </div>
+    </div>
+    <div class="videos reveal">
+      <figure>
+        <video src="assets/colinas-avance.mp4" poster="assets/colinas-avance-poster.jpg" controls preload="none" playsinline></video>
+        <figcaption>Avance de obra con Orlando Zare, Gerente General de Alpex</figcaption>
+      </figure>
+      <figure>
+        <video src="assets/colinas-club.mp4" poster="assets/colinas-club-poster.jpg" controls preload="none" playsinline></video>
+        <figcaption>Poroto, la nueva élite</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="reveal">
+    <div class="tag">Cómo comprar</div>
+    <h2 style="margin-top:1rem">Cuatro pasos, <em>sin complicaciones</em></h2>
+  </div>
+  <div class="steps">
+    <div class="step reveal"><h3>Escríbenos</h3><p>Cuéntanos qué buscas y te enviamos precios, planos y disponibilidad.</p></div>
+    <div class="step reveal"><h3>Visita el proyecto</h3><p>Te llevamos a conocerlo el día que prefieras, de lunes a domingo.</p></div>
+    <div class="step reveal"><h3>Separa tu lote</h3><p>Eliges ubicación y forma de pago, y aseguras tu inmueble.</p></div>
+    <div class="step reveal"><h3>Firma y patrimonio</h3><p>Te acompañamos en la firma y en todo el proceso posterior.</p></div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="reveal">
+    <div class="tag" style="justify-content:center">El siguiente paso</div>
+    <h2>Tu patrimonio empieza con <em>una visita</em></h2>
+    <p>Escríbenos por WhatsApp y coordina tu visita a cualquiera de nuestros proyectos.</p>
+    <div class="btns">
+      <a class="btn btn-gold" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20agendar%20una%20visita%20con%20Sapia" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Escribir por WhatsApp</a>
+      <a class="btn btn-line" href="tel:+51922529675">Llamar al 922 529 675</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <a href="#inicio" class="brand" style="margin-bottom:1rem"><svg style="width:42px;height:44px"><use href="#temple"/></svg><div><div class="brand-name">SAPIA</div><div class="brand-sub">Grupo Inmobiliario</div></div></a>
+    <p>Comercialización de bienes raíces y desarrollo inmobiliario en La Libertad.</p>
+    <p class="group">Parte de BMDT Group</p>
+  </div>
+  <div>
+    <h4>Contacto</h4>
+    <p>Trujillo, La Libertad · Perú</p>
+    <a href="https://wa.me/51922529675" target="_blank" rel="noopener">WhatsApp: +51 922 529 675</a>
+    <a href="https://www.instagram.com/sapia.inmobiliaria/" target="_blank" rel="noopener">Instagram: @sapia.inmobiliaria</a>
+    <a href="https://www.facebook.com/profile.php?id=61555159207982" target="_blank" rel="noopener">Facebook: Sapia Grupo Inmobiliario</a>
+  </div>
+  <div>
+    <h4>Grupo</h4>
+    <a href="https://bmdgroup.org.pe/" target="_blank" rel="noopener">BMD Consulting · Consultoría comercial</a>
+    <a href="#proyectos">Nuestros proyectos</a>
+  </div>
+  <p class="legal">© 2026 Sapia Grupo Inmobiliario · Parte de BMDT Group. Imágenes referenciales.</p>
+</footer>
+
+<a class="wa" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20los%20proyectos%20de%20Sapia" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<div class="lb" id="lb" role="dialog" aria-label="Galería">
+  <button class="x" id="lbx" aria-label="Cerrar">×</button>
+  <button class="pv" id="lbp" aria-label="Anterior">‹</button>
+  <img id="lbimg" alt=""/>
+  <button class="nx" id="lbn" aria-label="Siguiente">›</button>
+</div>
+
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  const links=document.getElementById('links');
+  document.getElementById('burger').onclick=()=>links.classList.toggle('open');
+  links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const imgs=[...document.querySelectorAll('#gallery img')].map(i=>i.src);
+  const lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg');let cur=0;
+  const show=i=>{cur=(i+imgs.length)%imgs.length;lbimg.src=imgs[cur];lb.classList.add('open')};
+  document.querySelectorAll('#gallery button').forEach(b=>b.onclick=()=>show(+b.dataset.i));
+  document.getElementById('lbx').onclick=()=>lb.classList.remove('open');
+  document.getElementById('lbp').onclick=()=>show(cur-1);
+  document.getElementById('lbn').onclick=()=>show(cur+1);
+  lb.onclick=e=>{if(e.target===lb)lb.classList.remove('open')};
+  addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')lb.classList.remove('open');if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+</script>
+</body>
+</html>
