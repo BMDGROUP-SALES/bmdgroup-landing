@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BMDT Group | Grupo empresarial — Trujillo, Perú</title>
+<meta name="description" content="BMDT Group es un grupo empresarial con sede en Trujillo que integra BMD Consulting, Sapia Grupo Inmobiliario y BMD Servicios Generales.">
+<meta property="og:title" content="BMDT Group | Grupo empresarial">
+<meta property="og:description" content="BMD Consulting · Sapia Grupo Inmobiliario · BMD Servicios Generales">
+<meta property="og:image" content="assets/og.jpg">
+<link rel="icon" href="assets/bmdt-isotipo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A1630;--navy2:#0F1F42;--gold:#C9A84C;--gold2:#A8862A;--ivory:#F5F0E8;--ink:#1A1F2B;--muted:#5C6475;--line:rgba(201,168,76,.35)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--ivory);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.15}
+.kicker{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.rule{width:64px;height:2px;background:var(--gold);margin:22px 0}
+/* nav */
+header{position:sticky;top:0;z-index:10;background:rgba(10,22,48,.96);backdrop-filter:blur(6px);border-bottom:1px solid rgba(201,168,76,.18)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav img{height:42px}
+.nav nav{display:flex;gap:28px}
+.nav nav a{color:#E8E2D6;font-size:14px;letter-spacing:.04em}
+.nav nav a:hover{color:var(--gold)}
+/* hero */
+.hero{background:radial-gradient(ellipse at 80% 20%,#16295a 0%,var(--navy) 55%);color:var(--ivory);padding:120px 0 110px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-120px;top:50%;transform:translateY(-50%);width:520px;height:520px;background:url(assets/bmdt-isotipo.png) center/contain no-repeat;opacity:.07}
+.hero h1{font-size:clamp(38px,6vw,68px);max-width:760px;margin-top:18px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p{max-width:620px;margin-top:22px;font-size:18px;color:#D8D2C6;font-weight:300}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+.btn{display:inline-block;padding:14px 26px;border-radius:4px;font-size:14px;letter-spacing:.06em;font-weight:500}
+.btn.gold{background:var(--gold);color:var(--navy)}
+.btn.ghost{border:1px solid var(--gold);color:var(--gold)}
+/* sections */
+section{padding:96px 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.sec-title{font-size:clamp(30px,4vw,44px);color:var(--navy)}
+.lead{font-size:17px;color:var(--muted)}
+.pillars{display:grid;grid-template-columns:1fr;gap:26px;margin-top:40px}
+.pillar{border-top:2px solid var(--gold);padding-top:16px}
+.pillar h3{font-size:24px;color:var(--navy)}
+.pillar p{font-size:15px;color:var(--muted);margin-top:6px}
+/* units */
+.units{background:var(--navy);color:var(--ivory)}
+.units .sec-title{color:var(--ivory)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.card{background:var(--navy2);border:1px solid var(--line);border-radius:10px;padding:32px 28px;display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.card img{width:72px;height:72px;border-radius:10px;object-fit:cover}
+.card .tag{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-top:22px}
+.card h3{font-size:28px;margin-top:6px}
+.card p{font-size:15px;color:#C9C3B6;margin-top:12px;flex:1}
+.card .go{margin-top:24px;font-size:14px;color:var(--gold);letter-spacing:.04em}
+/* founder */
+.founder{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:center}
+.founder .ph{border-radius:12px;overflow:hidden;background:var(--gold);aspect-ratio:1/1}
+.founder .ph img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.founder h3{font-size:34px;color:var(--navy)}
+.founder .role{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold2);margin-top:4px}
+.founder ul{list-style:none;margin-top:22px}
+.founder li{padding:10px 0;border-bottom:1px solid #E3DCCD;color:var(--muted);font-size:15px}
+.founder li b{color:var(--navy);font-weight:600}
+/* contact */
+.contact{background:#EDE6D9}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.cbox{background:#fff;border-radius:10px;padding:26px;border:1px solid #E3DCCD}
+.cbox .k{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2)}
+.cbox .v{margin-top:8px;font-size:16px;color:var(--navy);font-weight:500}
+.cbox .s{font-size:13px;color:var(--muted);margin-top:4px}
+footer{background:var(--navy);color:#A9A396;padding:40px 0;font-size:13px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot img{height:34px}
+@media(max-width:880px){
+ .nav nav{display:none}
+ .two,.founder{grid-template-columns:1fr;gap:36px}
+ .cards,.cgrid,.pillars{grid-template-columns:1fr}
+ .founder .ph{max-width:320px}
+ section{padding:72px 0}
+ .hero{padding:84px 0 80px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+ <a href="#inicio"><img src="assets/bmdt-logo-oscuro.png" alt="BMDT Group"></a>
+ <nav><a href="#grupo">El grupo</a><a href="#unidades">Unidades de negocio</a><a href="#fundador">Fundador</a><a href="#contacto">Contacto</a></nav>
+</div></header>
+
+<section class="hero" id="inicio"><div class="wrap">
+ <div class="kicker">Grupo empresarial · Trujillo, Perú</div>
+ <h1>Empresas que crecen con <em>estrategia, ventas y confianza.</em></h1>
+ <p>BMDT Group integra unidades de negocio especializadas en consultoría comercial, comercialización inmobiliaria y servicios generales para empresas.</p>
+ <div class="btns"><a class="btn gold" href="#unidades">Conoce nuestras unidades</a><a class="btn ghost" href="#contacto">Contáctanos</a></div>
+</div></section>
+
+<section id="grupo"><div class="wrap two">
+ <div>
+  <div class="kicker">El grupo</div>
+  <h2 class="sec-title" style="margin-top:12px">Una sola forma de trabajar, tres unidades especializadas</h2>
+  <div class="rule"></div>
+  <p class="lead">BMDT Group es la empresa matriz que reúne a BMD Consulting, Sapia Grupo Inmobiliario y BMD Servicios Generales. Cada unidad opera con identidad propia y comparte la misma base: estrategia clara, ejecución comercial disciplinada y relaciones de largo plazo con clientes y aliados.</p>
+ </div>
+ <div class="pillars">
+  <div class="pillar"><h3>Estrategia</h3><p>Decisiones basadas en datos y en el conocimiento del mercado local.</p></div>
+  <div class="pillar"><h3>Ejecución</h3><p>Equipos entrenados con método y seguimiento constante.</p></div>
+  <div class="pillar"><h3>Confianza</h3><p>Relaciones transparentes que se sostienen en el tiempo.</p></div>
+ </div>
+</div></section>
+
+<section class="units" id="unidades"><div class="wrap">
+ <div class="kicker">Unidades de negocio</div>
+ <h2 class="sec-title" style="margin-top:12px">Lo que hacemos</h2>
+ <div class="cards">
+  <a class="card" href="https://bmdgroup.org.pe/" target="_blank" rel="noopener">
+   <img src="assets/u-consulting.jpg" alt="BMD Consulting">
+   <div class="tag">Consultoría</div><h3>BMD Consulting</h3>
+   <p>Consultoría comercial y estratégica, talleres y mentoría para equipos de venta, con el Método BMD / Frecuencia Comercial™.</p>
+   <div class="go">Visitar sitio →</div></a>
+  <a class="card" href="https://bmdgroup.org.pe/sapia/" target="_blank" rel="noopener">
+   <img src="assets/u-sapia.jpg" alt="Sapia Grupo Inmobiliario">
+   <div class="tag">Inmobiliaria</div><h3>Sapia Grupo Inmobiliario</h3>
+   <p>Comercialización en exclusiva de proyectos inmobiliarios seleccionados en La Libertad: lotes de campo, campo y playa, y departamentos.</p>
+   <div class="go">Visitar sitio →</div></a>
+  <a class="card" href="https://bmdgroup.org.pe/servicios/" target="_blank" rel="noopener">
+   <img src="assets/u-servicios.jpg" alt="BMD Servicios Generales">
+   <div class="tag">Servicios</div><h3>BMD Servicios Generales</h3>
+   <p>Construcción, remodelación y mantenimiento integral para colegios, empresas, locales comerciales y condominios.</p>
+   <div class="go">Visitar sitio →</div></a>
+ </div>
+</div></section>
+
+<section id="fundador"><div class="wrap founder">
+ <div class="ph"><img src="assets/bruno.png" alt="Bruno Noriega Montenegro"></div>
+ <div>
+  <div class="kicker">Fundador</div>
+  <h3 style="margin-top:12px">Bruno Noriega Montenegro</h3>
+  <div class="role">Fundador y Director General</div>
+  <ul>
+   <li><b>Más de 20 años</b> liderando ventas y equipos comerciales en B2B y B2C.</li>
+   <li><b>Autor</b> del libro <i>Ventas en Frecuencia</i>.</li>
+   <li><b>Creador</b> del Método BMD / Frecuencia Comercial™.</li>
+   <li>Experto en marketing digital, negociación de alto impacto y liderazgo.</li>
+  </ul>
+ </div>
+</div></section>
+
+<section class="contact" id="contacto"><div class="wrap">
+ <div class="kicker">Contacto</div>
+ <h2 class="sec-title" style="margin-top:12px">Conversemos</h2>
+ <div class="cgrid">
+  <div class="cbox"><div class="k">Correo</div><div class="v"><a href="mailto:direcciongeneral@bmdgroup.org.pe">direcciongeneral@bmdgroup.org.pe</a></div><div class="s">Dirección General</div></div>
+  <div class="cbox"><div class="k">Teléfono</div><div class="v"><a href="tel:+51933815686">+51 933 815 686</a></div><div class="s">Llamadas</div></div>
+  <div class="cbox"><div class="k">Oficina</div><div class="v">Calle Las Begonias Mz. 1 Lote 20, Of. 301</div><div class="s">Urb. Jardines del Golf, Trujillo</div></div>
+ </div>
+</div></section>
+
+<footer><div class="wrap foot">
+ <img src="assets/bmdt-logo-oscuro.png" alt="BMDT Group">
+ <div>© 2026 BMDT GROUP S.A.C. · Trujillo, Perú · <a href="https://bmdgroup.org.pe/privacidad/" style="text-decoration:underline">Política de privacidad</a></div>
+</div></footer>
+</body>
+</html>
