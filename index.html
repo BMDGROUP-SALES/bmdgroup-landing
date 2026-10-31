@@ -6,6 +6,12 @@
 <meta name="description" content="BMD Consulting — Consultoría de negocios, mentorías y talleres para equipos comerciales. Diagnóstico gratuito. Trujillo, Perú."/>
 <meta name="robots" content="index, follow"/>
 <meta property="og:title" content="BMD Consulting | Consultoría Comercial y Estratégica"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://bmdgroup.org.pe/"/>
+<meta property="og:image" content="https://bmdgroup.org.pe/assets/og-consulting.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" type="image/jpeg" href="/assets/bmd-consulting-isotipo.jpg"/>
+<link rel="canonical" href="https://bmdgroup.org.pe/"/>
 <meta property="og:description" content="¿Tu empresa vende lo que realmente merece vender? Consultoría para emprendedores, pymes y equipos comerciales. Diagnóstico gratuito sin compromiso."/>
 <title>BMD Consulting | Consultoría Comercial y Estratégica — Trujillo, Perú</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -43,6 +49,8 @@
     border-bottom: 1px solid rgba(201,168,76,0.12);
     transition: all .3s;
   }
+  nav.menu-open { backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .nav-links.open { margin-left: 0 !important; }
   .nav-logo {
     font-family: var(--serif);
     font-size: 1.5rem;
@@ -520,8 +528,7 @@
   /* ── WHATSAPP CTA FLOAT ── */
   .wa-float {
     position: fixed;
-    top: 50%; right: 1.5rem;
-    transform: translateY(-50%);
+    bottom: 1.5rem; right: 1.5rem;
     z-index: 99;
     background: #25D366;
     color: #fff;
@@ -550,12 +557,15 @@
   .wa-float .wa-label { white-space: nowrap; }
   @media (max-width: 600px) {
     .wa-float {
-      top: 55%;
-      right: .9rem;
+      bottom: 1rem;
+      right: 1rem;
       padding: .65rem .9rem .65rem .75rem;
       font-size: .78rem;
     }
-    .wa-float svg { width: 20px; height: 20px; }
+    .wa-float svg { width: 28px; height: 28px; }
+    .wa-float { width: 56px; height: 56px; padding: 0; justify-content: center; }
+    .wa-float .wa-label { display: none; }
+    #music-ctrl { right: 1.4rem !important; bottom: 5.3rem !important; }
   }
 
   /* ── FADE IN ── */
@@ -590,6 +600,7 @@
     .nav-links.open a { font-size: 1.2rem; }
     .hamburger { display: flex; z-index: 300; }
     .bruno-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .about-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
     .coaching-grid { grid-template-columns: 1fr; }
     footer { grid-template-columns: 1fr; gap: 2rem; }
     .hero-stats { gap: 2rem; }
@@ -660,7 +671,7 @@
 
 <!-- QUIÉNES SOMOS -->
 <section id="quienes-somos" style="background:var(--navy3);">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
+  <div class="about-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
     <div class="fade-in">
       <div class="section-tag">Quiénes somos</div>
       <h2>Una firma que convierte <em>estrategia en resultados</em></h2>
@@ -1300,10 +1311,21 @@
     </div>
     <h2 style="font-size:2rem;margin-bottom:1rem;">Recibe estrategia directa en tu correo</h2>
     <p style="color:var(--gray);margin-bottom:2rem;font-size:1rem;line-height:1.7;">Tips sobre ventas, liderazgo y ejecución comercial. Sin spam, solo contenido que impacta en tu negocio.</p>
-    <div style="display:flex;gap:.8rem;margin-bottom:1.5rem;">
-      <input type="email" placeholder="Tu correo" style="flex:1;padding:.85rem 1.2rem;background:rgba(255,255,255,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:2px;color:var(--white);font-size:.95rem;" required/>
-      <button style="background:var(--gold);color:var(--navy);padding:.85rem 2rem;border:none;border-radius:2px;font-weight:600;cursor:pointer;transition:background .2s;">Suscribirse</button>
-    </div>
+    <form id="news-form" novalidate style="display:flex;flex-wrap:wrap;gap:.8rem;margin-bottom:1.5rem;">
+      <input type="email" id="news-email" autocomplete="email" aria-label="Tu correo" placeholder="Tu correo" style="flex:1 1 220px;min-width:0;padding:.85rem 1.2rem;background:rgba(255,255,255,0.08);border:1px solid rgba(201,168,76,0.2);border-radius:2px;color:var(--white);font-size:.95rem;" required/>
+      <button style="background:var(--gold);color:var(--navy);padding:.85rem 2rem;border:none;border-radius:2px;font-weight:600;cursor:pointer;transition:background .2s;flex:0 0 auto;">Suscribirse</button>
+    </form>
+    <p id="news-msg" role="status" style="color:var(--gold);font-size:.85rem;min-height:1.2em;margin:-.8rem 0 1rem;"></p>
+    <script>
+      document.getElementById('news-form').addEventListener('submit',function(e){
+        e.preventDefault();
+        var em=document.getElementById('news-email').value.trim(),msg=document.getElementById('news-msg');
+        if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)){msg.textContent='Ingresa un correo válido.';document.getElementById('news-email').focus();return;}
+        msg.textContent='¡Gracias! Se abrirá WhatsApp para confirmar tu suscripción.';
+        window.open('https://wa.me/51922529675?text='+encodeURIComponent('Hola, quiero suscribirme al newsletter de BMD Consulting. Mi correo es: '+em),'_blank','noopener');
+        this.reset();
+      });
+    </script>
     <p style="color:var(--gray);font-size:.8rem;">Respetamos tu privacidad. Puedes desuscribirte cuando quieras.</p>
   </div>
 </section>
@@ -1395,6 +1417,8 @@ Solo claridad y un plan real para tu negocio.</p>
     <p>📞 <a href="tel:+51933815686" style="color:var(--gray);text-decoration:none;">+51 933 815 686</a> <span style="color:var(--gold);font-size:.75rem;">(llamadas)</span></p>
     <p>✉️ <a href="mailto:gerencia@bmdgroup.org.pe" style="color:var(--gray);text-decoration:none;">gerencia@bmdgroup.org.pe</a></p>
     <p>🏛️ <span>¿Quieres invertir en inmuebles? <a href="/sapia/" style="color:var(--gold);text-decoration:none;">Sapia Grupo Inmobiliario</a>, también parte de BMDT Group</span></p>
+    <p>🛠️ <span>¿Obras o mantenimiento para tu empresa? <a href="/servicios/" style="color:var(--gold);text-decoration:none;">BMD Servicios Generales</a></span></p>
+    <p>🏢 <span>Conoce el grupo: <a href="/grupo/" style="color:var(--gold);text-decoration:none;">BMDT Group</a></span></p>
   </div>
 </footer>
 <div class="footer-bottom">
@@ -1413,10 +1437,11 @@ Solo claridad y un plan real para tu negocio.</p>
 <script>
   // MENU
   function toggleMenu() {
-    document.getElementById('navLinks').classList.toggle('open');
+    var open = document.getElementById('navLinks').classList.toggle('open');
+    document.getElementById('navbar').classList.toggle('menu-open', open);
   }
   document.querySelectorAll('.nav-links a').forEach(a => {
-    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+    a.addEventListener('click', () => { document.getElementById('navLinks').classList.remove('open'); document.getElementById('navbar').classList.remove('menu-open'); });
   });
 
   // FADE IN ON SCROLL
@@ -1457,7 +1482,7 @@ Solo claridad y un plan real para tu negocio.</p>
   });
 </script>
 
-  <div id="music-ctrl" style="position:fixed;bottom:5.5rem;right:2rem;z-index:98;">
+  <div id="music-ctrl" style="position:fixed;bottom:5.2rem;right:1.6rem;z-index:98;">
     <button onclick="toggleMusic()" id="music-btn"
       style="background:rgba(7,12,26,0.85);border:1px solid rgba(201,168,76,0.4);
              color:var(--gold);width:44px;height:44px;border-radius:50%;
