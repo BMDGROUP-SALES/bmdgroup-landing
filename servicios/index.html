@@ -6,6 +6,12 @@
 <title>BMD Servicios Generales | Construcción, remodelación y mantenimiento en Trujillo</title>
 <meta name="description" content="BMD Servicios Generales: construcción, remodelación y mantenimiento integral para colegios, empresas, locales comerciales y condominios en Trujillo. Parte de BMDT Group."/>
 <meta property="og:title" content="BMD Servicios Generales"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://bmdgroup.org.pe/servicios/"/>
+<meta property="og:image" content="https://bmdgroup.org.pe/assets/og-servicios.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="canonical" href="https://bmdgroup.org.pe/servicios/"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23070C1A'/%3E%3Ccircle cx='24' cy='24' r='21' fill='none' stroke='%23C9A84C' stroke-width='1.5'/%3E%3Cpath d='M13 27l11-9 11 9' fill='none' stroke='%23C9A84C' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13 34l11-9 11 9' fill='none' stroke='%23E2C47A' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round' opacity='.7'/%3E%3C/svg%3E"/>
 <meta property="og:description" content="Su infraestructura, en manos expertas. Solicite su visita técnica."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
@@ -131,6 +137,9 @@
   .group{color:var(--gold);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;margin-top:1rem}
   .legal{grid-column:1/-1;border-top:1px solid rgba(201,168,76,.15);padding-top:1.5rem;font-size:.78rem}
 
+  .wa-float{position:fixed;right:1rem;bottom:1rem;z-index:55;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 22px rgba(37,211,102,.45);transition:transform .2s}
+  .wa-float:hover{transform:scale(1.07)}
+  .wa-float svg{width:28px;height:28px;fill:#fff}
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
   .reveal.on{opacity:1;transform:none}
 
@@ -143,7 +152,8 @@
     section{padding:4.5rem 16px}
     nav{padding:1rem 16px}
     .burger{display:block}
-    .nav-links{position:fixed;inset:64px 0 auto 0;flex-direction:column;align-items:flex-start;gap:1.2rem;background:rgba(7,12,26,.98);padding:1.5rem 16px 2rem;display:none}
+    .nav-links{position:fixed;top:64px;left:0;right:0;bottom:0;z-index:60;flex-direction:column;align-items:flex-start;gap:1.4rem;background:#070C1A;padding:2rem 16px;display:none;overflow-y:auto;border-top:1px solid rgba(201,168,76,.18)}
+    .nav-links a{font-size:.9rem}
     .nav-links.open{display:flex}
     .svc-grid,.why,.who,.steps,.row{grid-template-columns:1fr}
     .hero-facts{gap:1.6rem}
@@ -274,6 +284,7 @@
       <div class="ct-list">
         <div><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0112 2.5a7 7 0 017 7C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>Begonias Mz 1 lote 20, Golf · Trujillo, La Libertad</span></div>
         <div><svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg><a href="mailto:serviciosgenerales@bmdgroup.org.pe">serviciosgenerales@bmdgroup.org.pe</a></div>
+        <div><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.7a2 2 0 01-.5 2.1L8 9.8a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.7.7a2 2 0 011.7 2z"/></svg><span><a href="tel:+51933815686">+51 933 815 686</a> · <a href="https://wa.me/51933815686" target="_blank" rel="noopener">WhatsApp</a></span></div>
         <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Lunes a sábado · Visitas técnicas con cita previa</span></div>
       </div>
     </div>
@@ -310,6 +321,8 @@
   <div>
     <h4>Contacto</h4>
     <p>Begonias Mz 1 lote 20, Golf · Trujillo</p>
+    <a href="tel:+51933815686">+51 933 815 686 (llamadas)</a>
+    <a href="https://wa.me/51933815686" target="_blank" rel="noopener">WhatsApp</a>
     <a href="mailto:serviciosgenerales@bmdgroup.org.pe">serviciosgenerales@bmdgroup.org.pe</a>
     <a href="#contacto">Solicitar visita técnica</a>
   </div>
@@ -317,9 +330,12 @@
     <h4>Grupo</h4>
     <a href="/">BMD Consulting · Consultoría estratégica</a>
     <a href="/sapia/">Sapia Grupo Inmobiliario</a>
+    <a href="/grupo/">BMDT Group</a>
   </div>
   <p class="legal">© 2026 BMD Servicios Generales · Parte de BMDT Group.</p>
 </footer>
+
+<a href="https://wa.me/51933815686?text=Hola%2C%20BMD%20Servicios%20Generales.%20Quisiera%20informaci%C3%B3n." class="wa-float" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg><use href="#wa"/></svg></a>
 
 <script>
   const WA='51933815686', MAIL='serviciosgenerales@bmdgroup.org.pe';
