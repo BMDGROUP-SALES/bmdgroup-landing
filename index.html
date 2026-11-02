@@ -169,6 +169,40 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
 
 .fo a{color:var(--muted);text-decoration:none}.fo a:hover{color:var(--gold)}
 .waf{position:fixed;right:max(18px,env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35);z-index:30}
+
+/* recuperado: marcas, casos, testimonios, equipo, libro */
+.logos{padding-block:34px;border-bottom:1px solid var(--line)}
+.logos p{text-align:center;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.lg{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px 34px}
+.lg img{height:40px;width:auto;object-fit:contain;opacity:.85;filter:grayscale(.2)}
+.cases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.cases{grid-template-columns:1fr}}
+.cv{background:var(--card);border:1px solid var(--line);display:grid;min-width:0}
+.cv video{width:100%;aspect-ratio:16/10;object-fit:cover;background:#000;display:block}
+.cv div{padding:20px;display:grid;gap:6px}
+.cv small{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.cv h3{font-size:1.35rem}
+.cv p{color:var(--muted);font-size:.9rem}
+.cv b{font-size:.88rem;color:var(--fg)}
+.tst{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.tst{grid-template-columns:1fr}}
+.tq{border-left:2px solid var(--gold);padding:6px 0 6px 20px;display:grid;gap:10px;align-content:start}
+.tq p{font-family:var(--serif);font-style:italic;font-size:1.25rem;line-height:1.35}
+.tq span{font-size:.8rem;color:var(--muted)}
+.team{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.team{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.team{grid-template-columns:1fr}}
+.tm{display:grid;gap:6px;align-content:start;text-align:center;justify-items:center}
+.tm img{width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid var(--gold);margin-bottom:6px}
+.tm h3{font-size:1.25rem}
+.tm small{color:var(--gold);font-size:.78rem;font-weight:700}
+.tm p{color:var(--muted);font-size:.86rem;max-width:30ch}
+.book{display:flex;gap:28px;align-items:center;flex-wrap:wrap;border:1px solid var(--line);padding:clamp(22px,4vw,36px);background:var(--card)}
+.book img{width:120px;box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.book div{flex:1;min-width:240px;display:grid;gap:10px}
+.book h3{font-size:1.8rem}
+.book p{color:var(--muted)}
+.book .acts{display:flex;gap:10px;flex-wrap:wrap}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "BMD Consulting", "description": "Consultoría comercial, talleres y mentoría para equipos de ventas en Trujillo y el norte del Perú.", "url": "https://bmdgroup.org.pe/", "image": "https://bmdgroup.org.pe/assets/og-consulting.jpg", "logo": "https://bmdgroup.org.pe/assets/bmd-consulting-isotipo.jpg", "telephone": "+51922529675", "email": "direcciongeneral@bmdgroup.org.pe", "address": {"@type": "PostalAddress", "streetAddress": "Calle Las Begonias Mz. 1 Lote 20, Of. 301, Urb. Jardines del Golf", "addressLocality": "Trujillo", "addressRegion": "La Libertad", "addressCountry": "PE"}, "areaServed": "Norte del Perú", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "19:00"}], "founder": {"@type": "Person", "name": "Bruno Noriega Montenegro", "sameAs": "https://www.linkedin.com/in/bruno-renato-noriega-montenegro-b7b93b232"}, "parentOrganization": {"@type": "Organization", "name": "BMDT Group"}, "sameAs": ["https://www.linkedin.com/company/139873966/", "https://www.linkedin.com/in/bruno-renato-noriega-montenegro-b7b93b232", "https://instagram.com/bmd.consultoria.bienesraices", "https://www.tiktok.com/@bmdgroupconsultora"]}</script>
 </head>
@@ -214,6 +248,8 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
     </div>
   </div>
 </section>
+<div class="logos"><div class="w"><p>Marcas con las que hemos trabajado en más de 20 años de trayectoria</p><div class="lg"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc41f0579c_6.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc40948bd4_7.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3f96e55d_8.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3ec4f96b_9.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3d6648b1_10.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3c5585b0_11.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3afef323_12.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3873e0b9_13.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc372072c0_14.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc35b4d540_15.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc33f52ff6_16.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc32163baf_17.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2fc26e93_18.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2da61a3b_19.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2c011f24_20.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2a60e4ec_21.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc293c1ed7_22.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc273be7d3_23.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc26208cce_24.png" alt="Marca cliente" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc24d9b845_25.png" alt="Marca cliente" loading="lazy"></div></div></div>
+
 
 <section class="alt">
   <div class="w">
@@ -247,6 +283,30 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
   </div>
 </section>
 
+
+<section class="alt">
+  <div class="w">
+    <div class="head"><p class="tag">Transformaciones reales</p><h2>Así se ve la consultoría <em>en acción</em></h2></div>
+    <div class="cases">
+      <article class="cv"><video controls playsinline preload="none" poster="/assets/video-kazator-poster.jpg"><source src="/assets/video-kazator.mp4" type="video/mp4"></video><div><small>Strategy Pricing</small><h3>Empresa de servicios B2B</h3><p>Estrategia de precios y estructura comercial para crecer de forma predecible.</p><b>Resultado: modelo de pricing sostenible y automatizado.</b></div></article>
+      <article class="cv"><video controls playsinline preload="none" poster="/assets/video-ampc-poster.jpg"><source src="/assets/video-ampc.mp4" type="video/mp4"></video><div><small>Mentalidad comercial</small><h3>Desarrolladora inmobiliaria</h3><p>Entrenamiento de mentalidad y microhábitos para equipos de venta.</p><b>Resultado: equipos enfocados y ventas consistentes.</b></div></article>
+      <article class="cv"><video controls playsinline preload="none" poster="/assets/video-jl-vasquez-poster.jpg"><source src="/assets/video-jl-vasquez.mp4" type="video/mp4"></video><div><small>Venta Letal</small><h3>Grupo empresarial · La Libertad</h3><p>Coaching grupal intensivo con nuestro método de ventas y cierre.</p><b>Resultado: equipo de venta de alto rendimiento.</b></div></article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="w">
+    <div class="head"><p class="tag">Testimonios</p><h2>Lo que dicen quienes <em>ya confiaron</em></h2></div>
+    <div class="tst">
+      <div class="tq"><p>"Incorporamos perfiles alineados a nuestra cultura y vimos crecimiento directo en ventas. Una de las mejores decisiones como empresa."</p><span>Mueblería · La Libertad</span></div>
+      <div class="tq"><p>"Pasamos de operar por intuición a datos reales: precios sustentados, embudo medible y equipo alineado a KPIs."</p><span>Empresa de servicios · Sistema comercial</span></div>
+      <div class="tq"><p>"Pasamos de terrenos sin movimiento a atraer compradores calificados. Resultados medibles desde el primer mes."</p><span>Grupo inmobiliario · Perú</span></div>
+    </div>
+    <p class="note" style="margin-top:22px">Nombres en reserva por confidencialidad.</p>
+  </div>
+</section>
+
 <section class="alt">
   <div class="w">
     <div class="head"><p class="tag">Cómo trabajamos</p><h2>Tres etapas. <em>Resultados medibles.</em></h2></div>
@@ -265,14 +325,14 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
       <p class="tag">Nuestra filosofía</p>
       <h2 style="margin-top:12px">Vender <em>en frecuencia</em></h2>
       <p class="lead">No se trata de sonreír todo el día. Se trata de prepararse, escuchar y sostener el método incluso en los meses difíciles. Así entrenamos a cada equipo.</p>
-      <p class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 1 1-2.1-2.8V9.4a6.3 6.3 0 1 0 5.5 6.3V8.7a8.2 8.2 0 0 0 4.8 1.5V6.8z"/></svg> 2 minutos · Bruno Noriega en @bmdconsulting</p>
+      <p class="pill"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.7a4.8 4.8 0 0 1-3.8-4.2V2h-3.4v13.7a2.9 2.9 0 1 1-2.1-2.8V9.4a6.3 6.3 0 1 0 5.5 6.3V8.7a8.2 8.2 0 0 0 4.8 1.5V6.8z"/></svg> 2 minutos · más de 12 mil vistas en @bmdconsulting</p>
     </div>
     <div class="tk">
-      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bmdconsulting/video/7678887270434360594" data-video-id="7678887270434360594">
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@bmdconsulting/video/7675184556177149192" data-video-id="7675184556177149192">
         <section>
-          <a class="tk-fallback" href="https://www.tiktok.com/@bmdconsulting/video/7678887270434360594" target="_blank" rel="noopener">
+          <a class="tk-fallback" href="https://www.tiktok.com/@bmdconsulting/video/7675184556177149192" target="_blank" rel="noopener">
             <span class="play"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-            <b>Energía comercial: estar en frecuencia</b>
+            <b>Tu competencia no es la competencia. Eres tú.</b>
             <small>Ver el video en TikTok</small>
           </a>
         </section>
@@ -293,6 +353,29 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
         <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
         <div><b>Compromiso compartido</b><p>Si tu equipo cumple el plan acordado (asistencia, tareas y reportes) y en 90 días tu tasa de cierre no mejora, el cuarto mes de acompañamiento va por nuestra cuenta. Condiciones detalladas en el contrato.</p></div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="alt">
+  <div class="w">
+    <div class="head"><p class="tag">Nuestro equipo</p><h2>Especialistas propios <em>en cada área</em></h2></div>
+    <div class="team">
+      <div class="tm"><img src="/assets/image-02.png" alt="Bruno Noriega"><h3>Bruno Noriega M.</h3><small>CEO · BMD Consulting</small><p>+20 años en estrategia comercial B2B/B2C y liderazgo de equipos.</p></div>
+      <div class="tm"><img src="/assets/image-06.jpg" alt="María Fernanda Monchéss"><h3>María Fernanda Monchéss</h3><small>Gerente Comercial · Sapia</small><p>+11 años en el sector inmobiliario. Broker inmobiliaria.</p></div>
+      <div class="tm"><img src="/assets/image-05.png" alt="Marco Cerna"><h3>Marco H. Cerna V.</h3><small>Contador Público Colegiado</small><p>+12 años en tributación, contabilidad y planillas.</p></div>
+      <div class="tm"><img src="/assets/image-07.jpg" alt="Arturo Alva"><h3>Arturo Alva</h3><small>Jefe de Ventas</small><p>Formación de equipos con el método Venta Letal.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="w">
+    <div class="book">
+      <img src="/assets/image-03.jpg" alt="Libro Ventas en Frecuencia">
+      <div><p class="tag">El libro del método</p><h3>Ventas en Frecuencia</h3><p>21 capítulos con el método Frecuencia Comercial™. Lee el primero gratis.</p>
+      <div class="acts"><a class="btn" href="/libro/">Leer capítulo 1 gratis</a><a class="btn ghost" href="https://pay.hotmart.com/P105882962I?off=xnjjdr51" target="_blank" rel="noopener">Comprar en Hotmart</a></div></div>
     </div>
   </div>
 </section>
