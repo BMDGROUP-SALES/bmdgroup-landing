@@ -614,6 +614,97 @@
     .footer-bottom { flex-direction: column; gap: .5rem; text-align: center; }
     #cta::before { font-size: 8rem; }
   }
+
+  /* ── FILOSOFÍA · DIAGNÓSTICO · LIBRO (nov-2026) ── */
+  [hidden] { display: none !important; }
+  #filosofia { background: var(--navy3); text-align: center; }
+  .filo-wrap { max-width: 860px; margin: 0 auto; }
+  .filo-wrap .section-tag { justify-content: center; }
+  .filo-title { font-family: var(--serif); font-size: clamp(2rem,4.6vw,3.3rem); line-height: 1.12; font-weight: 700; margin-top: 1rem; text-wrap: balance; }
+  .filo-title em { color: var(--gold); font-style: italic; font-weight: 600; }
+  .filo-body { margin: 1.8rem auto 0; max-width: 60ch; color: var(--gray); font-size: 1.05rem; display: grid; gap: .9rem; }
+  .filo-body strong { color: var(--white); font-weight: 600; }
+  .filo-flow { margin: 2.6rem auto 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .5rem .4rem; }
+  .filo-flow span { font-family: var(--serif); font-size: clamp(1.05rem,2.4vw,1.35rem); font-weight: 600; padding: .35rem .9rem; border: 1px solid rgba(201,168,76,.3); border-radius: 2px; }
+  .filo-flow span.end { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+  .filo-flow i { color: var(--gold); font-style: normal; }
+  .filo-quote { margin-top: 2.2rem; font-family: var(--serif); font-style: italic; font-size: 1.4rem; color: var(--white); }
+  .filo-quote small { display: block; margin-top: .5rem; font-family: var(--sans); font-style: normal; font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+
+  #diagnostico { background: var(--navy); }
+  .diag-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 3.5rem; align-items: start; margin-top: 2rem; }
+  @media (max-width: 900px) { .diag-layout { grid-template-columns: 1fr; gap: 2rem; } }
+  .diag-intro p { color: var(--gray); margin-top: 1rem; max-width: 46ch; }
+  .diag-intro ul { list-style: none; margin-top: 1.4rem; display: grid; gap: .6rem; color: var(--white); font-size: .95rem; }
+  .diag-intro li::before { content: '✓'; color: var(--gold); font-weight: 700; margin-right: .6rem; }
+  .diag-card { background: var(--navy3); border: 1px solid rgba(201,168,76,.22); border-top: 3px solid var(--gold); padding: clamp(1.4rem,4vw,2.4rem); min-height: 420px; display: flex; flex-direction: column; gap: 1.2rem; }
+  .diag-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .diag-step { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+  .diag-dots { display: flex; gap: 6px; }
+  .diag-dots b { width: 22px; height: 4px; background: rgba(201,168,76,.2); border-radius: 2px; transition: background .3s; }
+  .diag-dots b.on { background: var(--gold); }
+  .diag-q { font-family: var(--serif); font-size: clamp(1.4rem,3.2vw,1.85rem); line-height: 1.25; font-weight: 600; text-wrap: balance; }
+  .diag-opts { display: grid; gap: .7rem; }
+  .diag-opt { text-align: left; background: var(--navy); color: var(--white); border: 1px solid rgba(201,168,76,.2); padding: 1rem 1.1rem; font: inherit; font-size: .97rem; line-height: 1.45; cursor: pointer; border-radius: 2px; display: flex; gap: .9rem; align-items: flex-start; transition: border-color .2s, transform .2s, background .2s; }
+  .diag-opt:hover { border-color: var(--gold); transform: translateX(4px); }
+  .diag-opt .k { flex: none; width: 26px; height: 26px; border: 1px solid var(--gold); color: var(--gold); display: grid; place-items: center; font-size: .78rem; font-weight: 700; border-radius: 50%; }
+  .diag-opt.picked { background: var(--gold-dim); border-color: var(--gold); }
+  .diag-opt[disabled] { cursor: default; transform: none; }
+  .diag-opt[disabled]:not(.picked) { opacity: .45; }
+  .diag-insight { border-left: 3px solid var(--gold); background: rgba(201,168,76,.06); padding: 1rem 1.2rem; display: grid; gap: .3rem; animation: diagIn .35s ease; }
+  .diag-insight p { font-family: var(--serif); font-style: italic; font-size: 1.15rem; line-height: 1.4; }
+  .diag-insight small { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  @keyframes diagIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .diag-insight { animation: none; } .diag-opt:hover { transform: none; } }
+  .diag-next { align-self: flex-start; background: var(--gold); color: var(--navy); border: 0; padding: .8rem 1.6rem; font: inherit; font-weight: 700; font-size: .88rem; letter-spacing: .05em; border-radius: 2px; cursor: pointer; }
+  .diag-next:hover { background: var(--gold-light); }
+  .diag-gauge { position: relative; height: 10px; background: linear-gradient(90deg, #6B3A2E, #8A7432, var(--gold)); border-radius: 5px; margin-top: .4rem; }
+  .diag-gauge i { position: absolute; top: 50%; width: 22px; height: 22px; background: var(--white); border: 3px solid var(--navy); border-radius: 50%; transform: translate(-50%,-50%); transition: left 1s cubic-bezier(.2,.8,.2,1); box-shadow: 0 0 0 2px var(--gold); }
+  .diag-gauge-l { display: flex; justify-content: space-between; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); }
+  .diag-res-title { font-family: var(--serif); font-size: clamp(1.9rem,4vw,2.5rem); font-weight: 700; color: var(--gold); line-height: 1.1; }
+  .diag-res p { color: var(--gray); line-height: 1.7; }
+  .diag-res .rec { color: var(--white); }
+  .diag-res .rec strong { color: var(--gold); }
+  .diag-actions { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; }
+  .diag-again { background: none; border: 0; color: var(--gray); font: inherit; font-size: .85rem; text-decoration: underline; cursor: pointer; }
+
+  .libro-extra { margin-top: 4.5rem; }
+  .libro-extra h3.lx-title { font-family: var(--serif); font-size: clamp(1.8rem,3.8vw,2.4rem); font-weight: 700; margin-top: .8rem; }
+  .ideas { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.5rem; margin-top: 2rem; }
+  @media (max-width: 900px) { .ideas { grid-template-columns: 1fr; } }
+  .idea { background: var(--navy3); border: 1px solid rgba(201,168,76,.15); border-top: 2px solid var(--gold); padding: 1.6rem; display: grid; gap: .8rem; align-content: start; min-width: 0; }
+  .idea .tag { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); background: none; padding: 0; }
+  .idea h3 { font-family: var(--serif); font-size: 1.4rem; line-height: 1.2; }
+  .idea p { color: var(--gray); font-size: .93rem; line-height: 1.6; }
+  .idea .quote { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--white); line-height: 1.35; }
+  .locked { list-style: none; display: grid; gap: .4rem; font-size: .92rem; }
+  .locked li { display: flex; gap: .6rem; align-items: center; }
+  .locked li::before { content: ''; width: 6px; height: 6px; background: var(--gold); flex: none; }
+  .locked li.off { color: var(--gray); filter: blur(4px); user-select: none; }
+  .idea .more { font-size: .84rem; color: var(--gold); font-weight: 600; }
+  .cap-gratis { margin-top: 3.5rem; display: grid; grid-template-columns: .85fr 1.15fr; gap: 3rem; align-items: start; }
+  @media (max-width: 900px) { .cap-gratis { grid-template-columns: 1fr; } }
+  .cap-form { display: grid; gap: 1rem; }
+  .cap-form p { color: var(--gray); line-height: 1.7; }
+  .cap-form .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+  @media (max-width: 520px) { .cap-form .row2 { grid-template-columns: 1fr; } }
+  .cap-form label { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); margin-bottom: .35rem; }
+  .cap-form input { width: 100%; background: var(--navy); color: var(--white); border: 1px solid rgba(201,168,76,.25); padding: .8rem 1rem; font: inherit; border-radius: 2px; }
+  .cap-form input:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .cap-err { color: #E07A5F; font-size: .85rem; }
+  .cap-ok { color: var(--gold); font-size: .9rem; }
+  .cap-lock { background: var(--navy3); border: 1px dashed rgba(201,168,76,.35); padding: 2rem; text-align: center; color: var(--gray); display: grid; gap: .6rem; place-items: center; min-height: 260px; align-content: center; }
+  .cap-lock b { font-family: var(--serif); font-size: 1.5rem; color: var(--white); }
+  .reader { background: var(--navy3); border: 1px solid rgba(201,168,76,.22); padding: clamp(1.4rem,4vw,2.8rem); max-height: 620px; overflow-y: auto; }
+  .reader .chap { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+  .reader h3 { font-family: var(--serif); font-size: clamp(1.6rem,3.5vw,2.1rem); margin: .4rem 0 1.4rem; }
+  .reader h4 { font-family: var(--serif); font-size: 1.25rem; color: var(--gold); margin: 1.6rem 0 .6rem; }
+  .reader p { margin-bottom: .8rem; color: var(--gray); line-height: 1.75; }
+  .reader .big { font-family: var(--serif); font-style: italic; font-size: 1.25rem; color: var(--white); }
+  .reader ul, .reader ol { margin: 0 0 1rem 1.2rem; color: var(--gray); line-height: 1.7; }
+  .reader strong { color: var(--white); }
+  .funnel { border-left: 2px solid var(--gold); padding-left: .9rem; font-variant-numeric: tabular-nums; color: var(--white) !important; }
+  .reader-end { margin-top: 1.6rem; padding-top: 1.2rem; border-top: 1px solid rgba(201,168,76,.2); display: grid; gap: 1rem; }
 </style>
 </head>
 <body>
@@ -630,7 +721,7 @@
     <li><a href="#libro">Libro</a></li>
     <li><a href="#testimonios">Testimonios</a></li>
     <li><a href="#equipo">Equipo</a></li>
-    <li><a href="#cta" class="nav-cta">Diagnóstico Gratis</a></li>
+    <li><a href="#diagnostico" class="nav-cta">Diagnóstico Gratis</a></li>
   </ul>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -780,6 +871,24 @@
 </section>
 
 <!-- SERVICIOS -->
+
+<!-- DIAGNÓSTICO -->
+<section id="diagnostico">
+  <div class="diag-layout">
+    <div class="diag-intro">
+      <div class="section-tag">Diagnóstico gratuito</div>
+      <h2>¿En qué frecuencia <em>vende tu equipo?</em></h2>
+      <p>5 situaciones reales del día a día comercial. Elige lo que de verdad pasa en tu empresa y descubre en un minuto dónde se están escapando las ventas.</p>
+      <ul>
+        <li>Toma menos de 1 minuto</li>
+        <li>Resultado inmediato, sin registrarte</li>
+        <li>Basado en el método Frecuencia Comercial™</li>
+      </ul>
+    </div>
+    <div class="diag-card" id="diag" aria-live="polite"></div>
+  </div>
+</section>
+
 <section id="servicios">
   <div class="fade-in">
     <div class="section-tag">Qué hacemos</div>
@@ -911,6 +1020,12 @@
       <p>Convertir clientes en recompra y referidos con un proceso de seguimiento después de la venta.</p>
       <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Postventa%20y%20Fidelizaci%C3%B3n" target="_blank" rel="noopener">Solicitar información →</a>
     </div>
+    <div class="mentoria-card fade-in destacada">
+      <div class="mentoria-cat">Conferencias</div>
+      <h3>Conferencias y Masterclasses</h3>
+      <p>Ventas y liderazgo desde la experiencia: charlas de 60 a 90 minutos para convenciones, eventos corporativos e instituciones, presenciales o virtuales.</p>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%2C%20quiero%20organizar%20una%20conferencia%20o%20masterclass%20con%20BMD%20Consulting" target="_blank" rel="noopener">Organizar una conferencia →</a>
+    </div>
   </div>
   <div class="fade-in" style="text-align:center;margin-top:2.5rem;">
     <a href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20armar%20un%20programa%20de%20mentor%C3%ADa%20para%20mi%20equipo" target="_blank" rel="noopener" class="btn-primary">Arma el programa para tu equipo</a>
@@ -963,6 +1078,23 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- FILOSOFÍA -->
+<section id="filosofia">
+  <div class="filo-wrap fade-in">
+    <div class="section-tag">Nuestra filosofía</div>
+    <h2 class="filo-title">Frecuencia Comercial™ no es una técnica. <em>Es la forma en que entendemos las ventas y el liderazgo.</em></h2>
+    <div class="filo-body">
+      <p>En más de 20 años de campo aprendimos que las grandes oportunidades rara vez se ganan insistiendo más.</p>
+      <p>Se ganan con <strong>estructura, presencia constante y confianza</strong>, sosteniendo la relación hasta que llega el momento de decidir. Esa es la base de cada consultoría, taller y mentoría de BMD.</p>
+    </div>
+    <div class="filo-flow" aria-label="Recorrido de la venta en frecuencia">
+      <span>Prospección</span><i>→</i><span>Contacto</span><i>→</i><span>Relación</span><i>→</i><span>Valor</span><i>→</i><span>Confianza</span><i>→</i><span class="end">Cierre</span>
+    </div>
+    <p class="filo-quote">"La venta no es un evento. Es acumulación de presencia estratégica."<small>Ventas en Frecuencia · Capítulo 1</small></p>
   </div>
 </section>
 
@@ -1054,6 +1186,121 @@
         <div style="margin-top:2rem;padding:1.5rem 2rem;border-left:3px solid var(--gold);background:rgba(201,168,76,0.06);border-radius:0 4px 4px 0;">
           <p style="font-size:.95rem;color:var(--gold);font-weight:600;letter-spacing:.08em;margin:0 0 .6rem;text-transform:uppercase;">Ventas en Frecuencia no es solo un libro</p>
           <p style="font-size:1rem;line-height:1.7;color:var(--gray);margin:0;">Es una filosofía comercial. Un movimiento de vendedores que eligieron construir relaciones reales en lugar de perseguir transacciones. Si vendes con propósito, ya formas parte de esto.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="libro-extra">
+      <div class="section-tag">Dentro del libro</div>
+      <h3 class="lx-title">Tres ideas que cambian la forma de vender</h3>
+      <div class="ideas">
+        <article class="idea">
+          <p class="tag">Capítulo 8 · Objeciones</p>
+          <h3>"Déjame pensarlo" no es una respuesta</h3>
+          <p class="quote">Es una salida elegante.</p>
+          <p>Detrás de esa frase casi nunca hay desinterés. Hay algo que no se trabajó mucho antes de llegar al cierre. El libro muestra las causas reales y cómo detectarlas a tiempo:</p>
+          <ul class="locked">
+            <li>No se validó al decisor real</li>
+            <li>No se cuantificó el problema</li>
+            <li class="off" aria-hidden="true">Contenido exclusivo del libro</li>
+            <li class="off" aria-hidden="true">Contenido exclusivo del libro</li>
+          </ul>
+          <p class="more">El método completo está en el capítulo 8.</p>
+        </article>
+        <article class="idea">
+          <p class="tag">Capítulo 11 · El modelo</p>
+          <h3>Mismo producto, mismo guion, resultados opuestos</h3>
+          <p class="quote">El cliente no compra solo el producto. Compra el estado interno del vendedor.</p>
+          <p>Dos vendedores con la misma capacitación pueden vender el doble o la mitad. La diferencia está en seis pilares que forman la Frecuencia Comercial™:</p>
+          <ul class="locked">
+            <li>Regulación mental</li>
+            <li>Relación con el rechazo</li>
+            <li>Disciplina operativa</li>
+            <li class="off" aria-hidden="true">Pilar exclusivo</li>
+            <li class="off" aria-hidden="true">Pilar exclusivo</li>
+            <li class="off" aria-hidden="true">Pilar exclusivo</li>
+          </ul>
+          <p class="more">Los seis pilares, en el capítulo 11.</p>
+        </article>
+        <article class="idea">
+          <p class="tag">Capítulo 5 · Caso real</p>
+          <h3>La cuenta que se cayó cuando ya estaba cerrada</h3>
+          <p class="quote">Cerca de un millón en facturación proyectada. Firmado. Y de pronto, nada.</p>
+          <p>No fue el precio ni la competencia: fue un cambio interno en el cliente que nadie podía controlar. Lo que se hizo después, y lo que pasó seis meses más tarde, es una de las lecciones centrales del método.</p>
+          <p class="more">La historia completa, en el capítulo 5.</p>
+        </article>
+      </div>
+      <div class="cap-gratis" id="capitulo">
+        <div class="cap-form">
+          <div class="section-tag">Capítulo 1 gratis</div>
+          <h3 class="lx-title" style="margin-top:0">Del entusiasmo al profesionalismo comercial</h3>
+          <p>La reunión que parecía exitosa y terminó en silencio, los cinco errores que la mataron y los números que convierten la venta en un sistema medible.</p>
+          <p>Déjanos tu nombre y WhatsApp: lo lees aquí mismo y te enviamos el PDF.</p>
+          <form id="free-form" novalidate>
+            <div class="row2">
+              <div><label for="c-name">Nombre</label><input id="c-name" autocomplete="name" placeholder="Tu nombre"/></div>
+              <div><label for="c-phone">WhatsApp</label><input id="c-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="9XX XXX XXX"/></div>
+            </div>
+          </form>
+          <p class="cap-err" id="c-err" hidden>Escribe tu nombre y un número de 9 dígitos.</p>
+          <div><a class="btn-primary" id="c-send" href="#" target="_blank" rel="noopener">Leer el capítulo 1</a></div>
+          <p class="cap-ok" id="c-ok" hidden>Listo. Ya puedes leerlo, y en WhatsApp te llega el PDF.</p>
+        </div>
+        <div>
+          <div class="cap-lock" id="cap-lock"><b>Capítulo 1</b><span>Completa tus datos para desbloquear la lectura.</span></div>
+          <div class="reader" id="reader" hidden tabindex="-1">
+        <p class="chap">Capítulo 1 · Ventas en Frecuencia</p>
+        <h3>Del entusiasmo al profesionalismo comercial</h3>
+        <h4>1.1 El primer error: creer que vender es cuestión de actitud</h4>
+        <p>Cuando ingresé al segmento de seguros corporativos B2B, creía que estaba listo. Tenía energía. Tenía discurso. Tenía presencia. Y tenía algo que muchos vendedores consideran suficiente: actitud.</p>
+        <p class="big">Pero el mercado corporativo no compra actitud. Compra estructura.</p>
+        <p>Durante mis primeras reuniones, yo confiaba en mi capacidad de conversación. Me preparaba, sí, pero mi preparación era superficial: conocía el producto, revisaba la página web del cliente, y llevaba una presentación lista.</p>
+        <p>Pensaba que eso era profesionalismo. No lo era. Era entusiasmo con traje formal. Y el mercado corporate distingue la diferencia en los primeros cinco minutos.</p>
+        <h4>1.2 El entorno B2B: donde la improvisación no tiene espacio</h4>
+        <p>En el segmento corporativo no se vende por simpatía. Se vende por:</p>
+        <ul><li>Gestión de riesgo.</li><li>Impacto financiero.</li><li>Optimización presupuestal.</li><li>Reducción de contingencias.</li><li>Proyección estratégica.</li></ul>
+        <p>Cuando te sientas frente a un gerente financiero, él no está evaluando si eres carismático. Está evaluando si eres confiable. Y la confianza no se transmite con intensidad. Se transmite con claridad estructural.</p>
+        <p>Ahí entendí algo determinante:</p>
+        <p class="big">El mercado profesional no rechaza personas. Rechaza procesos débiles.</p>
+        <h4>1.3 Caso real: la reunión que parecía exitosa (y no lo fue)</h4>
+        <p>Una de las reuniones que más me enseñó fue con una empresa mediana del sector industrial. Logré la cita después de varios intentos. Llegué preparado, con propuesta lista.</p>
+        <p>La reunión fluyó. El gerente escuchó con atención. Hizo preguntas. Mostró interés. Al finalizar dijo: "Envíame la propuesta formal y lo revisamos internamente."</p>
+        <p>Salí convencido de que estaba cerca del cierre. Envié la propuesta ese mismo día. Pasó una semana. Silencio. Llamé. "No hemos podido revisarlo aún." Pasaron dos semanas más. Nada.</p>
+        <p>Finalmente entendí que el proceso había muerto. Y ahí decidí analizar objetivamente qué había ocurrido.</p>
+        <h4>1.4 Análisis técnico de la reunión fallida</h4>
+        <p>Cuando desarmé la reunión, descubrí errores estructurales:</p>
+        <ol><li><strong>No validé presupuesto.</strong> Nunca confirmé si tenían partida asignada.</li><li><strong>No identifiqué decisor real.</strong> El gerente con el que hablé influía, pero no decidía solo.</li><li><strong>No cuantifiqué el problema.</strong> Hablé de beneficios generales, no de impacto financiero concreto.</li><li><strong>No establecí siguiente paso con fecha.</strong> Dejé el proceso abierto.</li><li><strong>No medí urgencia.</strong> Asumí interés como intención de compra.</li></ol>
+        <p>Ahí entendí que no había perdido por falta de carisma. Había perdido por falta de estructura. Y eso cambió mi mentalidad.</p>
+        <h4>1.5 El nacimiento de la matemática comercial</h4>
+        <p>Decidí eliminar la emoción del análisis. Comencé a medir: número de llamadas diarias, tasa de contacto efectivo, tasa de citas agendadas, tasa de propuestas enviadas y tasa de cierre real.</p>
+        <p>Descubrí que antes trabajaba por sensación. Ahora trabajaba por indicadores. Ejemplo real:</p>
+        <p class="funnel">30 llamadas → 8 conversaciones reales<br>8 conversaciones → 3 reuniones<br>3 reuniones → 1 propuesta sólida<br>1 propuesta → 0.4 cierre promedio</p>
+        <p>Eso significa que mi trabajo no era frustrarme por un no. Era alimentar el sistema. La venta dejó de ser emocional. Se convirtió en gestión estratégica.</p>
+        <h4>1.6 Profesionalismo: estabilidad emocional aplicada al proceso</h4>
+        <p>Un vendedor reactivo se motiva cuando cierra, se desmotiva cuando pierde, trabaja más cuando necesita dinero y se relaja cuando tiene ingresos.</p>
+        <p>Un vendedor profesional prospecta incluso cuando está en su mejor mes, sigue procesos incluso cuando ya tiene cuota cubierta, aprende incluso cuando gana y no depende de un solo cliente.</p>
+        <p class="big">El profesionalismo no es intensidad. Es consistencia. Y la consistencia nace de un sistema.</p>
+        <h4>1.7 La frecuencia empieza a tomar forma</h4>
+        <p>Hubo un cliente que visité varias veces sin cierre inmediato. Cada reunión agregaba valor: información técnica, comparativos, análisis de riesgo, ajustes personalizados. No presioné. Estuve presente.</p>
+        <p>Meses después, cuando decidieron cambiar proveedor, no compararon opciones. Me llamaron directamente. ¿Por qué? Porque mi nombre ya estaba posicionado en su mente.</p>
+        <p>Ahí entendí algo fundamental:</p>
+        <p class="big">La venta no es un evento. Es acumulación de presencia estratégica.</p>
+        <p class="funnel">Prospección → Contacto → Relación → Valor → Confianza → Cierre</p>
+        <p>Eso es frecuencia. Y esa filosofía empezó a construirse desde ese momento.</p>
+        <h4>1.8 La transformación real</h4>
+        <p>El cambio no fue externo. Fue interno. Dejé de preguntarme "¿Cómo cierro más rápido?" y empecé a preguntarme "¿Cómo construyo procesos más sólidos?"</p>
+        <p>Dejé de vender desde la urgencia. Empecé a vender desde la estructura. Y ese cambio transformó no solo mis resultados, sino mi identidad profesional. Ya no era alguien que intentaba vender. Era alguien que gestionaba decisiones estratégicas.</p>
+        <h4>Síntesis estratégica del capítulo</h4>
+        <p>La venta profesional nace cuando se eliminan las suposiciones, se miden indicadores, se validan presupuestos, se identifica al decisor, se establece el siguiente paso y se trabaja por sistema y no por emoción.</p>
+        <p class="big">El entusiasmo inicia la carrera. La estructura la sostiene.</p>
+        <div class="reader-end">
+          <p>Si el profesionalismo nace con estructura… ¿qué ocurre cuando esa estructura desaparece? Lo descubres en el capítulo 2.</p>
+          <div class="cta" style="display:flex;flex-wrap:wrap;gap:12px">
+            <a class="btn-primary" href="https://pay.hotmart.com/P105882962I?off=xnjjdr51" target="_blank" rel="noopener">Quiero el libro completo</a>
+            <a class="btn-secondary" href="#diagnostico">Hacer el diagnóstico</a>
+          </div>
+        </div>
+      </div>
         </div>
       </div>
     </div>
@@ -1503,5 +1750,103 @@ Solo claridad y un plan real para tu negocio.</p>
     }
   </script>
 
+
+<script>
+/* Diagnóstico Frecuencia Comercial + Capítulo 1 gratis (nov-2026) */
+(function(){
+  var WA="51922529675";
+  var Q=[
+    {q:"Un prospecto te dice: «Envíame la propuesta y lo revisamos». ¿Qué hace tu equipo?",
+     o:[["La envía ese mismo día y espera respuesta",0],["La envía y llama a los pocos días para ver si la revisó",1],["Antes de enviarla confirma presupuesto, quién decide y la fecha de la siguiente reunión",2]],
+     i:"Una propuesta sin decisor ni fecha casi siempre termina en silencio.",c:"Capítulo 1"},
+    {q:"Es el mejor mes del año. ¿Qué pasa con la prospección?",
+     o:[["Se pausa: hay que atender los cierres",0],["Baja un poco, ya cumplimos la meta",1],["Sigue igual que cualquier otro mes",2]],
+     i:"El vendedor profesional prospecta incluso en su mejor mes. Por eso no sufre el siguiente.",c:"Capítulo 1"},
+    {q:"Un cliente interesado responde: «Déjame pensarlo». ¿Cuál es la reacción?",
+     o:[["Le ofrecemos un descuento para animarlo",0],["Le damos espacio y lo llamamos en unos días",1],["Le preguntamos qué le genera duda y quién más participa en la decisión",2]],
+     i:"«Déjame pensarlo» no es una respuesta. Es una salida elegante.",c:"Capítulo 8"},
+    {q:"Si mañana se cae tu oportunidad más grande del mes, ¿qué pasa?",
+     o:[["El mes se derrumba",0],["Duele, pero hay otras oportunidades en curso",1],["El resto de la cartera lo absorbe",2]],
+     i:"Obsesiónate con el trabajo, nunca con una sola cuenta. La frecuencia también es diseño de cartera.",c:"Capítulo 5"},
+    {q:"¿Cuántos contactos necesita tu equipo para lograr una venta?",
+     o:[["No lo sabemos",0],["Tenemos una idea aproximada",1],["Lo medimos con números exactos",2]],
+     i:"30 llamadas, 8 conversaciones, 3 reuniones, 1 propuesta. Sin números se trabaja por sensación.",c:"Capítulo 1"}
+  ];
+  var R=[
+    {max:4,t:"Frecuencia baja",d:"Hoy se vende más por empuje que por sistema: meses altos y bajos, propuestas que terminan en silencio y dependencia de pocas oportunidades. El talento está; lo que falta es estructura.",r:"Te recomendamos empezar con un <strong>diagnóstico comercial de 20 minutos</strong> y el taller <strong>Venta Letal</strong> para tu equipo."},
+    {max:7,t:"Frecuencia en transición",d:"Hay buenas prácticas, pero no son constantes. Algunas ventas se escapan por detalles de proceso que se corrigen rápido cuando se miden.",r:"Te recomendamos una <strong>consultoría comercial con acompañamiento</strong> para convertir esas prácticas en un sistema."},
+    {max:10,t:"Frecuencia alta",d:"Tu equipo trabaja con estructura. El siguiente paso es escalar: sostener el ritmo con más asesores y negociar cuentas más grandes sin perder margen.",r:"Te recomendamos el taller de <strong>Negociación y Cierre B2B</strong> o una <strong>mentoría 1 a 1</strong> para tus líderes."}
+  ];
+  var box=document.getElementById("diag"); if(!box) return;
+  var st={i:-1,ans:[]};
+  function h(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+  function head(label){
+    var hd=h("div","diag-head");hd.appendChild(h("span","diag-step",label));
+    var dots=h("div","diag-dots");for(var k=0;k<Q.length;k++){var b=h("b");if(k<st.ans.length)b.className="on";dots.appendChild(b)}
+    hd.appendChild(dots);return hd;
+  }
+  function render(){
+    box.innerHTML="";
+    if(st.i===-1){
+      box.appendChild(head("Listo para empezar"));
+      box.appendChild(h("p","diag-q","¿Tu equipo vende por sistema o por sensación?"));
+      box.appendChild(h("p",null,"Responde pensando en lo que pasa de verdad, no en lo que debería pasar."));
+      box.lastChild.style.color="var(--gray)";
+      var go=h("button","diag-next","Empezar el diagnóstico →");go.type="button";go.onclick=function(){st.i=0;render()};
+      box.appendChild(go);return;
+    }
+    if(st.i<Q.length){
+      var q=Q[st.i];
+      box.appendChild(head("Situación "+(st.i+1)+" de "+Q.length));
+      box.appendChild(h("p","diag-q",q.q));
+      var opts=h("div","diag-opts"),keys=["A","B","C"];
+      q.o.forEach(function(o,n){
+        var b=h("button","diag-opt");b.type="button";
+        var k=h("span","k",keys[n]);b.appendChild(k);b.appendChild(h("span",null,o[0]));
+        b.onclick=function(){
+          st.ans[st.i]=o[1];
+          [].forEach.call(opts.children,function(x){x.disabled=true});b.classList.add("picked");
+          var ins=h("div","diag-insight");ins.appendChild(h("p",null,q.i));ins.appendChild(h("small",null,"Ventas en Frecuencia · "+q.c));
+          box.appendChild(ins);
+          var nx=h("button","diag-next",st.i===Q.length-1?"Ver mi resultado →":"Siguiente →");nx.type="button";
+          nx.onclick=function(){st.i++;render()};box.appendChild(nx);nx.focus({preventScroll:true});
+          box.querySelector(".diag-dots").children[st.i].className="on";
+        };
+        opts.appendChild(b);
+      });
+      box.appendChild(opts);return;
+    }
+    var score=st.ans.reduce(function(a,b){return a+b},0),res=R.filter(function(r){return score<=r.max})[0];
+    box.appendChild(head("Tu resultado · "+score+" de 10"));
+    var g=h("div","diag-gauge"),dot=h("i");dot.style.left="0%";g.appendChild(dot);box.appendChild(g);
+    var gl=h("div","diag-gauge-l");["Baja","En transición","Alta"].forEach(function(x){gl.appendChild(h("span",null,x))});box.appendChild(gl);
+    setTimeout(function(){dot.style.left=Math.max(4,Math.min(96,score*10))+"%"},60);
+    var wrap=h("div","diag-res");wrap.style.display="grid";wrap.style.gap=".8rem";
+    wrap.appendChild(h("div","diag-res-title",res.t));wrap.appendChild(h("p",null,res.d));
+    var rec=h("p","rec");rec.innerHTML=res.r;wrap.appendChild(rec);box.appendChild(wrap);
+    var acts=h("div","diag-actions");
+    var msg="Hola, BMD Consulting. Hice el diagnóstico de Frecuencia Comercial y salió: "+res.t+" ("+score+"/10). Quiero agendar mi diagnóstico gratuito de 20 minutos.";
+    var a=h("a","btn-primary","Agendar diagnóstico de 20 min");a.href="https://wa.me/"+WA+"?text="+encodeURIComponent(msg);a.target="_blank";a.rel="noopener";
+    var again=h("button","diag-again","Repetir");again.type="button";again.onclick=function(){st={i:0,ans:[]};render()};
+    acts.appendChild(a);acts.appendChild(again);box.appendChild(acts);
+  }
+  render();
+
+  var cn=document.getElementById("c-name"),cp=document.getElementById("c-phone"),cs=document.getElementById("c-send");
+  if(!cs) return;
+  var reader=document.getElementById("reader"),lock=document.getElementById("cap-lock");
+  function upd(){cs.href="https://wa.me/"+WA+"?text="+encodeURIComponent("Hola, BMD Consulting. Soy "+cn.value.trim()+" y quiero recibir el capítulo 1 gratis de Ventas en Frecuencia. Mi WhatsApp: "+cp.value.trim())}
+  function open(){reader.hidden=false;lock.hidden=true}
+  [cn,cp].forEach(function(e){e.addEventListener("input",upd)});
+  cs.addEventListener("click",function(e){
+    if(!cn.value.trim()||cp.value.replace(/\D/g,"").length<9){e.preventDefault();document.getElementById("c-err").hidden=false;return}
+    document.getElementById("c-err").hidden=true;document.getElementById("c-ok").hidden=false;open();
+    try{localStorage.setItem("bmd-cap1","1")}catch(_){}
+  });
+  document.getElementById("free-form").addEventListener("submit",function(e){e.preventDefault()});
+  try{if(localStorage.getItem("bmd-cap1")==="1")open()}catch(_){}
+  upd();
+})();
+</script>
 </body>
 </html>
