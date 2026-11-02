@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Ventas en Frecuencia: el método Frecuencia Comercial™ de Bruno Noriega. Lee el capítulo 1 gratis."/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="BMD Consulting | Consultoría Comercial y Estratégica"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://bmdgroup.org.pe/"/>
+<meta property="og:image" content="https://bmdgroup.org.pe/assets/og-consulting.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" type="image/jpeg" href="/assets/bmd-consulting-isotipo.jpg"/>
+<link rel="canonical" href="https://bmdgroup.org.pe/libro/"/>
+<meta property="og:description" content="¿Tu empresa vende lo que realmente merece vender? Consultoría para emprendedores, pymes y equipos comerciales. Diagnóstico gratuito sin compromiso."/>
+<title>Ventas en Frecuencia | Libro de Bruno Noriega — BMD Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E2C47A;
+    --gold-dim: rgba(201,168,76,0.15);
+    --navy: #070C1A;
+    --navy2: #0D1425;
+    --navy3: #111B30;
+    --white: #F5F0E8;
+    --gray: #8A9BB0;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--navy);
+    color: var(--white);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; width: 100%; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 6%;
+    background: rgba(7,12,26,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+    transition: all .3s;
+  }
+  nav.menu-open { backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .nav-links.open { margin-left: 0 !important; }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: .05em;
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--white); }
+  .nav-links { display: flex; gap: 1.6rem; list-style: none; align-items: center; }
+  .nav-links a { white-space: nowrap; }
+  @media (max-width: 1480px) { .nav-links { gap: .95rem; margin-left: 1.5rem; } .nav-links a { font-size: .76rem; letter-spacing: .05em; } .nav-cta { padding: .5rem .9rem; } }
+  .nav-links a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: .85rem;
+    font-weight: 500;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    padding: .5rem 1.2rem;
+    border-radius: 2px;
+    font-weight: 600 !important;
+    transition: background .2s !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 2px; background: var(--white); display: block; transition: .3s; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex; align-items: center;
+    padding: 10rem 6% 6rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 40% at 10% 80%, rgba(201,168,76,0.04) 0%, transparent 50%);
+  }
+  .hero-line {
+    position: absolute; top: 0; right: 25%;
+    width: 1px; height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(201,168,76,0.2), transparent);
+    z-index: 0;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 720px; }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: .6rem;
+    font-size: .75rem; font-weight: 600; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 1.8rem;
+  }
+  .hero-tag::before {
+    content: ''; display: block;
+    width: 30px; height: 1px; background: var(--gold);
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.6rem, 5.5vw, 4.2rem);
+    font-weight: 600;
+    line-height: 1.12;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+  }
+  h1 em { color: var(--gold); font-style: normal; }
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--gray);
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+  .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: .6rem;
+    background: var(--gold);
+    color: var(--navy);
+    padding: .85rem 2rem;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: .95rem;
+    text-decoration: none;
+    transition: background .2s, transform .2s;
+    letter-spacing: .02em;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: .6rem;
+    border: 1px solid rgba(201,168,76,0.4);
+    color: var(--gold);
+    padding: .85rem 2rem;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: .95rem;
+    text-decoration: none;
+    transition: all .2s;
+  }
+  .btn-secondary:hover { background: var(--gold-dim); border-color: var(--gold); }
+  .hero-stats {
+    display: flex; gap: 3rem; margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .stat-label { font-size: .78rem; color: var(--gray); text-transform: uppercase; letter-spacing: .1em; margin-top: .3rem; }
+
+  /* ── SECTIONS ── */
+  section { padding: 6rem 6%; }
+  .section-tag {
+    display: inline-flex; align-items: center; gap: .6rem;
+    font-size: .72rem; font-weight: 600; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 1rem;
+  }
+  .section-tag::before { content: ''; display: block; width: 24px; height: 1px; background: var(--gold); }
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  h2 em { color: var(--gold); font-style: normal; }
+
+  /* ── PAIN POINTS ── */
+  #dolor { background: var(--navy2); }
+  .dolor-intro { max-width: 600px; margin-bottom: 3.5rem; }
+  .dolor-intro p { color: var(--gray); font-size: 1.05rem; margin-top: .8rem; }
+  .dolor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  .dolor-card {
+    background: var(--navy3);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-left: 3px solid var(--gold);
+    padding: 1.8rem;
+    border-radius: 2px;
+    transition: border-color .2s, transform .2s;
+  }
+  .dolor-card:hover { border-left-color: var(--gold-light); transform: translateY(-3px); }
+  .dolor-icon {
+    width: 64px; height: 64px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 1.2rem;
+    background: linear-gradient(135deg, rgba(201,168,76,0.18) 0%, rgba(201,168,76,0.06) 100%);
+    border: 1px solid rgba(201,168,76,0.35);
+    border-radius: 14px;
+    color: var(--gold);
+    box-shadow: inset 0 0 24px rgba(201,168,76,0.08);
+  }
+  .dolor-icon svg { width: 32px; height: 32px; fill: var(--gold); }
+  .dolor-card h3 { font-family: var(--serif); font-size: 1.2rem; margin-bottom: .5rem; }
+  .dolor-card p { color: var(--gray); font-size: .9rem; line-height: 1.6; }
+
+  /* ── MENTORÍAS ── */
+  #mentorias { background: var(--navy2); }
+  .mentorias-formatos { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
+  .mentorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+  .mentoria-card {
+    background: var(--navy3);
+    border: 1px solid rgba(201,168,76,0.12);
+    padding: 1.6rem 1.6rem 1.4rem;
+    border-radius: 2px;
+    display: flex; flex-direction: column;
+    transition: border-color .3s, transform .2s;
+  }
+  .mentoria-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-3px); }
+  .mentoria-card.destacada { border-left: 3px solid var(--gold); }
+  .mentoria-cat { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: .6rem; }
+  .mentoria-card h3 { font-family: var(--serif); font-size: 1.25rem; margin-bottom: .5rem; }
+  .mentoria-card p { color: var(--gray); font-size: .88rem; line-height: 1.6; flex: 1; }
+  .mentoria-link { margin-top: 1rem; font-size: .82rem; font-weight: 600; color: var(--gold); text-decoration: none; }
+  .mentoria-link:hover { color: var(--gold-light); }
+
+  /* ── SERVICIOS ── */
+  #servicios { background: var(--navy); }
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .servicio-card {
+    background: var(--navy3);
+    border: 1px solid rgba(201,168,76,0.1);
+    padding: 2rem;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color .3s, transform .2s;
+  }
+  .servicio-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    opacity: 0; transition: opacity .3s;
+  }
+  .servicio-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); }
+  .servicio-card:hover::before { opacity: 1; }
+  .servicio-num {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(201,168,76,0.1);
+    line-height: 1;
+    margin-bottom: .5rem;
+  }
+  .servicio-card h3 { font-family: var(--serif); font-size: 1.25rem; margin-bottom: .8rem; color: var(--white); }
+  .servicio-card p { color: var(--gray); font-size: .88rem; line-height: 1.65; }
+
+  /* ── METODOLOGÍA ── */
+  #metodologia { background: var(--navy2); }
+  .metod-container { display: flex; flex-direction: column; gap: 0; margin-top: 3rem; }
+  .metod-step {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    align-items: start;
+  }
+  .metod-step:last-child { border-bottom: none; }
+  .metod-num {
+    font-family: var(--serif);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    opacity: .3;
+    line-height: 1;
+    text-align: right;
+  }
+  .metod-content h3 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: .8rem; }
+  .metod-content p { color: var(--gray); font-size: .95rem; line-height: 1.7; }
+  .metod-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+  .tag {
+    background: var(--gold-dim);
+    color: var(--gold);
+    font-size: .75rem;
+    font-weight: 500;
+    padding: .3rem .8rem;
+    border-radius: 20px;
+    letter-spacing: .05em;
+  }
+
+  /* ── SOBRE BRUNO ── */
+  #bruno { background: var(--navy); }
+  .bruno-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 5rem;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  .bruno-img-wrap {
+    position: relative;
+  }
+  .bruno-img-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--navy3);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--gray);
+    font-size: .85rem;
+    text-align: center;
+    padding: 2rem;
+  }
+  .bruno-img-placeholder .avatar-icon {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: var(--gold-dim);
+    border: 2px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem;
+  }
+  .bruno-accent {
+    position: absolute;
+    bottom: -20px; right: -20px;
+    width: 120px; height: 120px;
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 2px;
+    z-index: -1;
+  }
+  .bruno-content .subtitle {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+    font-style: italic;
+  }
+  .bruno-content p { color: var(--gray); font-size: .95rem; line-height: 1.75; margin-bottom: 1rem; }
+  .creds { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
+  .cred {
+    background: var(--navy3);
+    border: 1px solid rgba(201,168,76,0.2);
+    padding: .4rem 1rem;
+    border-radius: 2px;
+    font-size: .78rem;
+    color: var(--gold);
+    font-weight: 500;
+    letter-spacing: .05em;
+  }
+
+  /* ── COACHING ── */
+  #coaching { background: var(--navy2); }
+  .coaching-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .coaching-card {
+    background: var(--navy);
+    border: 1px solid rgba(201,168,76,0.15);
+    padding: 2.5rem;
+    border-radius: 2px;
+    position: relative;
+  }
+  .coaching-card.featured {
+    border-color: var(--gold);
+    background: linear-gradient(135deg, var(--navy) 0%, rgba(201,168,76,0.05) 100%);
+  }
+  .coaching-badge {
+    position: absolute; top: -12px; left: 2rem;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .3rem .8rem;
+    border-radius: 2px;
+  }
+  .coaching-card h3 { font-family: var(--serif); font-size: 1.4rem; margin-bottom: .6rem; }
+  .coaching-card .price {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    margin: 1rem 0;
+  }
+  .coaching-card .price span { font-size: 1rem; color: var(--gray); font-family: var(--sans); font-weight: 400; }
+  .coaching-card p { color: var(--gray); font-size: .88rem; line-height: 1.65; margin-bottom: 1.5rem; }
+  .coaching-features { list-style: none; margin-bottom: 2rem; }
+  .coaching-features li {
+    display: flex; align-items: center; gap: .6rem;
+    color: var(--gray); font-size: .88rem;
+    padding: .4rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .coaching-features li::before { content: '✓'; color: var(--gold); font-weight: 700; }
+
+  /* ── CONSULTORÍA PRECIOS ── */
+  #precios { background: var(--navy); }
+  .precio-card {
+    background: var(--navy3);
+    border: 1px solid rgba(201,168,76,0.15);
+    padding: 3rem;
+    border-radius: 2px;
+    max-width: 680px;
+    margin: 3rem auto 0;
+    text-align: center;
+  }
+  .precio-card h3 { font-family: var(--serif); font-size: 1.5rem; margin-bottom: .5rem; }
+  .precio-card .price-range {
+    font-family: var(--serif);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin: 1rem 0;
+    line-height: 1;
+  }
+  .precio-card p { color: var(--gray); font-size: .95rem; max-width: 480px; margin: 0 auto 1.5rem; }
+  .precio-features { list-style: none; text-align: left; max-width: 360px; margin: 1.5rem auto 2rem; }
+  .precio-features li {
+    display: flex; align-items: flex-start; gap: .7rem;
+    color: var(--gray); font-size: .9rem;
+    padding: .5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .precio-features li::before { content: '—'; color: var(--gold); flex-shrink: 0; }
+  .diagnostico-box {
+    background: linear-gradient(135deg, rgba(201,168,76,0.1), rgba(201,168,76,0.03));
+    border: 1px solid var(--gold);
+    padding: 2rem;
+    border-radius: 2px;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  .diagnostico-box p { color: var(--white); font-size: 1rem; }
+  .diagnostico-box strong { color: var(--gold); }
+
+  /* ── CTA FINAL ── */
+  #cta {
+    background: linear-gradient(135deg, var(--navy2) 0%, var(--navy3) 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  #cta::before {
+    content: 'BMD';
+    position: absolute;
+    font-family: var(--serif);
+    font-size: 18rem;
+    font-weight: 700;
+    color: rgba(201,168,76,0.03);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  #cta .section-tag { justify-content: center; }
+  #cta h2 { font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 1rem; }
+  #cta p { color: var(--gray); max-width: 520px; margin: 0 auto 2.5rem; font-size: 1.05rem; line-height: 1.7; }
+  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 3rem 6%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .footer-brand .nav-logo { font-size: 1.8rem; display: block; margin-bottom: .8rem; }
+  .footer-brand p { color: var(--gray); font-size: .85rem; line-height: 1.7; }
+  footer h4 { font-family: var(--serif); font-size: 1rem; margin-bottom: 1rem; color: var(--gold); }
+  .footer-links { list-style: none; }
+  .footer-links li { margin-bottom: .5rem; }
+  .footer-links a { color: var(--gray); text-decoration: none; font-size: .88rem; transition: color .2s; }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-contact p { color: var(--gray); font-size: .88rem; margin-bottom: .6rem; display: flex; align-items: center; gap: .5rem; }
+  .footer-bottom {
+    background: var(--navy);
+    border-top: 1px solid rgba(255,255,255,0.04);
+    padding: 1.2rem 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-bottom p { color: var(--gray); font-size: .78rem; }
+
+  /* ── WHATSAPP CTA FLOAT ── */
+  .wa-float {
+    position: fixed;
+    bottom: 1.5rem; right: 1.5rem;
+    z-index: 99;
+    background: #25D366;
+    color: #fff;
+    padding: .7rem 1rem .7rem .8rem;
+    border-radius: 999px;
+    display: inline-flex; align-items: center; gap: .55rem;
+    text-decoration: none;
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: .82rem;
+    letter-spacing: .02em;
+    box-shadow: 0 6px 22px rgba(37,211,102,0.45);
+    transition: transform .2s, box-shadow .2s, background .2s;
+    animation: pulse-wa 2s infinite;
+  }
+  .wa-float:hover {
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 8px 30px rgba(37,211,102,0.6);
+    background: #1ebe57;
+  }
+  @keyframes pulse-wa {
+    0%,100% { box-shadow: 0 6px 22px rgba(37,211,102,0.45); }
+    50% { box-shadow: 0 6px 34px rgba(37,211,102,0.65); }
+  }
+  .wa-float svg { width: 22px; height: 22px; fill: white; flex-shrink: 0; }
+  .wa-float .wa-label { white-space: nowrap; }
+  @media (max-width: 600px) {
+    .wa-float {
+      bottom: 1rem;
+      right: 1rem;
+      padding: .65rem .9rem .65rem .75rem;
+      font-size: .78rem;
+    }
+    .wa-float svg { width: 28px; height: 28px; }
+    .wa-float { width: 56px; height: 56px; padding: 0; justify-content: center; }
+    .wa-float .wa-label { display: none; }
+  }
+
+  /* ── FADE IN ── */
+  .fade-in {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1250px) {
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+      background: var(--navy);
+      justify-content: center; align-items: center;
+      gap: 2.5rem; z-index: 200;
+    }
+    .nav-links.open a { font-size: 1.2rem; }
+    .hamburger { display: flex; z-index: 300; }
+  }
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+      background: var(--navy);
+      justify-content: center; align-items: center;
+      gap: 2.5rem; z-index: 200;
+    }
+    .nav-links.open a { font-size: 1.2rem; }
+    .hamburger { display: flex; z-index: 300; }
+    .bruno-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .about-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+    .coaching-grid { grid-template-columns: 1fr; }
+    footer { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-stats { gap: 2rem; }
+    .metod-step { grid-template-columns: 50px 1fr; gap: 1rem; }
+  }
+  @media (max-width: 600px) {
+    nav { padding: 1rem 5%; }
+    section { padding: 4rem 5%; }
+    .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+    footer { padding: 3rem 5%; }
+    .footer-bottom { flex-direction: column; gap: .5rem; text-align: center; }
+    #cta::before { font-size: 8rem; }
+  }
+
+  /* ── FILOSOFÍA · DIAGNÓSTICO · LIBRO (nov-2026) ── */
+  [hidden] { display: none !important; }
+  #filosofia { background: var(--navy3); text-align: center; }
+  .filo-wrap { max-width: 860px; margin: 0 auto; }
+  .filo-wrap .section-tag { justify-content: center; }
+  .filo-title { font-family: var(--serif); font-size: clamp(2rem,4.6vw,3.3rem); line-height: 1.12; font-weight: 700; margin-top: 1rem; text-wrap: balance; }
+  .filo-title em { color: var(--gold); font-style: italic; font-weight: 600; }
+  .filo-body { margin: 1.8rem auto 0; max-width: 60ch; color: var(--gray); font-size: 1.05rem; display: grid; gap: .9rem; }
+  .filo-body strong { color: var(--white); font-weight: 600; }
+  .filo-flow { margin: 2.6rem auto 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .5rem .4rem; }
+  .filo-flow span { font-family: var(--serif); font-size: clamp(1.05rem,2.4vw,1.35rem); font-weight: 600; padding: .35rem .9rem; border: 1px solid rgba(201,168,76,.3); border-radius: 2px; }
+  .filo-flow span.end { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+  .filo-flow i { color: var(--gold); font-style: normal; }
+  .filo-quote { margin-top: 2.2rem; font-family: var(--serif); font-style: italic; font-size: 1.4rem; color: var(--white); }
+  .filo-quote small { display: block; margin-top: .5rem; font-family: var(--sans); font-style: normal; font-size: .75rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+
+  #diagnostico { background: var(--navy); }
+  .diag-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 3.5rem; align-items: start; margin-top: 2rem; }
+  @media (max-width: 900px) { .diag-layout { grid-template-columns: 1fr; gap: 2rem; } }
+  .diag-intro p { color: var(--gray); margin-top: 1rem; max-width: 46ch; }
+  .diag-intro ul { list-style: none; margin-top: 1.4rem; display: grid; gap: .6rem; color: var(--white); font-size: .95rem; }
+  .diag-intro li::before { content: '✓'; color: var(--gold); font-weight: 700; margin-right: .6rem; }
+  .diag-card { background: var(--navy3); border: 1px solid rgba(201,168,76,.22); border-top: 3px solid var(--gold); padding: clamp(1.4rem,4vw,2.4rem); min-height: 420px; display: flex; flex-direction: column; gap: 1.2rem; }
+  .diag-head { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .diag-step { font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); }
+  .diag-dots { display: flex; gap: 6px; }
+  .diag-dots b { width: 22px; height: 4px; background: rgba(201,168,76,.2); border-radius: 2px; transition: background .3s; }
+  .diag-dots b.on { background: var(--gold); }
+  .diag-q { font-family: var(--serif); font-size: clamp(1.4rem,3.2vw,1.85rem); line-height: 1.25; font-weight: 600; text-wrap: balance; }
+  .diag-opts { display: grid; gap: .7rem; }
+  .diag-opt { text-align: left; background: var(--navy); color: var(--white); border: 1px solid rgba(201,168,76,.2); padding: 1rem 1.1rem; font: inherit; font-size: .97rem; line-height: 1.45; cursor: pointer; border-radius: 2px; display: flex; gap: .9rem; align-items: flex-start; transition: border-color .2s, transform .2s, background .2s; }
+  .diag-opt:hover { border-color: var(--gold); transform: translateX(4px); }
+  .diag-opt .k { flex: none; width: 26px; height: 26px; border: 1px solid var(--gold); color: var(--gold); display: grid; place-items: center; font-size: .78rem; font-weight: 700; border-radius: 50%; }
+  .diag-opt.picked { background: var(--gold-dim); border-color: var(--gold); }
+  .diag-opt[disabled] { cursor: default; transform: none; }
+  .diag-opt[disabled]:not(.picked) { opacity: .45; }
+  .diag-insight { border-left: 3px solid var(--gold); background: rgba(201,168,76,.06); padding: 1rem 1.2rem; display: grid; gap: .3rem; animation: diagIn .35s ease; }
+  .diag-insight p { font-family: var(--serif); font-style: italic; font-size: 1.15rem; line-height: 1.4; }
+  .diag-insight small { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+  @keyframes diagIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .diag-insight { animation: none; } .diag-opt:hover { transform: none; } }
+  .diag-next { align-self: flex-start; background: var(--gold); color: var(--navy); border: 0; padding: .8rem 1.6rem; font: inherit; font-weight: 700; font-size: .88rem; letter-spacing: .05em; border-radius: 2px; cursor: pointer; }
+  .diag-next:hover { background: var(--gold-light); }
+  .diag-gauge { position: relative; height: 10px; background: linear-gradient(90deg, #6B3A2E, #8A7432, var(--gold)); border-radius: 5px; margin-top: .4rem; }
+  .diag-gauge i { position: absolute; top: 50%; width: 22px; height: 22px; background: var(--white); border: 3px solid var(--navy); border-radius: 50%; transform: translate(-50%,-50%); transition: left 1s cubic-bezier(.2,.8,.2,1); box-shadow: 0 0 0 2px var(--gold); }
+  .diag-gauge-l { display: flex; justify-content: space-between; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); }
+  .diag-res-title { font-family: var(--serif); font-size: clamp(1.9rem,4vw,2.5rem); font-weight: 700; color: var(--gold); line-height: 1.1; }
+  .diag-res p { color: var(--gray); line-height: 1.7; }
+  .diag-res .rec { color: var(--white); }
+  .diag-res .rec strong { color: var(--gold); }
+  .diag-actions { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; }
+  .diag-again { background: none; border: 0; color: var(--gray); font: inherit; font-size: .85rem; text-decoration: underline; cursor: pointer; }
+
+  .libro-extra { margin-top: 4.5rem; }
+  .libro-extra h3.lx-title { font-family: var(--serif); font-size: clamp(1.8rem,3.8vw,2.4rem); font-weight: 700; margin-top: .8rem; }
+  .ideas { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.5rem; margin-top: 2rem; }
+  @media (max-width: 900px) { .ideas { grid-template-columns: 1fr; } }
+  .idea { background: var(--navy3); border: 1px solid rgba(201,168,76,.15); border-top: 2px solid var(--gold); padding: 1.6rem; display: grid; gap: .8rem; align-content: start; min-width: 0; }
+  .idea .tag { font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); background: none; padding: 0; }
+  .idea h3 { font-family: var(--serif); font-size: 1.4rem; line-height: 1.2; }
+  .idea p { color: var(--gray); font-size: .93rem; line-height: 1.6; }
+  .idea .quote { font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--white); line-height: 1.35; }
+  .locked { list-style: none; display: grid; gap: .4rem; font-size: .92rem; }
+  .locked li { display: flex; gap: .6rem; align-items: center; }
+  .locked li::before { content: ''; width: 6px; height: 6px; background: var(--gold); flex: none; }
+  .locked li.off { color: var(--gray); filter: blur(4px); user-select: none; }
+  .idea .more { font-size: .84rem; color: var(--gold); font-weight: 600; }
+  .cap-gratis { margin-top: 3.5rem; display: grid; grid-template-columns: .85fr 1.15fr; gap: 3rem; align-items: start; }
+  @media (max-width: 900px) { .cap-gratis { grid-template-columns: 1fr; } }
+  .cap-form { display: grid; gap: 1rem; }
+  .cap-form p { color: var(--gray); line-height: 1.7; }
+  .cap-form .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+  @media (max-width: 520px) { .cap-form .row2 { grid-template-columns: 1fr; } }
+  .cap-form label { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); margin-bottom: .35rem; }
+  .cap-form input { width: 100%; background: var(--navy); color: var(--white); border: 1px solid rgba(201,168,76,.25); padding: .8rem 1rem; font: inherit; border-radius: 2px; }
+  .cap-form input:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .cap-err { color: #E07A5F; font-size: .85rem; }
+  .cap-ok { color: var(--gold); font-size: .9rem; }
+  .cap-lock { background: var(--navy3); border: 1px dashed rgba(201,168,76,.35); padding: 2rem; text-align: center; color: var(--gray); display: grid; gap: .6rem; place-items: center; min-height: 260px; align-content: center; }
+  .cap-lock b { font-family: var(--serif); font-size: 1.5rem; color: var(--white); }
+  .reader { background: var(--navy3); border: 1px solid rgba(201,168,76,.22); padding: clamp(1.4rem,4vw,2.8rem); max-height: 620px; overflow-y: auto; }
+  .reader .chap { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+  .reader h3 { font-family: var(--serif); font-size: clamp(1.6rem,3.5vw,2.1rem); margin: .4rem 0 1.4rem; }
+  .reader h4 { font-family: var(--serif); font-size: 1.25rem; color: var(--gold); margin: 1.6rem 0 .6rem; }
+  .reader p { margin-bottom: .8rem; color: var(--gray); line-height: 1.75; }
+  .reader .big { font-family: var(--serif); font-style: italic; font-size: 1.25rem; color: var(--white); }
+  .reader ul, .reader ol { margin: 0 0 1rem 1.2rem; color: var(--gray); line-height: 1.7; }
+  .reader strong { color: var(--white); }
+  .funnel { border-left: 2px solid var(--gold); padding-left: .9rem; font-variant-numeric: tabular-nums; color: var(--white) !important; }
+  .reader-end { margin-top: 1.6rem; padding-top: 1.2rem; border-top: 1px solid rgba(201,168,76,.2); display: grid; gap: 1rem; }
+
+  .mentoria-extra { display: none; }
+  .mentorias-grid.abierto .mentoria-extra { display: flex; flex-direction: column; }
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav id="navbar">
+  <a href="/" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;"><img src="../assets/bmd-consulting-isotipo.jpg" alt="BMD Consulting" style="height:56px;width:56px;object-fit:contain;border-radius:50%;"/><span style="font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--gold);white-space:nowrap;">BMD <span style="color:var(--white);">Consulting</span></span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="#ideas">Dentro del libro</a></li>
+    <li><a href="#capitulo">Capítulo 1 gratis</a></li>
+    <li><a href="https://pay.hotmart.com/P105882962I?off=xnjjdr51" target="_blank" rel="noopener" class="nav-cta">Comprar el libro</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<section id="libro" style="background:var(--navy2);padding-top:8rem;">
+  <div class="container">
+    <div class="section-tag">Libro</div>
+    <div style="display:flex;align-items:center;gap:4rem;flex-wrap:wrap;margin-top:2.5rem;">
+      <div style="flex:0 0 auto;text-align:center;">
+        <div style="position:relative;display:inline-block;">
+          <div style="position:absolute;inset:-8px;background:radial-gradient(ellipse,rgba(201,168,76,0.25),transparent 70%);border-radius:8px;"></div>
+          <img src="../assets/image-03.jpg" alt="Ventas en Frecuencia" 
+               style="width:220px;border-radius:6px;box-shadow:0 24px 60px rgba(0,0,0,0.6),0 0 0 1px rgba(201,168,76,0.2);position:relative;z-index:1;"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div style="display:none;width:220px;height:320px;background:linear-gradient(135deg,#070C1A,#111B30);border:1px solid rgba(201,168,76,0.3);border-radius:6px;align-items:center;justify-content:center;flex-direction:column;gap:1rem;padding:2rem;text-align:center;">
+            <div style="font-size:2rem;">📖</div>
+            <div style="font-family:var(--serif);font-size:1.1rem;color:var(--gold);font-weight:700;">VENTAS EN FRECUENCIA</div>
+            <div style="font-size:.75rem;color:var(--gray);">Bruno Noriega Montenegro</div>
+          </div>
+        </div>
+      </div>
+      <div style="flex:1;min-width:280px;">
+        <h2 style="font-family:var(--serif);font-size:2.2rem;font-weight:700;color:var(--white);margin-bottom:.5rem;line-height:1.2;">
+          Ventas en <span style="color:var(--gold);">Frecuencia</span>
+        </h2>
+        <p style="font-size:.85rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:1.5rem;">
+          El libro que cambia la forma en que vendes — para siempre.
+        </p>
+        <p style="color:var(--gray);line-height:1.8;margin-bottom:1.5rem;font-size:.95rem;">
+          Este libro nació de 20 años en el campo — no en un aula.
+          Lo escribí para el vendedor que trabaja duro pero no termina de despegar. Para el emprendedor que tiene algo bueno pero no sabe cómo comunicarlo. Para quien quiere construir una carrera comercial sólida, no solo cerrar una venta.
+          21 capítulos. Una sola transformación.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;">
+          <div style="display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--gray);">
+            <span style="color:var(--gold);">✦</span> 331 páginas
+          </div>
+          <div style="display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--gray);">
+            <span style="color:var(--gold);">✦</span> 21 capítulos
+          </div>
+          <div style="display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--gray);">
+            <span style="color:var(--gold);">✦</span> Primera edición 2026
+          </div>
+        </div>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="https://pay.hotmart.com/P105882962I?off=xnjjdr51" target="_blank"
+             style="display:inline-flex;align-items:center;gap:.6rem;background:var(--gold);color:var(--navy);padding:.8rem 1.8rem;border-radius:2px;font-weight:700;font-size:.9rem;text-decoration:none;letter-spacing:.05em;transition:background .2s;"
+             onmouseover="this.style.background='#E2C47A'" onmouseout="this.style.background='#C9A84C'">
+            Comprar en Hotmart
+          </a>
+          <a href="#capitulo" class="btn-secondary">Leer el capítulo 1 gratis →</a>
+          <!-- BOTÓN AMAZON: reactivar cuando exista el link real del Kindle
+<a href="https://amazon.com" target="_blank"
+             style="display:inline-flex;align-items:center;gap:.6rem;background:transparent;color:var(--gold);padding:.8rem 1.8rem;border-radius:2px;font-weight:600;font-size:.9rem;text-decoration:none;letter-spacing:.05em;border:1px solid rgba(201,168,76,0.4);transition:all .2s;"
+             onmouseover="this.style.borderColor='var(--gold)';this.style.background='rgba(201,168,76,0.08)'" 
+             onmouseout="this.style.borderColor='rgba(201,168,76,0.4)';this.style.background='transparent'">
+            📦 Ver en Amazon Kindle
+          </a>
+-->
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<section style="background:var(--navy);">
+  <div class="container">
+    <div class="libro-extra">
+      <div class="section-tag">Dentro del libro</div>
+      <h3 class="lx-title">Tres ideas que cambian la forma de vender</h3>
+      <div class="ideas" id="ideas">
+        <article class="idea">
+          <p class="tag">Capítulo 8 · Objeciones</p>
+          <h3>"Déjame pensarlo" no es una respuesta</h3>
+          <p class="quote">Es una salida elegante.</p>
+          <p>Detrás de esa frase casi nunca hay desinterés. Hay algo que no se trabajó mucho antes de llegar al cierre. El libro muestra las causas reales y cómo detectarlas a tiempo:</p>
+          <ul class="locked">
+            <li>No se validó al decisor real</li>
+            <li>No se cuantificó el problema</li>
+            <li class="off" aria-hidden="true">Contenido exclusivo del libro</li>
+            <li class="off" aria-hidden="true">Contenido exclusivo del libro</li>
+          </ul>
+          <p class="more">El método completo está en el capítulo 8.</p>
+        </article>
+        <article class="idea">
+          <p class="tag">Capítulo 11 · El modelo</p>
+          <h3>Mismo producto, mismo guion, resultados opuestos</h3>
+          <p class="quote">El cliente no compra solo el producto. Compra el estado interno del vendedor.</p>
+          <p>Dos vendedores con la misma capacitación pueden vender el doble o la mitad. La diferencia está en seis pilares que forman la Frecuencia Comercial™:</p>
+          <ul class="locked">
+            <li>Regulación mental</li>
+            <li>Relación con el rechazo</li>
+            <li>Disciplina operativa</li>
+            <li class="off" aria-hidden="true">Pilar exclusivo</li>
+            <li class="off" aria-hidden="true">Pilar exclusivo</li>
+            <li class="off" aria-hidden="true">Pilar exclusivo</li>
+          </ul>
+          <p class="more">Los seis pilares, en el capítulo 11.</p>
+        </article>
+        <article class="idea">
+          <p class="tag">Capítulo 5 · Caso real</p>
+          <h3>La cuenta que se cayó cuando ya estaba cerrada</h3>
+          <p class="quote">Cerca de un millón en facturación proyectada. Firmado. Y de pronto, nada.</p>
+          <p>No fue el precio ni la competencia: fue un cambio interno en el cliente que nadie podía controlar. Lo que se hizo después, y lo que pasó seis meses más tarde, es una de las lecciones centrales del método.</p>
+          <p class="more">La historia completa, en el capítulo 5.</p>
+        </article>
+      </div>
+      <div class="cap-gratis" id="capitulo">
+        <div class="cap-form">
+          <div class="section-tag">Capítulo 1 gratis</div>
+          <h3 class="lx-title" style="margin-top:0">Del entusiasmo al profesionalismo comercial</h3>
+          <p>La reunión que parecía exitosa y terminó en silencio, los cinco errores que la mataron y los números que convierten la venta en un sistema medible.</p>
+          <p>Déjanos tu nombre y WhatsApp: lo lees aquí mismo y te enviamos el PDF.</p>
+          <form id="free-form" novalidate>
+            <div class="row2">
+              <div><label for="c-name">Nombre</label><input id="c-name" autocomplete="name" placeholder="Tu nombre"/></div>
+              <div><label for="c-phone">WhatsApp</label><input id="c-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="9XX XXX XXX"/></div>
+            </div>
+          </form>
+          <p class="cap-err" id="c-err" hidden>Escribe tu nombre y un número de 9 dígitos.</p>
+          <div><a class="btn-primary" id="c-send" href="#" target="_blank" rel="noopener">Leer el capítulo 1</a></div>
+          <p class="cap-ok" id="c-ok" hidden>Listo. Ya puedes leerlo, y en WhatsApp te llega el PDF.</p>
+        </div>
+        <div>
+          <div class="cap-lock" id="cap-lock"><b>Capítulo 1</b><span>Completa tus datos para desbloquear la lectura.</span></div>
+          <div class="reader" id="reader" hidden tabindex="-1">
+        <p class="chap">Capítulo 1 · Ventas en Frecuencia</p>
+        <h3>Del entusiasmo al profesionalismo comercial</h3>
+        <h4>1.1 El primer error: creer que vender es cuestión de actitud</h4>
+        <p>Cuando ingresé al segmento de seguros corporativos B2B, creía que estaba listo. Tenía energía. Tenía discurso. Tenía presencia. Y tenía algo que muchos vendedores consideran suficiente: actitud.</p>
+        <p class="big">Pero el mercado corporativo no compra actitud. Compra estructura.</p>
+        <p>Durante mis primeras reuniones, yo confiaba en mi capacidad de conversación. Me preparaba, sí, pero mi preparación era superficial: conocía el producto, revisaba la página web del cliente, y llevaba una presentación lista.</p>
+        <p>Pensaba que eso era profesionalismo. No lo era. Era entusiasmo con traje formal. Y el mercado corporate distingue la diferencia en los primeros cinco minutos.</p>
+        <h4>1.2 El entorno B2B: donde la improvisación no tiene espacio</h4>
+        <p>En el segmento corporativo no se vende por simpatía. Se vende por:</p>
+        <ul><li>Gestión de riesgo.</li><li>Impacto financiero.</li><li>Optimización presupuestal.</li><li>Reducción de contingencias.</li><li>Proyección estratégica.</li></ul>
+        <p>Cuando te sientas frente a un gerente financiero, él no está evaluando si eres carismático. Está evaluando si eres confiable. Y la confianza no se transmite con intensidad. Se transmite con claridad estructural.</p>
+        <p>Ahí entendí algo determinante:</p>
+        <p class="big">El mercado profesional no rechaza personas. Rechaza procesos débiles.</p>
+        <h4>1.3 Caso real: la reunión que parecía exitosa (y no lo fue)</h4>
+        <p>Una de las reuniones que más me enseñó fue con una empresa mediana del sector industrial. Logré la cita después de varios intentos. Llegué preparado, con propuesta lista.</p>
+        <p>La reunión fluyó. El gerente escuchó con atención. Hizo preguntas. Mostró interés. Al finalizar dijo: "Envíame la propuesta formal y lo revisamos internamente."</p>
+        <p>Salí convencido de que estaba cerca del cierre. Envié la propuesta ese mismo día. Pasó una semana. Silencio. Llamé. "No hemos podido revisarlo aún." Pasaron dos semanas más. Nada.</p>
+        <p>Finalmente entendí que el proceso había muerto. Y ahí decidí analizar objetivamente qué había ocurrido.</p>
+        <h4>1.4 Análisis técnico de la reunión fallida</h4>
+        <p>Cuando desarmé la reunión, descubrí errores estructurales:</p>
+        <ol><li><strong>No validé presupuesto.</strong> Nunca confirmé si tenían partida asignada.</li><li><strong>No identifiqué decisor real.</strong> El gerente con el que hablé influía, pero no decidía solo.</li><li><strong>No cuantifiqué el problema.</strong> Hablé de beneficios generales, no de impacto financiero concreto.</li><li><strong>No establecí siguiente paso con fecha.</strong> Dejé el proceso abierto.</li><li><strong>No medí urgencia.</strong> Asumí interés como intención de compra.</li></ol>
+        <p>Ahí entendí que no había perdido por falta de carisma. Había perdido por falta de estructura. Y eso cambió mi mentalidad.</p>
+        <h4>1.5 El nacimiento de la matemática comercial</h4>
+        <p>Decidí eliminar la emoción del análisis. Comencé a medir: número de llamadas diarias, tasa de contacto efectivo, tasa de citas agendadas, tasa de propuestas enviadas y tasa de cierre real.</p>
+        <p>Descubrí que antes trabajaba por sensación. Ahora trabajaba por indicadores. Ejemplo real:</p>
+        <p class="funnel">30 llamadas → 8 conversaciones reales<br>8 conversaciones → 3 reuniones<br>3 reuniones → 1 propuesta sólida<br>1 propuesta → 0.4 cierre promedio</p>
+        <p>Eso significa que mi trabajo no era frustrarme por un no. Era alimentar el sistema. La venta dejó de ser emocional. Se convirtió en gestión estratégica.</p>
+        <h4>1.6 Profesionalismo: estabilidad emocional aplicada al proceso</h4>
+        <p>Un vendedor reactivo se motiva cuando cierra, se desmotiva cuando pierde, trabaja más cuando necesita dinero y se relaja cuando tiene ingresos.</p>
+        <p>Un vendedor profesional prospecta incluso cuando está en su mejor mes, sigue procesos incluso cuando ya tiene cuota cubierta, aprende incluso cuando gana y no depende de un solo cliente.</p>
+        <p class="big">El profesionalismo no es intensidad. Es consistencia. Y la consistencia nace de un sistema.</p>
+        <h4>1.7 La frecuencia empieza a tomar forma</h4>
+        <p>Hubo un cliente que visité varias veces sin cierre inmediato. Cada reunión agregaba valor: información técnica, comparativos, análisis de riesgo, ajustes personalizados. No presioné. Estuve presente.</p>
+        <p>Meses después, cuando decidieron cambiar proveedor, no compararon opciones. Me llamaron directamente. ¿Por qué? Porque mi nombre ya estaba posicionado en su mente.</p>
+        <p>Ahí entendí algo fundamental:</p>
+        <p class="big">La venta no es un evento. Es acumulación de presencia estratégica.</p>
+        <p class="funnel">Prospección → Contacto → Relación → Valor → Confianza → Cierre</p>
+        <p>Eso es frecuencia. Y esa filosofía empezó a construirse desde ese momento.</p>
+        <h4>1.8 La transformación real</h4>
+        <p>El cambio no fue externo. Fue interno. Dejé de preguntarme "¿Cómo cierro más rápido?" y empecé a preguntarme "¿Cómo construyo procesos más sólidos?"</p>
+        <p>Dejé de vender desde la urgencia. Empecé a vender desde la estructura. Y ese cambio transformó no solo mis resultados, sino mi identidad profesional. Ya no era alguien que intentaba vender. Era alguien que gestionaba decisiones estratégicas.</p>
+        <h4>Síntesis estratégica del capítulo</h4>
+        <p>La venta profesional nace cuando se eliminan las suposiciones, se miden indicadores, se validan presupuestos, se identifica al decisor, se establece el siguiente paso y se trabaja por sistema y no por emoción.</p>
+        <p class="big">El entusiasmo inicia la carrera. La estructura la sostiene.</p>
+        <div class="reader-end">
+          <p>Si el profesionalismo nace con estructura… ¿qué ocurre cuando esa estructura desaparece? Lo descubres en el capítulo 2.</p>
+          <div class="cta" style="display:flex;flex-wrap:wrap;gap:12px">
+            <a class="btn-primary" href="https://pay.hotmart.com/P105882962I?off=xnjjdr51" target="_blank" rel="noopener">Quiero el libro completo</a>
+            <a class="btn-secondary" href="#diagnostico">Hacer el diagnóstico</a>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <a href="/" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;"><img src="../assets/bmd-consulting-isotipo.jpg" alt="BMD Consulting" style="height:56px;width:56px;object-fit:contain;border-radius:50%;"/><span style="font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--gold);white-space:nowrap;">BMD <span style="color:var(--white);">Consulting</span></span></a>
+    <p>Consultoría de negocios, mentorías y talleres comerciales. Ética, método y compromiso en cada proyecto.</p>
+    <p style="margin-top:.6rem;font-size:.8rem;color:var(--gold);letter-spacing:.08em;">Parte de BMDT Group</p>
+  </div>
+  <div>
+    <h4>Servicios</h4>
+    <ul class="footer-links">
+      <li><a href="/#servicios">Consultoría Comercial</a></li>
+      <li><a href="/#servicios">Talleres para Equipos</a></li>
+      <li><a href="/#servicios">Mentoría para Líderes</a></li>
+      <li><a href="/#mentorias">Programas y Conferencias</a></li>
+      <li><a href="/#casos-video">Casos de Éxito</a></li>
+      <li><a href="/libro/">Libro Ventas en Frecuencia</a></li>
+    </ul>
+  </div>
+  <div class="footer-contact">
+    <h4>Contacto</h4>
+    <p>📍 Trujillo, La Libertad · Perú</p>
+    <p>💬 <a href="https://wa.me/51922529675" target="_blank" style="color:var(--gray);text-decoration:none;">+51 922 529 675</a> <span style="color:var(--gold);font-size:.75rem;">(WhatsApp)</span></p>
+    <p>📞 <a href="tel:+51933815686" style="color:var(--gray);text-decoration:none;">+51 933 815 686</a> <span style="color:var(--gold);font-size:.75rem;">(llamadas)</span></p>
+    <p>✉️ <a href="mailto:gerencia@bmdgroup.org.pe" style="color:var(--gray);text-decoration:none;">gerencia@bmdgroup.org.pe</a></p>
+    <p>🏛️ <span>¿Quieres invertir en inmuebles? <a href="/sapia/" style="color:var(--gold);text-decoration:none;">Sapia Grupo Inmobiliario</a>, también parte de BMDT Group</span></p>
+    <p>🛠️ <span>¿Obras o mantenimiento para tu empresa? <a href="/servicios/" style="color:var(--gold);text-decoration:none;">BMD Servicios Generales</a></span></p>
+    <p>🏢 <span>Conoce el grupo: <a href="/grupo/" style="color:var(--gold);text-decoration:none;">BMDT Group</a></span></p>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <p>© 2026 BMD Consulting · Parte de BMDT Group. Todos los derechos reservados.</p>
+</div>
+
+<!-- WHATSAPP CTA FLOAT -->
+<a href="https://wa.me/51922529675?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20libro%20Ventas%20en%20Frecuencia" target="_blank" class="wa-float" title="Comunicarse por WhatsApp" aria-label="Comunicarse por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.984-1.407A9.94 9.94 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.031-1.094l-.29-.173-2.958.835.797-2.888-.19-.298A7.944 7.944 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
+  </svg>
+  <span class="wa-label">Comunicarse por WhatsApp</span>
+</a>
+<script>
+  function toggleMenu(){var o=document.getElementById('navLinks').classList.toggle('open');document.getElementById('navbar').classList.toggle('menu-open',o);}
+  document.querySelectorAll('.fade-in').forEach(function(e){e.classList.add('visible')});
+</script>
+<script>
+/* ── MEDICIÓN: Píxel de Meta y Google Analytics 4 ──
+   Pegar los ID aquí para activarlos. Vacíos = no se carga nada. */
+var BMD_PIXEL_ID = "";
+var BMD_GA_ID = "";
+(function(){
+  if (BMD_PIXEL_ID) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', BMD_PIXEL_ID); fbq('track', 'PageView');
+  }
+  if (BMD_GA_ID) {
+    var g=document.createElement('script'); g.async=true; g.src='https://www.googletagmanager.com/gtag/js?id='+BMD_GA_ID; document.head.appendChild(g);
+    window.dataLayer=window.dataLayer||[]; window.gtag=function(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config', BMD_GA_ID);
+  }
+  window.bmdTrack=function(evento, datos){
+    datos=datos||{};
+    try{ if(window.fbq) fbq(evento==='Contact'||evento==='Lead'?'track':'trackCustom', evento, datos); }catch(e){}
+    try{ if(window.gtag) gtag('event', evento==='Contact'?'contacto_whatsapp':evento==='Lead'?'diagnostico_completo':evento, datos); }catch(e){}
+  };
+  function seccion(el){ var s=el.closest('section[id],nav,footer'); if(!s) return el.classList.contains('wa-float')?'boton-flotante':'otro'; return s.id||s.tagName.toLowerCase(); }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href*="wa.me"]'); if(!a) return;
+    bmdTrack('Contact',{seccion:seccion(a), boton:(a.textContent||'').trim().slice(0,60)});
+  },true);
+  var btn=document.getElementById('ver-programas');
+  if(btn) btn.addEventListener('click',function(){
+    var g=document.querySelector('.mentorias-grid'); var ab=g.classList.toggle('abierto');
+    btn.setAttribute('aria-expanded',ab); btn.textContent=ab?'Ver menos ↑':'Ver los 14 programas ↓';
+    if(!ab) document.getElementById('mentorias').scrollIntoView({behavior:'smooth'});
+  });
+})();
+</script>
+<script>
+(function(){
+  var WA="51922529675";
+  var cn=document.getElementById("c-name"),cp=document.getElementById("c-phone"),cs=document.getElementById("c-send");
+  if(!cs) return;
+  var reader=document.getElementById("reader"),lock=document.getElementById("cap-lock");
+  function upd(){cs.href="https://wa.me/"+WA+"?text="+encodeURIComponent("Hola, BMD Consulting. Soy "+cn.value.trim()+" y quiero recibir el capítulo 1 gratis de Ventas en Frecuencia. Mi WhatsApp: "+cp.value.trim())}
+  function open(){reader.hidden=false;lock.hidden=true}
+  [cn,cp].forEach(function(e){e.addEventListener("input",upd)});
+  cs.addEventListener("click",function(e){
+    if(!cn.value.trim()||cp.value.replace(/\D/g,"").length<9){e.preventDefault();document.getElementById("c-err").hidden=false;return}
+    document.getElementById("c-err").hidden=true;document.getElementById("c-ok").hidden=false;open();if(window.bmdTrack)bmdTrack("Lead",{origen:"capitulo-1"});
+    try{localStorage.setItem("bmd-cap1","1")}catch(_){}
+  });
+  document.getElementById("free-form").addEventListener("submit",function(e){e.preventDefault()});
+  try{if(localStorage.getItem("bmd-cap1")==="1")open()}catch(_){}
+  upd();
+})();
+</script>
+</body>
+</html>
