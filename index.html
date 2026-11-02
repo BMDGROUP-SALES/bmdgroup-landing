@@ -707,7 +707,64 @@
 
   .mentoria-extra { display: none; }
   .mentorias-grid.abierto .mentoria-extra { display: flex; flex-direction: column; }
+
+  /* ── PARA QUIÉN · CHECKLIST · AGENDA (nov-2026) ── */
+  #para-quien { background: var(--navy2); }
+  .pq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+  @media (max-width: 800px) { .pq-grid { grid-template-columns: 1fr; } }
+  .pq-col { background: var(--navy3); padding: 1.8rem; border: 1px solid rgba(201,168,76,.15); }
+  .pq-si { border-top: 3px solid var(--gold); }
+  .pq-no { border-top: 3px solid #6B3A2E; }
+  .pq-col h3 { font-family: var(--serif); font-size: 1.4rem; margin-bottom: 1rem; }
+  .pq-col ul { list-style: none; display: grid; gap: .7rem; }
+  .pq-col li { color: var(--gray); line-height: 1.55; padding-left: 1.6rem; position: relative; }
+  .pq-si li::before { content: '✓'; color: var(--gold); position: absolute; left: 0; font-weight: 700; }
+  .pq-no li::before { content: '✕'; color: #C77D6A; position: absolute; left: 0; font-weight: 700; }
+
+  #checklist { background: var(--navy); }
+  .ck-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+  @media (max-width: 900px) { .ck-grid { grid-template-columns: 1fr; gap: 2rem; } }
+  .ck-lead { color: var(--gray); margin: 1rem 0 1.5rem; max-width: 48ch; line-height: 1.7; }
+  #ck-form, .ag-card { display: grid; gap: 1rem; }
+  .ck-row, .ag-row { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+  @media (max-width: 520px) { .ck-row, .ag-row { grid-template-columns: 1fr; } }
+  #checklist label, #agenda label, .ag-lbl { display: block; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gray); margin-bottom: .35rem; }
+  .ag-lbl small { text-transform: none; letter-spacing: 0; font-weight: 400; }
+  #checklist input:not([type=checkbox]), #agenda input, #agenda select { width: 100%; background: var(--navy); color: var(--white); border: 1px solid rgba(201,168,76,.25); padding: .8rem 1rem; font: inherit; border-radius: 2px; }
+  #checklist input:focus, #agenda input:focus, #agenda select:focus { outline: 2px solid var(--gold); outline-offset: 2px; }
+  #checklist label.consent, #libro-consent { text-transform: none; letter-spacing: 0; font-weight: 400; font-size: .85rem; color: var(--gray); display: flex; gap: .6rem; align-items: flex-start; line-height: 1.5; }
+  label.consent a { color: var(--gold); }
+  label.consent input { margin-top: .2rem; accent-color: var(--gold); }
+  .ck-box { background: var(--navy3); border: 1px solid rgba(201,168,76,.2); padding: clamp(1.2rem,3vw,2rem); }
+  .ck-box .cap-lock { border: 0; background: none; }
+  .ck-list { list-style: none; display: grid; gap: .9rem; }
+  .ck-list li { display: flex; gap: .9rem; align-items: flex-start; }
+  .ck-list b { font-family: var(--serif); font-size: 1.3rem; color: var(--gold); min-width: 2ch; font-variant-numeric: tabular-nums; }
+  .ck-list strong { display: block; color: var(--white); }
+  .ck-list span { color: var(--gray); font-size: .9rem; line-height: 1.5; }
+  .ck-next { margin-top: 1.4rem; padding-top: 1.2rem; border-top: 1px solid rgba(201,168,76,.2); display: grid; gap: .8rem; }
+  .ck-next p { color: var(--white); }
+
+  #agenda { background: linear-gradient(135deg, var(--navy2) 0%, var(--navy3) 100%); }
+  .ag-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 3rem; align-items: start; }
+  @media (max-width: 900px) { .ag-grid { grid-template-columns: 1fr; gap: 2rem; } }
+  .ag-info p { color: var(--gray); line-height: 1.7; margin-top: 1rem; max-width: 46ch; }
+  .ag-info h3 { font-family: var(--serif); font-size: 1.3rem; margin-top: 1.6rem; color: var(--gold); }
+  .ag-take { list-style: none; display: grid; gap: .6rem; margin-top: .8rem; }
+  .ag-take li { color: var(--white); padding-left: 1.6rem; position: relative; }
+  .ag-take li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+  .ag-alt .sel { color: var(--white); user-select: all; overflow-wrap: anywhere; }
+  .ag-card { background: var(--navy); border: 1px solid rgba(201,168,76,.25); border-top: 3px solid var(--gold); padding: clamp(1.2rem,3vw,2rem); }
+  .ag-chips { display: flex; flex-wrap: wrap; gap: .45rem; }
+  .ag-chip { background: var(--navy3); color: var(--white); border: 1px solid rgba(201,168,76,.22); padding: .5rem .75rem; font: inherit; font-size: .85rem; border-radius: 2px; cursor: pointer; line-height: 1.2; text-align: center; font-variant-numeric: tabular-nums; }
+  .ag-chip small { display: block; font-size: .68rem; color: var(--gray); text-transform: uppercase; letter-spacing: .08em; }
+  .ag-chip:hover { border-color: var(--gold); }
+  .ag-chip.on { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+  .ag-chip.on small { color: var(--navy); }
+  .ag-chip:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+  .ag-sum { color: var(--gold); font-size: .95rem; min-height: 1.4em; }
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "BMD Consulting", "description": "Consultoría comercial, talleres y mentoría para equipos de ventas en Trujillo y el norte del Perú.", "url": "https://bmdgroup.org.pe/", "image": "https://bmdgroup.org.pe/assets/og-consulting.jpg", "logo": "https://bmdgroup.org.pe/assets/bmd-consulting-isotipo.jpg", "telephone": "+51922529675", "email": "direcciongeneral@bmdgroup.org.pe", "address": {"@type": "PostalAddress", "streetAddress": "Calle Las Begonias Mz. 1 Lote 20, Of. 301, Urb. Jardines del Golf", "addressLocality": "Trujillo", "addressRegion": "La Libertad", "addressCountry": "PE"}, "areaServed": "Norte del Perú", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "19:00"}], "founder": {"@type": "Person", "name": "Bruno Noriega Montenegro", "sameAs": "https://www.linkedin.com/in/bruno-renato-noriega-montenegro-b7b93b232"}, "parentOrganization": {"@type": "Organization", "name": "BMDT Group"}, "sameAs": ["https://www.linkedin.com/in/bruno-renato-noriega-montenegro-b7b93b232", "https://instagram.com/bmd.consultoria.bienesraices", "https://www.tiktok.com/@bmdgroupconsultora"]}</script>
 </head>
 <body>
 
@@ -722,7 +779,7 @@
     <li><a href="#equipo">Equipo</a></li>
     <li><a href="#casos-video">Casos</a></li>
     <li><a href="#libro">Libro</a></li>
-    <li><a href="#diagnostico" class="nav-cta">Diagnóstico Gratis</a></li>
+    <li><a href="#agenda" class="nav-cta">Agendar diagnóstico</a></li>
   </ul>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -738,7 +795,7 @@
     <h1>Tu equipo puede vender más <em>todos los meses,</em> no solo en los buenos.</h1>
     <p class="hero-sub">Ordenamos tu sistema comercial y acompañamos a tu equipo hasta que los resultados se sostengan. Consultoría, talleres y mentoría para empresas del norte del Perú.</p>
     <div class="btn-group">
-      <a href="https://wa.me/51922529675?text=Hola%2C%20quiero%20agendar%20mi%20diagn%C3%B3stico%20comercial%20gratuito%20de%2020%20minutos" target="_blank" class="btn-primary">
+      <a href="#agenda" class="btn-primary">
         <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.984-1.407A9.94 9.94 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.031-1.094l-.29-.173-2.958.835.797-2.888-.19-.298A7.944 7.944 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
         Agendar diagnóstico de 20 min
       </a>
@@ -764,30 +821,30 @@
 <!-- MARCAS -->
 <section id="marcas" style="background:var(--navy);padding:3rem 6%;text-align:center;">
   <div class="fade-in" style="margin-bottom:2.5rem;">
-    <div class="section-tag" style="justify-content:center;">Empresas que ya confiaron en BMD</div>
-    <p style="color:var(--gray);font-size:.95rem;max-width:520px;margin:.6rem auto 0;">De emprendimientos a empresas consolidadas, en rubros muy distintos.</p>
+    <div class="section-tag" style="justify-content:center;">Marcas con las que hemos trabajado</div>
+    <p style="color:var(--gray);font-size:.95rem;max-width:520px;margin:.6rem auto 0;">Clientes atendidos por nuestro equipo a lo largo de más de 20 años de trayectoria comercial, en rubros muy distintos.</p>
   </div>
   <div class="fade-in" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:1.5rem 2.5rem;opacity:1;filter:none;">
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc41f0579c_6.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc40948bd4_7.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3f96e55d_8.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3ec4f96b_9.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3d6648b1_10.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3c5585b0_11.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3afef323_12.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3873e0b9_13.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc372072c0_14.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc35b4d540_15.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc33f52ff6_16.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc32163baf_17.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2fc26e93_18.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2da61a3b_19.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2c011f24_20.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2a60e4ec_21.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc293c1ed7_22.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc273be7d3_23.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc26208cce_24.png" style="height:52px;object-fit:contain;" alt="empresa"/>
-    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc24d9b845_25.png" style="height:52px;object-fit:contain;" alt="empresa"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc41f0579c_6.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc40948bd4_7.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3f96e55d_8.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3ec4f96b_9.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3d6648b1_10.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3c5585b0_11.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3afef323_12.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3873e0b9_13.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc372072c0_14.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc35b4d540_15.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc33f52ff6_16.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc32163baf_17.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2fc26e93_18.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2da61a3b_19.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2c011f24_20.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2a60e4ec_21.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc293c1ed7_22.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc273be7d3_23.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc26208cce_24.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
+    <img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc24d9b845_25.png" style="height:52px;object-fit:contain;" alt="Marca cliente" loading="lazy"/>
   </div>
 </section>
 
@@ -882,6 +939,34 @@
   </div>
 </section>
 
+
+<!-- PARA QUIÉN ES -->
+<section id="para-quien">
+  <div class="fade-in">
+    <div class="section-tag">¿Es para tu empresa?</div>
+    <h2>Trabajamos con empresas que quieren <em>crecer con método</em></h2>
+  </div>
+  <div class="pq-grid">
+    <div class="pq-col pq-si fade-in">
+      <h3>Es para ti si…</h3>
+      <ul>
+        <li>Tienes un equipo comercial de 3 o más personas, o estás por armarlo.</li>
+        <li>Tus ventas suben y bajan sin que sepas bien por qué.</li>
+        <li>Quieres un sistema medible, no una charla motivacional.</li>
+        <li>Estás dispuesto a implementar y medir durante al menos 3 meses.</li>
+      </ul>
+    </div>
+    <div class="pq-col pq-no fade-in">
+      <h3>No es para ti si…</h3>
+      <ul>
+        <li>Buscas una fórmula mágica para vender más esta semana.</li>
+        <li>Solo quieres una capacitación para cumplir el calendario.</li>
+        <li>No estás dispuesto a revisar cómo vende hoy tu equipo.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- MENTORÍAS -->
 <section id="mentorias">
   <div class="fade-in">
@@ -899,19 +984,19 @@
       <div class="mentoria-cat">Ventas</div>
       <h3>Venta Letal</h3>
       <p>Nuestro método de ventas y cierre de alto impacto. Diagnóstico del cliente, manejo de objeciones y cierres efectivos para equipos comerciales.</p>
-      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Venta%20Letal" target="_blank" rel="noopener">Solicitar información →</a>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20BMD%20Consulting%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Venta%20Letal" target="_blank" rel="noopener">Solicitar información →</a>
     </div>
     <div class="mentoria-card fade-in destacada">
       <div class="mentoria-cat">Liderazgo</div>
       <h3>Liderazgo Estratégico BMD</h3>
       <p>Para jefes y supervisores: dirigir equipos comerciales con método, indicadores claros y motivación sostenida.</p>
-      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Liderazgo%20Estrat%C3%A9gico%20BMD" target="_blank" rel="noopener">Solicitar información →</a>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20BMD%20Consulting%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Liderazgo%20Estrat%C3%A9gico%20BMD" target="_blank" rel="noopener">Solicitar información →</a>
     </div>
     <div class="mentoria-card fade-in destacada">
       <div class="mentoria-cat">Ventas</div>
       <h3>Negociación y Cierre B2B</h3>
       <p>Negociar con empresas: preparación, concesiones inteligentes y técnicas para cerrar sin bajar el precio.</p>
-      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Negociaci%C3%B3n%20y%20Cierre%20B2B" target="_blank" rel="noopener">Solicitar información →</a>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20BMD%20Consulting%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Negociaci%C3%B3n%20y%20Cierre%20B2B" target="_blank" rel="noopener">Solicitar información →</a>
     </div>
     <div class="mentoria-card fade-in destacada">
       <div class="mentoria-cat">Conferencias</div>
@@ -923,66 +1008,66 @@
       <div class="mentoria-cat">Habilidades blandas</div>
       <h3>Habilidades Blandas para Equipos</h3>
       <p>Trabajo en equipo, adaptabilidad y relaciones laborales que mejoran el clima y el rendimiento del equipo.</p>
-      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Habilidades%20Blandas%20para%20Equipos" target="_blank" rel="noopener">Solicitar información →</a>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20BMD%20Consulting%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Habilidades%20Blandas%20para%20Equipos" target="_blank" rel="noopener">Solicitar información →</a>
     </div>
     <div class="mentoria-card mentoria-extra">
       <div class="mentoria-cat">Comunicación</div>
       <h3>Comunicación Asertiva y Escucha Activa</h3>
       <p>Comunicar con claridad, escuchar para entender y resolver conflictos sin desgastar al equipo.</p>
-      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Comunicaci%C3%B3n%20Asertiva%20y%20Escucha%20Activa" target="_blank" rel="noopener">Solicitar información →</a>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20BMD%20Consulting%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Comunicaci%C3%B3n%20Asertiva%20y%20Escucha%20Activa" target="_blank" rel="noopener">Solicitar información →</a>
     </div>
     <div class="mentoria-card mentoria-extra">
       <div class="mentoria-cat">Mentalidad</div>
       <h3>Actitud Mental Positiva Comercial (AMPC)</h3>
       <p>Mentalidad y microhábitos de alto rendimiento para vendedores que quieren resultados consistentes.</p>
-      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Actitud%20Mental%20Positiva%20Comercial%20%28AMPC%29" target="_blank" rel="noopener">Solicitar información →</a>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20BMD%20Consulting%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Actitud%20Mental%20Positiva%20Comercial%20%28AMPC%29" target="_blank" rel="noopener">Solicitar información →</a>
     </div>
     <div class="mentoria-card mentoria-extra">
       <div class="mentoria-cat">Comunicación</div>
       <h3>Oratoria Comercial</h3>
       <p>Presentaciones y discursos de venta que generan confianza, captan atención y llevan al cierre.</p>
-      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Oratoria%20Comercial" target="_blank" rel="noopener">Solicitar información →</a>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20BMD%20Consulting%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Oratoria%20Comercial" target="_blank" rel="noopener">Solicitar información →</a>
     </div>
     <div class="mentoria-card mentoria-extra">
       <div class="mentoria-cat">Digital</div>
       <h3>Prospección por WhatsApp y Redes Sociales</h3>
       <p>Generar y calificar prospectos con mensajes que abren conversaciones y se convierten en citas.</p>
-      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Prospecci%C3%B3n%20por%20WhatsApp%20y%20Redes%20Sociales" target="_blank" rel="noopener">Solicitar información →</a>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20BMD%20Consulting%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Prospecci%C3%B3n%20por%20WhatsApp%20y%20Redes%20Sociales" target="_blank" rel="noopener">Solicitar información →</a>
     </div>
     <div class="mentoria-card mentoria-extra">
       <div class="mentoria-cat">Digital</div>
       <h3>IA Aplicada a Ventas</h3>
       <p>Herramientas de inteligencia artificial para prospectar, dar seguimiento y vender más en menos tiempo.</p>
-      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20IA%20Aplicada%20a%20Ventas" target="_blank" rel="noopener">Solicitar información →</a>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20BMD%20Consulting%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20IA%20Aplicada%20a%20Ventas" target="_blank" rel="noopener">Solicitar información →</a>
     </div>
     <div class="mentoria-card mentoria-extra">
       <div class="mentoria-cat">Comunicación</div>
       <h3>Lenguaje Corporal Intensivo</h3>
       <p>Leer al cliente y proyectar seguridad: postura, gestos y presencia en reuniones y presentaciones.</p>
-      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Lenguaje%20Corporal%20Intensivo" target="_blank" rel="noopener">Solicitar información →</a>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20BMD%20Consulting%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Lenguaje%20Corporal%20Intensivo" target="_blank" rel="noopener">Solicitar información →</a>
     </div>
     <div class="mentoria-card mentoria-extra">
       <div class="mentoria-cat">Marca personal</div>
       <h3>Marca Personal para Vendedores</h3>
       <p>Construir una presencia profesional en redes que atraiga clientes y respalde cada venta.</p>
-      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Marca%20Personal%20para%20Vendedores" target="_blank" rel="noopener">Solicitar información →</a>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20BMD%20Consulting%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Marca%20Personal%20para%20Vendedores" target="_blank" rel="noopener">Solicitar información →</a>
     </div>
     <div class="mentoria-card mentoria-extra">
       <div class="mentoria-cat">Desarrollo personal</div>
       <h3>Inteligencia Emocional y Manejo del Rechazo</h3>
       <p>Gestionar la presión, el rechazo y la frustración para mantener el rendimiento todos los meses.</p>
-      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Inteligencia%20Emocional%20y%20Manejo%20del%20Rechazo" target="_blank" rel="noopener">Solicitar información →</a>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20BMD%20Consulting%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Inteligencia%20Emocional%20y%20Manejo%20del%20Rechazo" target="_blank" rel="noopener">Solicitar información →</a>
     </div>
     <div class="mentoria-card mentoria-extra">
       <div class="mentoria-cat">Ventas</div>
       <h3>Postventa y Fidelización</h3>
       <p>Convertir clientes en recompra y referidos con un proceso de seguimiento después de la venta.</p>
-      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Postventa%20y%20Fidelizaci%C3%B3n" target="_blank" rel="noopener">Solicitar información →</a>
+      <a class="mentoria-link" href="https://wa.me/51922529675?text=Hola%20BMD%20Consulting%2C%20quiero%20informaci%C3%B3n%20sobre%20la%20mentor%C3%ADa%20Postventa%20y%20Fidelizaci%C3%B3n" target="_blank" rel="noopener">Solicitar información →</a>
     </div>
   </div>
   <div style="text-align:center;margin-top:1.8rem;"><button type="button" class="btn-secondary" id="ver-programas" aria-expanded="false">Ver los 14 programas ↓</button></div>
   <div class="fade-in" style="text-align:center;margin-top:2rem;">
-    <a href="https://wa.me/51922529675?text=Hola%20Bruno%2C%20quiero%20armar%20un%20programa%20de%20mentor%C3%ADa%20para%20mi%20equipo" target="_blank" rel="noopener" class="btn-primary">Arma el programa para tu equipo</a>
+    <a href="https://wa.me/51922529675?text=Hola%20BMD%20Consulting%2C%20quiero%20armar%20un%20programa%20de%20mentor%C3%ADa%20para%20mi%20equipo" target="_blank" rel="noopener" class="btn-primary">Arma el programa para tu equipo</a>
   </div>
 </section>
 
@@ -1105,6 +1190,7 @@
       <p>Lideré equipos en <strong style="color:var(--white);">empresas transnacionales</strong> con decisiones que impactaron millones en facturación. Eso me dio algo que ningún MBA enseña: visión estratégica real, forjada en campo.</p>
       <p>Resultados medibles: <strong style="color:var(--gold);">150% de productividad</strong> en un trimestre en el sector inmobiliario y <strong style="color:var(--gold);">26 sistemas de seguridad</strong> colocados en un solo mes para una entidad pública nacional.</p>
       <p>Fundé BMD Consulting —hoy parte de BMDT Group— con una convicción simple: las empresas medianas merecen la misma calidad de consultoría que las grandes corporaciones. Sin humo, sin teorías vacías — hombro a hombro con tu equipo.</p>
+      <p><a href="https://www.linkedin.com/in/bruno-renato-noriega-montenegro-b7b93b232" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;text-decoration:none;">Ver perfil en LinkedIn →</a></p>
       <div class="creds">
         <span class="cred">Lic. Administración de Empresas</span>
         <span class="cred">Coaching Comercial</span>
@@ -1319,22 +1405,22 @@
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-bottom:2.5rem;">
 
     <figure class="fade-in" style="margin:0;background:var(--navy3);border:1px solid rgba(201,168,76,0.15);border-radius:2px;overflow:hidden;">
-      <img src="assets/campo-01.png" alt="Equipo comercial de BMD Consulting en activación de campo" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;"/>
+      <img src="assets/campo-01.webp" alt="Equipo comercial de BMD Consulting en activación de campo" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;"/>
       <figcaption style="padding:.85rem 1rem;color:var(--gray);font-size:.8rem;line-height:1.5;">Activación comercial en campo con equipo en punto de venta.</figcaption>
     </figure>
 
     <figure class="fade-in" style="margin:0;background:var(--navy3);border:1px solid rgba(201,168,76,0.15);border-radius:2px;overflow:hidden;">
-      <img src="assets/campo-02.png" alt="Capacitación comercial a equipo de ventas" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;"/>
+      <img src="assets/campo-02.webp" alt="Capacitación comercial a equipo de ventas" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;"/>
       <figcaption style="padding:.85rem 1rem;color:var(--gray);font-size:.8rem;line-height:1.5;">Capacitación comercial presencial a equipo de ventas.</figcaption>
     </figure>
 
     <figure class="fade-in" style="margin:0;background:var(--navy3);border:1px solid rgba(201,168,76,0.15);border-radius:2px;overflow:hidden;">
-      <img src="assets/campo-03.png" alt="Equipo comercial en proyecto inmobiliario" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;"/>
+      <img src="assets/campo-03.webp" alt="Equipo comercial en proyecto inmobiliario" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;"/>
       <figcaption style="padding:.85rem 1rem;color:var(--gray);font-size:.8rem;line-height:1.5;">Equipo comercial desplegado en proyecto inmobiliario.</figcaption>
     </figure>
 
     <figure class="fade-in" style="margin:0;background:var(--navy3);border:1px solid rgba(201,168,76,0.15);border-radius:2px;overflow:hidden;">
-      <img src="assets/campo-04.png" alt="Presentación comercial de proyecto inmobiliario" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;"/>
+      <img src="assets/campo-04.webp" alt="Presentación comercial de proyecto inmobiliario" loading="lazy" style="width:100%;height:200px;object-fit:cover;display:block;"/>
       <figcaption style="padding:.85rem 1rem;color:var(--gray);font-size:.8rem;line-height:1.5;">Presentación comercial de proyecto ante equipo y aliados.</figcaption>
     </figure>
 
@@ -1351,6 +1437,33 @@
 </section>
 
 
+
+
+<!-- RECURSO GRATUITO -->
+<section id="checklist">
+  <div class="ck-grid">
+    <div class="fade-in">
+      <div class="section-tag">Recurso gratuito para gerentes</div>
+      <h2>Las 10 fugas que hacen <em>perder ventas</em> a tu equipo</h2>
+      <p class="ck-lead">Un checklist rápido para revisar con tu equipo esta semana. Si marcas 3 o más, hay ventas que se están quedando en el camino.</p>
+      <form id="ck-form" novalidate>
+        <div class="ck-row">
+          <div><label for="ck-name">Nombre</label><input id="ck-name" autocomplete="name" placeholder="Tu nombre"/></div>
+          <div><label for="ck-company">Empresa</label><input id="ck-company" autocomplete="organization" placeholder="Tu empresa"/></div>
+        </div>
+        <div><label for="ck-phone">WhatsApp</label><input id="ck-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="9XX XXX XXX"/></div>
+        <label class="consent"><input type="checkbox" id="ck-ok"/> Acepto la <a href="/privacidad/" target="_blank">política de privacidad</a> y que BMD Consulting me contacte.</label>
+        <p class="cap-err" id="ck-err" hidden>Completa nombre, empresa, un número de 9 dígitos y acepta la política de privacidad.</p>
+        <a class="btn-primary" id="ck-send" href="#" target="_blank" rel="noopener">Ver el checklist</a>
+      </form>
+    </div>
+    <div class="ck-box">
+      <div class="cap-lock" id="ck-lock"><b>Checklist</b><span>Completa tus datos para verlo completo.</span></div>
+      <ol class="ck-list" id="ck-list" hidden><li><b>01</b><div><strong>Propuestas sin presupuesto validado</strong><span>Se cotiza antes de saber si el cliente tiene partida asignada.</span></div></li><li><b>02</b><div><strong>Reuniones sin el decisor real</strong><span>Se presenta a quien influye, no a quien firma.</span></div></li><li><b>03</b><div><strong>El problema no se cuantifica</strong><span>Se habla de beneficios generales, no del costo en soles de no actuar.</span></div></li><li><b>04</b><div><strong>Reuniones sin siguiente paso</strong><span>Termina la cita y no queda una fecha concreta para avanzar.</span></div></li><li><b>05</b><div><strong>Interés confundido con intención</strong><span>Un cliente amable no es un cliente listo para comprar.</span></div></li><li><b>06</b><div><strong>Prospección solo en meses malos</strong><span>Cuando el mes va bien se deja de prospectar y el siguiente se cae.</span></div></li><li><b>07</b><div><strong>Dependencia de pocas cuentas</strong><span>Si se cae la oportunidad grande, se cae todo el mes.</span></div></li><li><b>08</b><div><strong>Descuento como primera respuesta</strong><span>Se baja el precio en vez de resolver la duda real.</span></div></li><li><b>09</b><div><strong>Embudo sin números</strong><span>Nadie sabe cuántos contactos se necesitan para una venta.</span></div></li><li><b>10</b><div><strong>Proceso solo en la cabeza</strong><span>No hay un proceso escrito: cada asesor vende a su manera.</span></div></li></ol>
+      <div class="ck-next" id="ck-next" hidden><p>¿Marcaste 3 o más? En 20 minutos te decimos por cuál empezar.</p><a href="#agenda" class="btn-secondary">Agendar diagnóstico →</a></div>
+    </div>
+  </div>
+</section>
 
 <!-- LIBRO -->
 <section id="libro" style="background:var(--navy2);">
@@ -1417,18 +1530,35 @@
 </section>
 
 <!-- CTA FINAL -->
-<section id="cta">
-  <div class="fade-in">
-    <div class="section-tag">El siguiente paso</div>
-    <h2>El mejor momento para actuar<br/>es <em>ahora mismo</em></h2>
-    <p>20 minutos. Sin costo. Sin compromiso.
-Solo claridad y un plan real para tu negocio.</p>
-    <div class="cta-buttons">
-      <a href="https://wa.me/51922529675?text=Hola%2C%20quiero%20agendar%20mi%20diagn%C3%B3stico%20comercial%20gratuito%20de%2020%20minutos" target="_blank" class="btn-primary">
-        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.984-1.407A9.94 9.94 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.946 7.946 0 01-4.031-1.094l-.29-.173-2.958.835.797-2.888-.19-.298A7.944 7.944 0 014 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
-        Agendar diagnóstico de 20 min
-      </a>
-      <a href="mailto:gerencia@bmdgroup.org.pe?subject=Diagn%C3%B3stico%20Gratuito%20BMD%20Consulting&body=Hola%20Bruno%2C%20me%20interesa%20solicitar%20mi%20diagn%C3%B3stico%20gratuito." class="btn-secondary">Escribir por correo</a>
+<section id="agenda">
+  <div class="ag-grid">
+    <div class="ag-info fade-in">
+      <div class="section-tag">El siguiente paso</div>
+      <h2>Agenda tu diagnóstico de 20 minutos <em>con Bruno Noriega</em></h2>
+      <p>Directamente con el CEO, sin intermediarios. Eliges el día y la hora, y Bruno te confirma personalmente por WhatsApp.</p>
+      <h3>Qué te llevas</h3>
+      <ul class="ag-take">
+        <li>3 hallazgos concretos sobre cómo vende hoy tu equipo.</li>
+        <li>Una recomendación clara de por dónde empezar.</li>
+        <li>Sin costo y sin compromiso.</li>
+      </ul>
+      <p class="ag-alt">¿Prefieres correo? <span class="sel">direcciongeneral@bmdgroup.org.pe</span></p>
+    </div>
+    <div class="ag-card" id="ag">
+      <div class="ag-row">
+        <div><label for="ag-name">Nombre</label><input id="ag-name" autocomplete="name" placeholder="Tu nombre"/></div>
+        <div><label for="ag-company">Empresa</label><input id="ag-company" autocomplete="organization" placeholder="Tu empresa"/></div>
+      </div>
+      <div class="ag-row">
+        <div><label for="ag-role">Cargo</label><select id="ag-role"><option>Gerente general / Dueño</option><option>Gerente o jefe comercial</option><option>Supervisor de ventas</option><option>Otro</option></select></div>
+        <div><label for="ag-team">Equipo comercial</label><select id="ag-team"><option>1 a 2 personas</option><option selected>3 a 10 personas</option><option>Más de 10 personas</option></select></div>
+      </div>
+      <div><label for="ag-mode">Modalidad</label><select id="ag-mode"><option>Videollamada</option><option>Llamada telefónica</option><option>Presencial en nuestra oficina (Trujillo)</option></select></div>
+      <div><span class="ag-lbl">Elige el día</span><div class="ag-chips" id="ag-days"></div></div>
+      <div><span class="ag-lbl">Elige la hora <small>(hora de Perú)</small></span><div class="ag-chips" id="ag-hours"></div></div>
+      <p class="ag-sum" id="ag-sum" aria-live="polite"></p>
+      <p class="cap-err" id="ag-err" hidden>Completa tu nombre, tu empresa, el día y la hora.</p>
+      <a class="btn-primary" id="ag-send" href="#" target="_blank" rel="noopener">Confirmar con Bruno por WhatsApp</a>
     </div>
   </div>
 </section>
@@ -1441,6 +1571,7 @@ Solo claridad y un plan real para tu negocio.</p>
     <a href="#hero" style="display:flex;align-items:center;gap:.6rem;text-decoration:none;"><img src="assets/bmd-consulting-isotipo.jpg" alt="BMD Consulting" style="height:56px;width:56px;object-fit:contain;border-radius:50%;"/><span style="font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--gold);white-space:nowrap;">BMD <span style="color:var(--white);">Consulting</span></span></a>
     <p>Consultoría de negocios, mentorías y talleres comerciales. Ética, método y compromiso en cada proyecto.</p>
     <p style="margin-top:.6rem;font-size:.8rem;color:var(--gold);letter-spacing:.08em;">Parte de BMDT Group</p>
+    <p style="margin-top:.8rem;font-size:.85rem;"><a href="https://www.linkedin.com/in/bruno-renato-noriega-montenegro-b7b93b232" target="_blank" rel="noopener" style="color:var(--gray);">LinkedIn de Bruno Noriega</a> · <a href="https://instagram.com/bmd.consultoria.bienesraices" target="_blank" rel="noopener" style="color:var(--gray);">Instagram</a> · <a href="https://www.tiktok.com/@bmdgroupconsultora" target="_blank" rel="noopener" style="color:var(--gray);">TikTok</a> · <a href="/privacidad/" style="color:var(--gray);">Privacidad</a></p>
   </div>
   <div>
     <h4>Servicios</h4>
@@ -1458,7 +1589,7 @@ Solo claridad y un plan real para tu negocio.</p>
     <p>📍 Trujillo, La Libertad · Perú</p>
     <p>💬 <a href="https://wa.me/51922529675" target="_blank" style="color:var(--gray);text-decoration:none;">+51 922 529 675</a> <span style="color:var(--gold);font-size:.75rem;">(WhatsApp)</span></p>
     <p>📞 <a href="tel:+51933815686" style="color:var(--gray);text-decoration:none;">+51 933 815 686</a> <span style="color:var(--gold);font-size:.75rem;">(llamadas)</span></p>
-    <p>✉️ <a href="mailto:gerencia@bmdgroup.org.pe" style="color:var(--gray);text-decoration:none;">gerencia@bmdgroup.org.pe</a></p>
+    <p>✉️ <a href="mailto:direcciongeneral@bmdgroup.org.pe" style="color:var(--gray);text-decoration:none;">direcciongeneral@bmdgroup.org.pe</a></p>
     <p>🏛️ <span>¿Quieres invertir en inmuebles? <a href="/sapia/" style="color:var(--gold);text-decoration:none;">Sapia Grupo Inmobiliario</a>, también parte de BMDT Group</span></p>
     <p>🛠️ <span>¿Obras o mantenimiento para tu empresa? <a href="/servicios/" style="color:var(--gold);text-decoration:none;">BMD Servicios Generales</a></span></p>
     <p>🏢 <span>Conoce el grupo: <a href="/grupo/" style="color:var(--gold);text-decoration:none;">BMDT Group</a></span></p>
@@ -1545,8 +1676,8 @@ var BMD_GA_ID = "";
   }
   window.bmdTrack=function(evento, datos){
     datos=datos||{};
-    try{ if(window.fbq) fbq(evento==='Contact'||evento==='Lead'?'track':'trackCustom', evento, datos); }catch(e){}
-    try{ if(window.gtag) gtag('event', evento==='Contact'?'contacto_whatsapp':evento==='Lead'?'diagnostico_completo':evento, datos); }catch(e){}
+    try{ if(window.fbq) fbq(['Contact','Lead','Schedule'].indexOf(evento)>-1?'track':'trackCustom', evento, datos); }catch(e){}
+    try{ if(window.gtag) gtag('event', evento==='Contact'?'contacto_whatsapp':evento==='Lead'?'lead':evento==='Schedule'?'agenda_diagnostico':evento, datos); }catch(e){}
   };
   function seccion(el){ var s=el.closest('section[id],nav,footer'); if(!s) return el.classList.contains('wa-float')?'boton-flotante':'otro'; return s.id||s.tagName.toLowerCase(); }
   document.addEventListener('click',function(e){
@@ -1638,7 +1769,8 @@ var BMD_GA_ID = "";
     if(window.bmdTrack) bmdTrack("Lead",{resultado:res.t, puntaje:score});
     var acts=h("div","diag-actions");
     var msg="Hola, BMD Consulting. Hice el diagnóstico de Frecuencia Comercial y salió: "+res.t+" ("+score+"/10). Quiero agendar mi diagnóstico gratuito de 20 minutos.";
-    var a=h("a","btn-primary","Agendar diagnóstico de 20 min");a.href="https://wa.me/"+WA+"?text="+encodeURIComponent(msg);a.target="_blank";a.rel="noopener";
+    try{sessionStorage.setItem("bmd-diag",res.t+" ("+score+"/10)")}catch(_){}
+    var a=h("a","btn-primary","Agendar diagnóstico de 20 min");a.href="#agenda";
     var again=h("button","diag-again","Repetir");again.type="button";again.onclick=function(){st={i:0,ans:[]};render()};
     acts.appendChild(a);acts.appendChild(again);box.appendChild(acts);
   }
@@ -1658,6 +1790,70 @@ var BMD_GA_ID = "";
   document.getElementById("free-form").addEventListener("submit",function(e){e.preventDefault()});
   try{if(localStorage.getItem("bmd-cap1")==="1")open()}catch(_){}
   upd();
+})();
+</script>
+
+<script>
+/* Checklist + Agenda directa (nov-2026) */
+(function(){
+  function $(i){return document.getElementById(i)}
+  function digits(v){return v.replace(/\D/g,"").length}
+  // CHECKLIST
+  var cs=$("ck-send");
+  if(cs){
+    function cm(){return "Hola BMD Consulting, soy "+$("ck-name").value.trim()+" de "+$("ck-company").value.trim()+". Quiero el checklist de las 10 fugas que hacen perder ventas. Mi WhatsApp: "+$("ck-phone").value.trim()}
+    function cu(){cs.href="https://wa.me/51922529675?text="+encodeURIComponent(cm())}
+    ["ck-name","ck-company","ck-phone"].forEach(function(i){$(i).addEventListener("input",cu)});
+    function openCk(){$("ck-list").hidden=false;$("ck-next").hidden=false;$("ck-lock").hidden=true}
+    cs.addEventListener("click",function(e){
+      if(!$("ck-name").value.trim()||!$("ck-company").value.trim()||digits($("ck-phone").value)<9||!$("ck-ok").checked){e.preventDefault();$("ck-err").hidden=false;return}
+      $("ck-err").hidden=true;openCk();try{localStorage.setItem("bmd-ck","1")}catch(_){}
+      if(window.bmdTrack)bmdTrack("Lead",{origen:"checklist"});
+    });
+    $("ck-form").addEventListener("submit",function(e){e.preventDefault()});
+    try{if(localStorage.getItem("bmd-ck")==="1")openCk()}catch(_){}
+    cu();
+  }
+  // AGENDA
+  var send=$("ag-send"); if(!send) return;
+  var DIAS=["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"],MESES=["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+  var LARGOS=["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
+  var st={day:null,hour:null};
+  function limaNow(){var d=new Date();return new Date(d.getTime()+(d.getTimezoneOffset()-300)*60000)}
+  var now=limaNow(), days=[], d=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+  while(days.length<10){var w=d.getDay(); if(w>0&&w<6) days.push(new Date(d)); d.setDate(d.getDate()+1)}
+  function slots(day){var out=[],isToday=day.toDateString()===now.toDateString();
+    for(var m=9*60;m<=18*60+30;m+=30){ if(isToday && m < now.getHours()*60+now.getMinutes()+120) continue; out.push(m) } return out }
+  function fmt(m){return (m/60|0)+":"+(m%60?"30":"00")}
+  var dayBox=$("ag-days"),hourBox=$("ag-hours");
+  function chip(html,on,fn){var b=document.createElement("button");b.type="button";b.className="ag-chip"+(on?" on":"");b.innerHTML=html;b.onclick=fn;return b}
+  function renderDays(){dayBox.innerHTML="";days.forEach(function(x,i){
+    if(!slots(x).length) return;
+    dayBox.appendChild(chip("<small>"+DIAS[x.getDay()]+"</small>"+x.getDate()+" "+MESES[x.getMonth()],st.day===i,function(){st.day=i;st.hour=null;renderDays();renderHours();upd()}));
+  })}
+  function renderHours(){hourBox.innerHTML="";
+    if(st.day===null){hourBox.innerHTML='<span style="color:var(--gray);font-size:.88rem">Primero elige un día.</span>';return}
+    slots(days[st.day]).forEach(function(m){hourBox.appendChild(chip(fmt(m),st.hour===m,function(){st.hour=m;renderHours();upd()}))});
+  }
+  function diagRes(){try{return sessionStorage.getItem("bmd-diag")||""}catch(_){return ""}}
+  function msg(){
+    var x=days[st.day], t="Hola Bruno, quiero agendar mi diagnóstico comercial de 20 minutos.";
+    t+="\nNombre: "+$("ag-name").value.trim()+"\nEmpresa: "+$("ag-company").value.trim()+"\nCargo: "+$("ag-role").value+"\nEquipo comercial: "+$("ag-team").value+"\nModalidad: "+$("ag-mode").value;
+    if(x&&st.hour!==null) t+="\nFecha: "+LARGOS[x.getDay()]+" "+x.getDate()+" de "+MESES[x.getMonth()]+", "+fmt(st.hour)+" (hora de Perú)";
+    var r=diagRes(); if(r) t+="\nResultado del test: "+r;
+    return t;
+  }
+  function upd(){
+    var x=days[st.day];
+    $("ag-sum").textContent=(x&&st.hour!==null)?"Tu cita: "+LARGOS[x.getDay()]+" "+x.getDate()+" de "+MESES[x.getMonth()]+" a las "+fmt(st.hour)+" · "+$("ag-mode").value.toLowerCase():"";
+    send.href="https://wa.me/51933815686?text="+encodeURIComponent(msg());
+  }
+  ["ag-name","ag-company","ag-role","ag-team","ag-mode"].forEach(function(i){$(i).addEventListener("input",upd);$(i).addEventListener("change",upd)});
+  send.addEventListener("click",function(e){
+    if(!$("ag-name").value.trim()||!$("ag-company").value.trim()||st.day===null||st.hour===null){e.preventDefault();$("ag-err").hidden=false;return}
+    $("ag-err").hidden=true; if(window.bmdTrack)bmdTrack("Schedule",{modalidad:$("ag-mode").value});
+  });
+  renderDays();renderHours();upd();
 })();
 </script>
 </body>

@@ -839,8 +839,9 @@
               <div><label for="c-name">Nombre</label><input id="c-name" autocomplete="name" placeholder="Tu nombre"/></div>
               <div><label for="c-phone">WhatsApp</label><input id="c-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="9XX XXX XXX"/></div>
             </div>
+            <label class="consent" id="libro-consent" style="margin-top:.8rem;text-transform:none;letter-spacing:0;font-weight:400;font-size:.85rem;color:var(--gray);display:flex;gap:.6rem;align-items:flex-start;line-height:1.5;"><input type="checkbox" id="c-ok" style="width:auto;margin-top:.2rem;accent-color:var(--gold);"/> <span>Acepto la <a href="/privacidad/" target="_blank" style="color:var(--gold);">política de privacidad</a> y que BMD Consulting me contacte.</span></label>
           </form>
-          <p class="cap-err" id="c-err" hidden>Escribe tu nombre y un número de 9 dígitos.</p>
+          <p class="cap-err" id="c-err" hidden>Escribe tu nombre, un número de 9 dígitos y acepta la política de privacidad.</p>
           <div><a class="btn-primary" id="c-send" href="#" target="_blank" rel="noopener">Leer el capítulo 1</a></div>
           <p class="cap-ok" id="c-ok" hidden>Listo. Ya puedes leerlo, y en WhatsApp te llega el PDF.</p>
         </div>
@@ -928,7 +929,7 @@
     <p>📍 Trujillo, La Libertad · Perú</p>
     <p>💬 <a href="https://wa.me/51922529675" target="_blank" style="color:var(--gray);text-decoration:none;">+51 922 529 675</a> <span style="color:var(--gold);font-size:.75rem;">(WhatsApp)</span></p>
     <p>📞 <a href="tel:+51933815686" style="color:var(--gray);text-decoration:none;">+51 933 815 686</a> <span style="color:var(--gold);font-size:.75rem;">(llamadas)</span></p>
-    <p>✉️ <a href="mailto:gerencia@bmdgroup.org.pe" style="color:var(--gray);text-decoration:none;">gerencia@bmdgroup.org.pe</a></p>
+    <p>✉️ <a href="mailto:direcciongeneral@bmdgroup.org.pe" style="color:var(--gray);text-decoration:none;">direcciongeneral@bmdgroup.org.pe</a></p>
     <p>🏛️ <span>¿Quieres invertir en inmuebles? <a href="/sapia/" style="color:var(--gold);text-decoration:none;">Sapia Grupo Inmobiliario</a>, también parte de BMDT Group</span></p>
     <p>🛠️ <span>¿Obras o mantenimiento para tu empresa? <a href="/servicios/" style="color:var(--gold);text-decoration:none;">BMD Servicios Generales</a></span></p>
     <p>🏢 <span>Conoce el grupo: <a href="/grupo/" style="color:var(--gold);text-decoration:none;">BMDT Group</a></span></p>
@@ -992,7 +993,7 @@ var BMD_GA_ID = "";
   function open(){reader.hidden=false;lock.hidden=true}
   [cn,cp].forEach(function(e){e.addEventListener("input",upd)});
   cs.addEventListener("click",function(e){
-    if(!cn.value.trim()||cp.value.replace(/\D/g,"").length<9){e.preventDefault();document.getElementById("c-err").hidden=false;return}
+    if(!cn.value.trim()||cp.value.replace(/\D/g,"").length<9||!document.getElementById("c-ok").checked){e.preventDefault();document.getElementById("c-err").hidden=false;return}
     document.getElementById("c-err").hidden=true;document.getElementById("c-ok").hidden=false;open();if(window.bmdTrack)bmdTrack("Lead",{origen:"capitulo-1"});
     try{localStorage.setItem("bmd-cap1","1")}catch(_){}
   });
