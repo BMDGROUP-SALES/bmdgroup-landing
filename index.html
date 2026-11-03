@@ -78,10 +78,18 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .res div{background:var(--bg2);padding:14px 16px}
 .res small{display:block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .res b{font-family:var(--serif);font-size:1.6rem;font-variant-numeric:tabular-nums}
+.one{display:flex;align-items:baseline;gap:8px;border-bottom:2px solid var(--gold);padding-bottom:6px}
+.one span{font-family:var(--serif);font-size:1.6rem;color:var(--gold)}
+.calc>*{min-width:0}
+.one input{flex:1;min-width:0;width:100%;background:transparent;border:0;color:var(--fg);font-family:var(--serif);font-size:clamp(2rem,5vw,2.6rem);font-variant-numeric:tabular-nums;outline:none;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{background:transparent;border:1px solid var(--line);color:var(--muted);padding:8px 14px;border-radius:999px;font:inherit;font-size:.85rem;cursor:pointer}
+.chips button.on,.chips button:hover{border-color:var(--gold);color:var(--fg)}
 .big{background:linear-gradient(135deg,rgba(201,168,76,.16),rgba(201,168,76,.04));border:1px solid var(--gold);padding:18px 20px;display:grid;gap:4px}
 .big small{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700}
 .big b{font-family:var(--serif);font-size:clamp(2.2rem,5vw,3rem);line-height:1;font-variant-numeric:tabular-nums}
-.big span{color:var(--muted);font-size:.85rem}
+.big > span{color:var(--muted);font-size:.85rem}
+.big b span{font:inherit;color:inherit}
 .note{font-size:.74rem;color:var(--muted)}
 
 /* rubros */
@@ -230,21 +238,16 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
     </div>
 
     <div class="calc" aria-labelledby="calc-t">
-      <h3 id="calc-t">¿Cuánto más podría vender tu equipo?</h3>
-      <p class="sub">Mueve los valores con los datos de tu empresa.</p>
-      <div class="fields">
-        <div class="f"><label for="c-a">Vendedores <output id="o-a">5</output></label><input type="range" id="c-a" min="1" max="40" value="5"></div>
-        <div class="f"><label for="c-p">Prospectos al mes por vendedor <output id="o-p">40</output></label><input type="range" id="c-p" min="5" max="300" step="5" value="40"></div>
-        <div class="f"><label for="c-c">Tasa de cierre actual <output id="o-c">10%</output></label><input type="range" id="c-c" min="1" max="60" value="10"></div>
-        <div class="f"><label for="c-t">Ticket promedio (S/)</label><input type="number" id="c-t" min="10" step="10" value="3000" inputmode="numeric"></div>
+      <h3 id="calc-t">¿Cuánto vende tu equipo al mes?</h3>
+      <div class="one">
+        <span>S/</span><input type="text" id="c-v" value="50,000" inputmode="numeric" aria-label="Ventas mensuales en soles">
       </div>
-      <div class="res">
-        <div><small>Hoy vendes al mes</small><b id="r-now">S/ 60,000</b></div>
-        <div><small>Con el método</small><b id="r-new">S/ 75,000</b></div>
+      <div class="chips" role="group" aria-label="Montos rápidos">
+        <button type="button" data-v="20000">20 mil</button><button type="button" data-v="50000" class="on">50 mil</button><button type="button" data-v="100000">100 mil</button><button type="button" data-v="300000">300 mil</button>
       </div>
-      <div class="big"><small>Dinero que hoy se queda sobre la mesa</small><b id="r-gap">S/ 15,000</b><span>al mes · <span id="r-year">S/ 180,000</span> al año</span></div>
-      <a class="btn" href="#agenda" id="calc-cta">Quiero recuperar ese dinero</a>
-      <p class="note">Estimación referencial con una mejora de 25% en la tasa de cierre, en línea con los resultados de 124–126% de cumplimiento obtenidos por nuestro equipo. El resultado real depende de cada empresa.</p>
+      <div class="big"><small>Con nuestro método podrías vender</small><b>+<span id="r-gap">S/ 12,500</span></b><span>más cada mes · <span id="r-year">S/ 150,000</span> más al año</span></div>
+      <a class="btn" href="#agenda" id="calc-cta">Quiero lograrlo</a>
+      <p class="note">Cálculo con +25%, la mejora que logró un cliente reciente (124–126% de su meta). Referencial.</p>
     </div>
   </div>
 </section>
@@ -419,14 +422,14 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
   var fmt=function(n){return "S/ "+Math.round(n).toLocaleString("es-PE")};
   var calcMsg="";
   function calc(){
-    var a=+$("c-a").value,p=+$("c-p").value,c=+$("c-c").value/100,t=Math.max(0,+$("c-t").value||0);
-    $("o-a").textContent=a;$("o-p").textContent=p;$("o-c").textContent=Math.round(c*100)+"%";
-    var now=a*p*c*t, nc=Math.min(c*1.25,1), neu=a*p*nc*t, gap=neu-now;
-    $("r-now").textContent=fmt(now);$("r-new").textContent=fmt(neu);$("r-gap").textContent=fmt(gap);$("r-year").textContent=fmt(gap*12);
-    calcMsg="Según la calculadora: "+a+" vendedores, "+Math.round(c*100)+"% de cierre, ticket "+fmt(t)+". Oportunidad: "+fmt(gap)+" al mes.";
+    var v=Math.max(0,+String($("c-v").value).replace(/[^0-9]/g,"")||0), gap=v*0.25;
+    $("r-gap").textContent=fmt(gap);$("r-year").textContent=fmt(gap*12);
+    calcMsg="Mi equipo vende aprox. "+fmt(v)+" al mes. La calculadora dice que podría vender "+fmt(gap)+" más.";
+    document.querySelectorAll(".chips button").forEach(function(b){b.classList.toggle("on",+b.dataset.v===v)});
     upd();
   }
-  ["c-a","c-p","c-c","c-t"].forEach(function(i){$(i).addEventListener("input",calc)});
+  $("c-v").addEventListener("input",function(){var n=String(this.value).replace(/[^0-9]/g,"");this.value=n?(+n).toLocaleString("en-US"):"";calc()});
+  document.querySelectorAll(".chips button").forEach(function(b){b.addEventListener("click",function(){$("c-v").value=(+b.dataset.v).toLocaleString("en-US");calc()})});
 
   var DI=["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"],ME=["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"],DL=["domingo","lunes","martes","miércoles","jueves","viernes","sábado"];
   var st={d:null,h:null},usedCalc=false;
