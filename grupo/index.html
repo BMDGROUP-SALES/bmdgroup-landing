@@ -216,6 +216,52 @@ footer{background:var(--navy);color:#A9A396;padding-block:44px calc(44px + env(s
  *{transition:none!important;scroll-behavior:auto!important}
  .js .rv{opacity:1;transform:none}
 }
+
+/* bloque estandarizado (modelo BMD Consulting) */
+.xs-sec{padding:96px 20px}
+.xs-sec.xs-alt{background:var(--navy)}
+.xs-sec .xs-w{max-width:1120px;margin:0 auto}
+.xs-sec h2{font-family:var(--disp);font-weight:600;line-height:1.1;font-size:clamp(2rem,4vw,3rem);color:var(--navy);margin:.8rem 0 2.2rem;max-width:760px}
+.xs-sec.xs-alt h2{color:var(--ivory)}
+.xs-sec h2 em{color:var(--gold);font-style:italic}
+.xs-kick{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2)}
+.xs-sec.xs-alt .xs-kick{color:var(--gold)}
+.xs-qs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.xs-qs p{background:#fff;border-left:2px solid var(--gold);padding:18px 20px;font-family:var(--disp);font-size:1.28rem;line-height:1.3;color:var(--ink)}
+.xs-alt .xs-qs p{background:var(--navy2);color:var(--ivory)}
+.xs-close{margin-top:28px;font-size:1.06rem;max-width:64ch;color:var(--ink)}
+.xs-alt .xs-close{color:var(--ivory)}
+.xs-close b{color:var(--gold)}
+.xs-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.xs-card{background:#fff;border:1px solid var(--line);padding:28px;color:var(--ink)}
+.xs-alt .xs-card{background:var(--navy2);color:var(--ivory)}
+.xs-card h3{font-family:var(--disp);font-size:1.5rem;margin-bottom:14px;color:inherit}
+.xs-card ul{list-style:none;display:grid;gap:12px;margin:0;padding:0}
+.xs-card li{padding-left:28px;position:relative;font-size:.97rem;line-height:1.5}
+.xs-yes li::before{content:"✓";position:absolute;left:0;color:#2E9E68;font-weight:700}
+.xs-alt .xs-yes li::before{color:#7FD1A8}
+.xs-no{border-color:rgba(200,90,70,.35)!important}
+.xs-no li::before{content:"✕";position:absolute;left:0;color:#D0705A;font-weight:700}
+.xs-bef li{opacity:.75}
+.xs-bef li::before{content:"—";position:absolute;left:0}
+.xs-aft{border-color:var(--gold)!important}
+.xs-aft li::before{content:"→";position:absolute;left:0;color:var(--gold);font-weight:700}
+.xs-note{margin-top:20px;font-size:.82rem;color:var(--muted)}
+.xs-alt .xs-note{color:var(--soft)}
+.xs-inc{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,48px);align-items:center;border:1px solid var(--gold);background:linear-gradient(135deg,rgba(201,168,76,.14),rgba(255,255,255,.7));padding:clamp(24px,4vw,44px);color:var(--ink)}
+.xs-alt .xs-inc{color:var(--ivory)}
+.xs-inc h2{margin:.6rem 0 0}
+.xs-inc ul{list-style:none;display:grid;gap:10px;margin:18px 0 0;padding:0}
+.xs-inc li{padding-left:26px;position:relative}
+.xs-inc li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+.xs-side{display:grid;gap:14px;justify-items:start}
+.xs-side small{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold2);font-weight:700}
+.xs-alt .xs-side small{color:var(--gold)}
+.xs-side b{font-family:var(--disp);font-size:clamp(1.8rem,3.6vw,2.4rem);line-height:1.05}
+.xs-side p{font-size:.92rem;opacity:.85;margin:0}
+.xs-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);color:var(--gold2);font-size:.78rem;font-weight:700;padding:6px 12px;border-radius:999px;margin:14px 0 4px}
+.xs-badge i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+@media (max-width:760px){.xs-qs,.xs-2,.xs-inc{grid-template-columns:1fr}.xs-sec{padding:72px 20px}}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -243,6 +289,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 <section class="hero" id="inicio"><div class="wrap hero-grid">
  <div>
   <div class="kicker">Grupo empresarial · Trujillo, Perú</div>
+  <div class="xs-badge"><i></i>Tres unidades especializadas · un mismo estándar de trabajo</div>
   <h1>Empresas que crecen con <em>estrategia, ventas y confianza.</em></h1>
   <p class="sub">BMDT Group integra unidades de negocio especializadas en consultoría comercial, comercialización inmobiliaria y servicios generales para empresas.</p>
   <div class="btns"><a class="btn gold" href="#unidades">Conoce nuestras unidades</a><a class="btn ghost" href="#contacto">Contáctanos</a></div>
@@ -289,6 +336,20 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   <div class="pillar"><button aria-expanded="false"><h3>Ejecución</h3><span class="plus" aria-hidden="true"></span></button><div class="body"><div><p>Equipos entrenados con método y seguimiento constante. Lo que se planifica se mide cada semana y se corrige a tiempo.</p></div></div></div>
   <div class="pillar"><button aria-expanded="false"><h3>Confianza</h3><span class="plus" aria-hidden="true"></span></button><div class="body"><div><p>Relaciones transparentes que se sostienen en el tiempo, con clientes, aliados y con nuestro propio equipo.</p></div></div></div>
  </div>
+</div></section>
+
+<section class="xs-sec" style="background:var(--sand)"><div class="xs-w">
+  <div class="xs-kick">¿Te suena familiar?</div>
+  <h2>Lo que viven muchas empresas <em>del norte del Perú</em></h2>
+  <div class="xs-qs">
+    <p>¿Tu equipo comercial no llega a la meta y no sabes exactamente por qué?</p>
+    <p>¿Quieres invertir en un inmueble, pero no sabes en quién confiar?</p>
+    <p>¿Tu local, oficina o colegio necesita mantenimiento y nadie responde a tiempo?</p>
+    <p>¿Trabajas con varios proveedores que no se coordinan entre sí?</p>
+    <p>¿Te prometieron resultados y nadie los midió?</p>
+    <p>¿Buscas un aliado que piense en el largo plazo y no solo en la siguiente venta?</p>
+  </div>
+  <p class="xs-close">BMDT Group reúne tres unidades especializadas con una misma forma de trabajar: <b>estrategia, ejecución y confianza.</b></p>
 </div></section>
 
 <section class="units" id="unidades"><div class="wrap">
@@ -341,6 +402,15 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
  </div>
 </div></section>
 
+<section class="xs-sec"><div class="xs-w">
+  <div class="xs-kick">¿Para quién es?</div>
+  <h2>Trabajamos con empresas <em>que quieren crecer con método</em></h2>
+  <div class="xs-2">
+    <div class="xs-card xs-yes"><h3>Es para ti si…</h3><ul><li>Diriges una empresa o institución en Trujillo o el norte del Perú.</li><li>Buscas aliados de largo plazo, no proveedores de una sola vez.</li><li>Valoras los procesos claros, los plazos y la medición.</li><li>Quieres resolver ventas, inversión inmobiliaria e infraestructura con un mismo estándar.</li></ul></div>
+    <div class="xs-card xs-no"><h3>No es para ti si…</h3><ul><li>Buscas solo el precio más bajo, sin importar el resultado.</li><li>No quieres medir avances ni rendir cuentas.</li><li>Esperas resultados sin compromiso de tu parte.</li></ul></div>
+  </div>
+</div></section>
+
 <section id="metodo"><div class="wrap">
  <div class="kicker">Cómo trabajamos</div>
  <h2 class="sec-title">De la idea al resultado, en cuatro pasos</h2>
@@ -351,6 +421,15 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   <button class="step" aria-pressed="false" data-d="Medimos los avances cada semana, corregimos a tiempo y consolidamos lo que funciona."><span class="num">4</span><h3>Seguimiento</h3><p>Resultados que se sostienen.</p></button>
  </div>
  <div class="step-detail" id="step-detail" aria-live="polite">Escuchamos y revisamos la situación real: qué se vende, cómo se vende y dónde se pierden oportunidades.</div>
+</div></section>
+
+<section class="xs-sec xs-alt"><div class="xs-w">
+  <div class="xs-kick">Antes y después</div>
+  <h2>Lo que cambia cuando trabajas <em>con un grupo</em></h2>
+  <div class="xs-2">
+    <div class="xs-card xs-bef"><h3>Antes</h3><ul><li>Varios proveedores sin coordinación.</li><li>Decisiones tomadas por intuición.</li><li>Promesas sin seguimiento.</li><li>Relaciones que terminan con la venta.</li></ul></div>
+    <div class="xs-card xs-aft"><h3>Con BMDT Group</h3><ul><li>Unidades especializadas con un estándar común.</li><li>Decisiones basadas en datos y en el mercado local.</li><li>Avances medidos cada semana.</li><li>Relaciones de largo plazo, antes y después del servicio.</li></ul></div>
+  </div>
 </div></section>
 
 <section id="fundador" style="background:#fff"><div class="wrap founder">
@@ -367,6 +446,17 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </ul>
   <div class="acts"><a class="btn ghost" href="https://pay.hotmart.com/P105882962I?off=xnjjdr51" target="_blank" rel="noopener">Conoce el libro</a></div>
  </div>
+</div></section>
+
+<section class="xs-sec "><div class="xs-w">
+  <div class="xs-inc">
+    <div>
+      <div class="xs-kick">Trabajar con BMDT Group</div>
+      <h2>Lo que <em>significa</em></h2>
+      <ul><li>Diagnóstico antes de proponer.</li><li>Un plan con responsables y plazos.</li><li>El método Frecuencia Comercial™ en cada unidad.</li><li>Seguimiento semanal de avances.</li><li>Atención directa del equipo de cada unidad.</li></ul>
+    </div>
+    <div class="xs-side"><small>Primer paso</small><b>Conversemos</b><p>Cuéntanos qué necesitas y te derivamos a la unidad indicada.</p><a class="btn gold" href="#contacto">Contáctanos</a></div>
+  </div>
 </div></section>
 
 <section class="contact" id="contacto"><div class="wrap">

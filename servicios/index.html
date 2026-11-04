@@ -160,6 +160,52 @@
     footer{grid-template-columns:1fr;padding:3rem 16px 2rem}
     form{padding:1.5rem}
   }
+
+/* bloque estandarizado (modelo BMD Consulting) */
+.xs-sec{padding:6rem 6%}
+.xs-sec.xs-alt{background:var(--navy)}
+.xs-sec .xs-w{max-width:1120px;margin:0 auto}
+.xs-sec h2{font-family:var(--serif);font-weight:600;line-height:1.1;font-size:clamp(2rem,4vw,3rem);color:var(--navy);margin:.8rem 0 2.2rem;max-width:760px}
+.xs-sec.xs-alt h2{color:var(--cream)}
+.xs-sec h2 em{color:var(--gold);font-style:italic}
+.xs-kick{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dk)}
+.xs-sec.xs-alt .xs-kick{color:var(--gold)}
+.xs-qs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.xs-qs p{background:#fff;border-left:2px solid var(--gold);padding:18px 20px;font-family:var(--serif);font-size:1.28rem;line-height:1.3;color:var(--navy)}
+.xs-alt .xs-qs p{background:var(--navy2);color:var(--cream)}
+.xs-close{margin-top:28px;font-size:1.06rem;max-width:64ch;color:var(--navy)}
+.xs-alt .xs-close{color:var(--cream)}
+.xs-close b{color:var(--gold)}
+.xs-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.xs-card{background:#fff;border:1px solid var(--line);padding:28px;color:var(--navy)}
+.xs-alt .xs-card{background:var(--navy2);color:var(--cream)}
+.xs-card h3{font-family:var(--serif);font-size:1.5rem;margin-bottom:14px;color:inherit}
+.xs-card ul{list-style:none;display:grid;gap:12px;margin:0;padding:0}
+.xs-card li{padding-left:28px;position:relative;font-size:.97rem;line-height:1.5}
+.xs-yes li::before{content:"✓";position:absolute;left:0;color:#2E9E68;font-weight:700}
+.xs-alt .xs-yes li::before{color:#7FD1A8}
+.xs-no{border-color:rgba(200,90,70,.35)!important}
+.xs-no li::before{content:"✕";position:absolute;left:0;color:#D0705A;font-weight:700}
+.xs-bef li{opacity:.75}
+.xs-bef li::before{content:"—";position:absolute;left:0}
+.xs-aft{border-color:var(--gold)!important}
+.xs-aft li::before{content:"→";position:absolute;left:0;color:var(--gold);font-weight:700}
+.xs-note{margin-top:20px;font-size:.82rem;color:var(--gray)}
+.xs-alt .xs-note{color:var(--gray-l)}
+.xs-inc{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,48px);align-items:center;border:1px solid var(--gold);background:linear-gradient(135deg,rgba(201,168,76,.14),rgba(255,255,255,.6));padding:clamp(24px,4vw,44px);color:var(--navy)}
+.xs-alt .xs-inc{color:var(--cream)}
+.xs-inc h2{margin:.6rem 0 0}
+.xs-inc ul{list-style:none;display:grid;gap:10px;margin:18px 0 0;padding:0}
+.xs-inc li{padding-left:26px;position:relative}
+.xs-inc li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+.xs-side{display:grid;gap:14px;justify-items:start}
+.xs-side small{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-dk);font-weight:700}
+.xs-alt .xs-side small{color:var(--gold)}
+.xs-side b{font-family:var(--serif);font-size:clamp(1.8rem,3.6vw,2.4rem);line-height:1.05}
+.xs-side p{font-size:.92rem;opacity:.85;margin:0}
+.xs-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);color:var(--gold-l);font-size:.78rem;font-weight:700;padding:6px 12px;border-radius:999px;margin:14px 0 4px}
+.xs-badge i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+@media (max-width:760px){.xs-qs,.xs-2,.xs-inc{grid-template-columns:1fr}.xs-sec{padding:4.5rem 16px}}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -193,6 +239,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   <div class="hero-wrap">
     <div class="hero-in reveal">
       <div class="tag">Construcción · Remodelación · Mantenimiento</div>
+      <div class="xs-badge"><i></i>Presupuesto detallado antes de empezar · visitas técnicas con cita previa</div>
       <h1>Su infraestructura, en <em>manos expertas</em></h1>
       <p>Construcción, remodelación y mantenimiento integral para empresas, colegios, locales comerciales y condominios en Trujillo. Un solo aliado, de los cimientos al acabado.</p>
       <div class="btns">
@@ -230,6 +277,20 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <div class="reveal"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 9h8M8 13h8M8 17h5"/></svg><h3>Factura electrónica</h3><p>Documentación formal para su área de compras o administración.</p></div>
   </div>
 </section>
+
+<section class="xs-sec xs-alt"><div class="xs-w">
+  <div class="xs-kick">¿Le suena familiar?</div>
+  <h2>Si administra una institución, <em>seguro lo vivió</em></h2>
+  <div class="xs-qs">
+    <p>¿Coordina con varios proveedores distintos para pintura, electricidad y gasfitería?</p>
+    <p>¿Los trabajos se retrasan y terminan costando más de lo presupuestado?</p>
+    <p>¿Necesita aulas, oficinas o locales listos antes de una fecha clave?</p>
+    <p>¿Nadie supervisa el avance mientras su equipo sigue trabajando?</p>
+    <p>¿El proveedor deja la obra sucia o con detalles pendientes?</p>
+    <p>¿Las reparaciones de emergencia siempre lo toman por sorpresa?</p>
+  </div>
+  <p class="xs-close">Con BMD Servicios Generales usted tiene <b>un solo aliado y un solo responsable</b>, de la visita técnica a la entrega.</p>
+</div></section>
 
 <section id="servicios">
   <div class="svc-head reveal">
@@ -270,6 +331,15 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </div>
 </section>
 
+<section class="xs-sec"><div class="xs-w">
+  <div class="xs-kick">¿Para quién es?</div>
+  <h2>Trabajamos con instituciones <em>que valoran el orden</em></h2>
+  <div class="xs-2">
+    <div class="xs-card xs-yes"><h3>Es para usted si…</h3><ul><li>Administra un colegio, empresa, oficina, local comercial o condominio en Trujillo.</li><li>Prefiere un solo responsable para toda su infraestructura.</li><li>Necesita presupuesto detallado y plazos claros antes de empezar.</li><li>Requiere documentación formal para su área de compras o administración.</li><li>Busca trabajos seguros, duraderos y con la obra en orden.</li></ul></div>
+    <div class="xs-card xs-no"><h3>No es para usted si…</h3><ul><li>Busca solo el precio más bajo, sin importar acabados ni seguridad.</li><li>Necesita empezar sin una visita técnica previa.</li><li>Prefiere coordinar usted mismo a cada técnico por separado.</li></ul></div>
+  </div>
+</div></section>
+
 <section id="proceso">
   <div class="reveal">
     <div class="tag">Cómo trabajamos</div>
@@ -282,6 +352,26 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <div class="step reveal"><h3>Entrega</h3><p>Obra limpia y conforme a lo acordado.</p></div>
   </div>
 </section>
+
+<section class="xs-sec xs-alt"><div class="xs-w">
+  <div class="xs-kick">Antes y después</div>
+  <h2>Lo que cambia con <em>un solo aliado</em></h2>
+  <div class="xs-2">
+    <div class="xs-card xs-bef"><h3>Antes</h3><ul><li>Varios proveedores que no se coordinan.</li><li>Retrasos y sobrecostos.</li><li>Obras desordenadas y sin limpieza.</li><li>Nadie responde por el resultado.</li></ul></div>
+    <div class="xs-card xs-aft"><h3>Con BMD Servicios Generales</h3><ul><li>Un solo aliado para toda su infraestructura.</li><li>Presupuesto y plazos claros desde el inicio.</li><li>Supervisión en cada etapa, con orden y limpieza.</li><li>Un responsable de principio a fin.</li></ul></div>
+  </div>
+</div></section>
+
+<section class="xs-sec "><div class="xs-w">
+  <div class="xs-inc">
+    <div>
+      <div class="xs-kick">Cada servicio</div>
+      <h2>Todo lo que <em>incluye</em></h2>
+      <ul><li>Visita técnica en sitio, con cita previa.</li><li>Presupuesto detallado y plazos por escrito.</li><li>Un coordinador responsable de su obra.</li><li>Supervisión en cada etapa del trabajo.</li><li>Entrega limpia y conforme a lo acordado.</li><li>Documentación formal para su área de compras.</li></ul>
+    </div>
+    <div class="xs-side"><small>Su siguiente paso</small><b>Una visita técnica</b><p>Cuéntenos qué necesita y coordinamos la visita para preparar su propuesta.</p><a class="btn btn-gold" href="#contacto">Solicitar visita técnica</a></div>
+  </div>
+</div></section>
 
 <section id="contacto" class="dark">
   <div class="ct">

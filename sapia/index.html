@@ -180,6 +180,52 @@
     footer{grid-template-columns:1fr}
     .hero-facts{gap:1.5rem}
   }
+
+/* bloque estandarizado (modelo BMD Consulting) */
+.xs-sec{padding:6rem 6%}
+.xs-sec.xs-alt{background:var(--navy2)}
+.xs-sec .xs-w{max-width:1120px;margin:0 auto}
+.xs-sec h2{font-family:var(--serif);font-weight:600;line-height:1.1;font-size:clamp(2rem,4vw,3rem);color:var(--white);margin:.8rem 0 2.2rem;max-width:760px}
+.xs-sec.xs-alt h2{color:var(--white)}
+.xs-sec h2 em{color:var(--gold);font-style:italic}
+.xs-kick{font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.xs-sec.xs-alt .xs-kick{color:var(--gold)}
+.xs-qs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.xs-qs p{background:var(--navy2);border-left:2px solid var(--gold);padding:18px 20px;font-family:var(--serif);font-size:1.28rem;line-height:1.3;color:var(--white)}
+.xs-alt .xs-qs p{background:var(--navy);color:var(--white)}
+.xs-close{margin-top:28px;font-size:1.06rem;max-width:64ch;color:var(--white)}
+.xs-alt .xs-close{color:var(--white)}
+.xs-close b{color:var(--gold)}
+.xs-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.xs-card{background:var(--navy2);border:1px solid rgba(201,168,76,.2);padding:28px;color:var(--white)}
+.xs-alt .xs-card{background:var(--navy);color:var(--white)}
+.xs-card h3{font-family:var(--serif);font-size:1.5rem;margin-bottom:14px;color:inherit}
+.xs-card ul{list-style:none;display:grid;gap:12px;margin:0;padding:0}
+.xs-card li{padding-left:28px;position:relative;font-size:.97rem;line-height:1.5}
+.xs-yes li::before{content:"✓";position:absolute;left:0;color:#2E9E68;font-weight:700}
+.xs-alt .xs-yes li::before{color:#7FD1A8}
+.xs-no{border-color:rgba(200,90,70,.35)!important}
+.xs-no li::before{content:"✕";position:absolute;left:0;color:#D0705A;font-weight:700}
+.xs-bef li{opacity:.75}
+.xs-bef li::before{content:"—";position:absolute;left:0}
+.xs-aft{border-color:var(--gold)!important}
+.xs-aft li::before{content:"→";position:absolute;left:0;color:var(--gold);font-weight:700}
+.xs-note{margin-top:20px;font-size:.82rem;color:var(--gray)}
+.xs-alt .xs-note{color:var(--gray)}
+.xs-inc{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,48px);align-items:center;border:1px solid var(--gold);background:linear-gradient(135deg,rgba(201,168,76,.12),rgba(201,168,76,.02));padding:clamp(24px,4vw,44px);color:var(--white)}
+.xs-alt .xs-inc{color:var(--white)}
+.xs-inc h2{margin:.6rem 0 0}
+.xs-inc ul{list-style:none;display:grid;gap:10px;margin:18px 0 0;padding:0}
+.xs-inc li{padding-left:26px;position:relative}
+.xs-inc li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+.xs-side{display:grid;gap:14px;justify-items:start}
+.xs-side small{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.xs-alt .xs-side small{color:var(--gold)}
+.xs-side b{font-family:var(--serif);font-size:clamp(1.8rem,3.6vw,2.4rem);line-height:1.05}
+.xs-side p{font-size:.92rem;opacity:.85;margin:0}
+.xs-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);color:var(--gold-l);font-size:.78rem;font-weight:700;padding:6px 12px;border-radius:999px;margin:14px 0 4px}
+.xs-badge i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+@media (max-width:760px){.xs-qs,.xs-2,.xs-inc{grid-template-columns:1fr}.xs-sec{padding:4.5rem 5%}}
 </style>
 <!-- Meta Pixel Code -->
 <script>
@@ -226,6 +272,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   <div class="hero-bg" role="img" aria-label="Pórtico de ingreso de Colinas del Golf de noche"></div>
   <div class="hero-in reveal">
     <div class="tag">Sabiduría · Confianza · Patrimonio</div>
+    <div class="xs-badge"><i></i>Visitas guiadas a Colinas del Golf con movilidad gratis desde Trujillo</div>
     <h1>Bienes raíces para construir <em>patrimonio</em> que trasciende</h1>
     <p>Comercializamos proyectos inmobiliarios seleccionados en La Libertad: lotes de campo, lotes entre campo y playa, y departamentos de estreno. Te acompañamos desde la primera visita hasta la firma.</p>
     <div class="btns">
@@ -251,6 +298,20 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <div class="pil reveal"><div class="n">III</div><h3>Patrimonio</h3><p>Inversiones pensadas para crecer con el tiempo y quedar en tu familia por generaciones.</p></div>
   </div>
 </section>
+
+<section class="xs-sec xs-alt"><div class="xs-w">
+  <div class="xs-kick">¿Te suena familiar?</div>
+  <h2>Antes de invertir, <em>seguro te lo preguntaste</em></h2>
+  <div class="xs-qs">
+    <p>¿Quieres que tus ahorros ganen valor, pero no sabes en qué inmueble confiar?</p>
+    <p>¿Visitaste proyectos y nadie te explicó con claridad documentos y formas de pago?</p>
+    <p>¿Te pidieron decidir rápido sin dejarte conocer el terreno con calma?</p>
+    <p>¿Sueñas con una casa de campo o de playa para tu familia y no sabes por dónde empezar?</p>
+    <p>¿Te preocupa comprar algo que después no puedas dejar a tus hijos?</p>
+    <p>¿Sientes que el dinero en el banco no crece al ritmo que quisieras?</p>
+  </div>
+  <p class="xs-close">En Sapia te acompañamos con <b>sabiduría, confianza y visión de patrimonio</b>: información clara, visita al proyecto y asesoría hasta la firma.</p>
+</div></section>
 
 <section id="proyectos">
   <div class="reveal">
@@ -469,6 +530,15 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
   </div>
 </section>
 
+<section class="xs-sec"><div class="xs-w">
+  <div class="xs-kick">¿Para quién es?</div>
+  <h2>Sapia es para quien piensa <em>en patrimonio</em></h2>
+  <div class="xs-2">
+    <div class="xs-card xs-yes"><h3>Es para ti si…</h3><ul><li>Buscas un inmueble que gane valor con el tiempo y quede en tu familia.</li><li>Quieres una casa de campo, un lote frente al mar o un departamento para vivir.</li><li>Prefieres conocer el proyecto antes de decidir.</li><li>Valoras una asesoría clara sobre ubicación, metraje y forma de pago.</li><li>Quieres que alguien te acompañe desde la primera visita hasta la firma.</li></ul></div>
+    <div class="xs-card xs-no"><h3>No es para ti si…</h3><ul><li>Buscas una ganancia rápida en pocas semanas.</li><li>No quieres visitar el proyecto ni revisar la información.</li><li>Solo te importa el precio más bajo, sin mirar ubicación ni documentos.</li><li>Quieres decidir sin hacer preguntas.</li></ul></div>
+  </div>
+</div></section>
+
 <section id="proceso">
   <div class="reveal">
     <div class="tag">Cómo comprar</div>
@@ -481,6 +551,26 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <div class="step reveal"><h3>Firma y patrimonio</h3><p>Te acompañamos en la firma y en todo el proceso posterior.</p></div>
   </div>
 </section>
+
+<section class="xs-sec xs-alt"><div class="xs-w">
+  <div class="xs-kick">Antes y después</div>
+  <h2>Lo que cambia cuando <em>compras con Sapia</em></h2>
+  <div class="xs-2">
+    <div class="xs-card xs-bef"><h3>Comprar solo</h3><ul><li>Información incompleta y presión por decidir.</li><li>Dudas sobre documentos y formas de pago.</li><li>Visitas que tienes que organizar por tu cuenta.</li><li>Ahorros que no crecen.</li></ul></div>
+    <div class="xs-card xs-aft"><h3>Comprar con Sapia</h3><ul><li>Información clara de cada proyecto.</li><li>Asesoría en documentos, separación y forma de pago.</li><li>Visita guiada al proyecto, con movilidad gratis a Colinas del Golf.</li><li>Un patrimonio que trasciende a tu familia.</li></ul></div>
+  </div>
+</div></section>
+
+<section class="xs-sec "><div class="xs-w">
+  <div class="xs-inc">
+    <div>
+      <div class="xs-kick">Comprar con Sapia</div>
+      <h2>Todo lo que <em>incluye</em></h2>
+      <ul><li>Asesoría personalizada en nuestros 3 proyectos.</li><li>Planos y brochure por WhatsApp.</li><li>Visita guiada de lunes a domingo.</li><li>Movilidad gratis desde Trujillo a Colinas del Golf.</li><li>Acompañamiento en separación, documentos y forma de pago.</li><li>Asesoría hasta la firma y después de ella.</li></ul>
+    </div>
+    <div class="xs-side"><small>Tu siguiente paso</small><b>Una visita</b><p>Conoce el proyecto antes de decidir. Te respondemos por WhatsApp para coordinarla.</p><a class="btn btn-gold" href="https://wa.me/51941684329?text=Hola%2C%20quiero%20agendar%20una%20visita%20con%20Sapia" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Agenda tu visita</a></div>
+  </div>
+</div></section>
 
 <section id="contacto">
   <div class="reveal">
