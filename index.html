@@ -215,6 +215,55 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
 .book h3{font-size:1.8rem}
 .book p{color:var(--muted)}
 .book .acts{display:flex;gap:10px;flex-wrap:wrap}
+/* nuevas secciones: problema, filtro, ruta, antes/después, incluye */
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--gold);color:var(--gold2);font-size:.78rem;font-weight:700;padding:6px 12px;border-radius:999px;margin-top:14px}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:inline-block}
+.hero-acts{display:flex;gap:12px;flex-wrap:wrap}
+.qs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:760px){.qs{grid-template-columns:1fr}}
+.qs p{background:var(--card);border-left:2px solid var(--gold);padding:18px 20px;font-family:var(--serif);font-size:1.3rem;line-height:1.3}
+.close-line{margin-top:30px;font-size:1.1rem;max-width:62ch}
+.close-line b{color:var(--gold)}
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:760px){.fit{grid-template-columns:1fr}}
+.fit .card ul{list-style:none;display:grid;gap:12px;margin-top:6px}
+.fit .card li{padding-left:28px;position:relative;color:var(--fg);font-size:.97rem}
+.fit .yes li::before{content:"✓";position:absolute;left:0;color:var(--up);font-weight:700}
+.fit .no{border-color:rgba(232,144,122,.3)}
+.fit .no li::before{content:"✕";position:absolute;left:0;color:#E8907A;font-weight:700}
+.road{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;border-top:1px solid var(--line)}
+@media (max-width:900px){.road{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.road{grid-template-columns:1fr}}
+.road>div{padding-top:24px;display:grid;gap:8px;align-content:start;position:relative}
+.road>div::before{content:"";position:absolute;top:-6px;left:0;width:11px;height:11px;border-radius:50%;background:var(--gold)}
+.road b{font-size:.72rem;letter-spacing:.2em;color:var(--gold)}
+.road h3{font-size:1.5rem}
+.road p{color:var(--muted);font-size:.93rem}
+.road .get{border-top:1px dashed var(--line);padding-top:10px;font-size:.88rem;color:var(--fg)}
+.road .get em{font-style:normal;color:var(--gold);font-weight:700;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:2px}
+.able{margin-top:44px;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--gold);padding:clamp(22px,3.5vw,32px)}
+.able h3{font-size:1.6rem;margin-bottom:14px}
+.able ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+@media (max-width:760px){.able ul{grid-template-columns:1fr}}
+.able li{padding-left:26px;position:relative}
+.able li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:760px){.ba{grid-template-columns:1fr}}
+.ba .card ul{list-style:none;display:grid;gap:12px;margin-top:6px}
+.ba .card li{padding-left:28px;position:relative;font-size:.97rem}
+.ba .bef li{color:var(--muted)}
+.ba .bef li::before{content:"—";position:absolute;left:0;color:var(--muted)}
+.ba .aft{border-color:var(--gold)}
+.ba .aft li::before{content:"→";position:absolute;left:0;color:var(--gold);font-weight:700}
+.inc{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,48px);align-items:center;border:1px solid var(--gold);background:linear-gradient(135deg,rgba(201,168,76,.12),rgba(201,168,76,.02));padding:clamp(24px,4vw,44px);margin-bottom:40px}
+@media (max-width:860px){.inc{grid-template-columns:1fr}}
+.inc ul{list-style:none;display:grid;gap:10px;margin-top:18px}
+.inc li{padding-left:26px;position:relative}
+.inc li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+.inc .side{display:grid;gap:14px;justify-items:start}
+.inc .side small{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.inc .side b{font-family:var(--serif);font-size:clamp(2rem,4vw,2.6rem);line-height:1}
+.inc .side p{color:var(--muted);font-size:.9rem}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "BMD Consulting", "description": "Consultoría comercial, talleres y mentoría para equipos de ventas en Trujillo y el norte del Perú.", "url": "https://bmdgroup.org.pe/", "image": "https://bmdgroup.org.pe/assets/og-consulting.jpg", "logo": "https://bmdgroup.org.pe/assets/bmd-consulting-isotipo.jpg", "telephone": "+51922529675", "email": "direcciongeneral@bmdgroup.org.pe", "address": {"@type": "PostalAddress", "streetAddress": "Calle Las Begonias Mz. 1 Lote 20, Of. 301, Urb. Jardines del Golf", "addressLocality": "Trujillo", "addressRegion": "La Libertad", "addressCountry": "PE"}, "areaServed": "Norte del Perú", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "19:00"}], "founder": {"@type": "Person", "name": "Bruno Noriega Montenegro", "sameAs": "https://www.linkedin.com/in/bruno-renato-noriega-montenegro-b7b93b232"}, "parentOrganization": {"@type": "Organization", "name": "BMDT Group"}, "sameAs": ["https://www.linkedin.com/company/139873966/", "https://www.linkedin.com/in/bruno-renato-noriega-montenegro-b7b93b232", "https://www.instagram.com/bmdconsulting.pe/", "https://www.tiktok.com/@bmdconsulting"]}</script>
 </head>
@@ -231,9 +280,10 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
   <div class="w hero-g">
     <div>
       <p class="tag">Consultoría comercial · Trujillo</p>
+      <span class="badge"><i></i>Próximos inicios de consultoría: 1 de diciembre</span>
       <h1>Tu equipo puede vender más. <em>Calcula cuánto.</em></h1>
       <p class="lead">Ordenamos tu sistema comercial y acompañamos a tu equipo hasta que los resultados se sostengan.</p>
-      <a class="btn" href="#agenda">Solicitar diagnóstico gratuito de 20 min</a>
+      <div class="hero-acts"><a class="btn" href="#agenda">Solicitar diagnóstico gratuito de 20 min</a><a class="btn ghost" href="#filosofia">Ver a Bruno en 2 minutos</a></div>
       <div class="trust">
         <div><b>20+</b><span>años en ventas B2B y B2C</span></div>
         <div><b>126%</b><span>de cumplimiento de meta trimestral</span></div>
@@ -257,76 +307,21 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
 </section>
 <div class="logos"><div class="w"><p>Marcas con las que hemos trabajado en más de 20 años de trayectoria</p><div class="lg"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc41f0579c_6.png" alt="Logotipo de AD&" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc40948bd4_7.png" alt="Logotipo de Farmacia Funegra" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3f96e55d_8.png" alt="Logotipo de BermanLab" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3ec4f96b_9.png" alt="Logotipo de Pacífico Seguros" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3d6648b1_10.png" alt="Logotipo de Prosegur Alarmas" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3c5585b0_11.png" alt="Logotipo de Érase un Café" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3afef323_12.png" alt="Logotipo de Verisure" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc3873e0b9_13.png" alt="Logotipo de Mapfre Perú" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc372072c0_14.png" alt="Logotipo de Urbanniza Inmobiliaria" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc35b4d540_15.png" alt="Logotipo de Ersil Inmobiliaria" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc33f52ff6_16.png" alt="Logotipo de AK Arquitectos" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc32163baf_17.png" alt="Logotipo de Eco Zoom" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2fc26e93_18.png" alt="Logotipo de Chan Chan" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2da61a3b_19.png" alt="Logotipo de Publiv Vibes" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2c011f24_20.png" alt="Logotipo de La Golosa" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc2a60e4ec_21.png" alt="Logotipo de La Alfombra Roja" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc293c1ed7_22.png" alt="Logotipo de Huella Viva" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc273be7d3_23.png" alt="Logotipo de Grobudsac" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc26208cce_24.png" alt="Logotipo de Sinergia" loading="lazy"><img src="https://d1yei2z3i6k35z.cloudfront.net/15890826/696bc24d9b845_25.png" alt="Logotipo de Profin Call Center" loading="lazy"></div></div></div>
 
-
 <section class="alt">
   <div class="w">
-    <div class="head"><p class="tag">Con quién trabajamos</p><h2>Empresas que venden con equipo <em>y quieren crecer con método</em></h2></div>
-    <div class="g3">
-      <article class="card"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div><h3>Inmobiliarias</h3><p>Equipos de asesores que convierten más visitas en separaciones.</p></article>
-      <article class="card"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 3v8a3 3 0 0 0 3 3v7M7 3v6M10 3v8a3 3 0 0 1-3 3M17 21V3c-2 1-3 4-3 7h3"/></svg></div><h3>Restaurantes</h3><p>Atención que vende más, caja estandarizada y marketing que llena mesas.</p></article>
-      <article class="card"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18v13H3zM8 7V4h8v3M3 12h18"/></svg></div><h3>Empresas B2B</h3><p>Procesos, KPIs y seguimiento para equipos que venden a empresas.</p></article>
+    <div class="head"><p class="tag">¿Te suena familiar?</p><h2>Si eres dueño o gerente, <em>seguro lo viviste</em></h2></div>
+    <div class="qs">
+      <p>¿Tu equipo atiende muchos prospectos, pero cierra pocos?</p>
+      <p>¿Las ventas del mes dependen de uno o dos vendedores estrella?</p>
+      <p>¿Nadie hace seguimiento después de la primera cotización?</p>
+      <p>¿Cada vendedor vende a su manera y no sabes qué funciona?</p>
+      <p>¿Inviertes en publicidad y los leads se enfrían sin respuesta?</p>
+      <p>¿Llegar a la meta se siente como cuestión de suerte cada mes?</p>
     </div>
-    <div class="g4">
-      <div class="svc"><h3>Consultoría comercial</h3><p>Sistema de ventas completo, de 3 a 6 meses.</p></div>
-      <div class="svc"><h3>Talleres in-company</h3><p>Venta Letal, liderazgo, negociación y más.</p></div>
-      <div class="svc"><h3>Mentoría 1 a 1</h3><p>Para gerentes y jefes comerciales.</p></div>
-      <div class="svc"><h3>Conferencias</h3><p>Ventas y liderazgo para tus eventos.</p></div>
-    </div>
+    <p class="close-line">Si respondiste que sí a dos o más, el problema no es tu gente: <b>es que tu equipo no tiene un sistema.</b> Eso es exactamente lo que construimos con el método Frecuencia Comercial™.</p>
   </div>
 </section>
-
-<section>
-  <div class="w case">
-    <div>
-      <p class="tag">Caso real · Seguridad inteligente</p>
-      <h2 style="margin:14px 0 30px">De cumplir la meta <em>a superarla</em></h2>
-      <div class="bars" aria-label="Cumplimiento de meta trimestral antes y después">
-        <div class="bar"><small>Antes: cumplimiento habitual <b>90–100%</b></small><div class="track"><i style="width:73%"></i><span class="goal" title="Meta 100%"></span></div></div>
-        <div class="bar"><small>Con nuestra gestión <b>124–126%</b></small><div class="track up"><i style="width:96%"></i><span class="goal"></span></div></div>
-        <p class="note">La línea blanca marca el 100% de la meta.</p>
-      </div>
-    </div>
-    <blockquote>"Las grandes oportunidades rara vez se ganan insistiendo más. Se ganan con estructura, presencia constante y confianza."<cite>Ventas en Frecuencia · Método Frecuencia Comercial™</cite></blockquote>
-  </div>
-</section>
-
-
-<section class="alt">
-  <div class="w">
-    <div class="head"><p class="tag">Transformaciones reales</p><h2>Así se ve la consultoría <em>en acción</em></h2></div>
-    <div class="cases">
-      <article class="cv"><video controls playsinline preload="none" poster="/assets/video-kazator-poster.jpg"><source src="/assets/video-kazator.mp4" type="video/mp4"></video><div><small>Strategy Pricing</small><h3>Empresa de servicios B2B</h3><p>Estrategia de precios y estructura comercial para crecer de forma predecible.</p><b>Resultado: modelo de pricing sostenible y automatizado.</b></div></article>
-      <article class="cv"><video controls playsinline preload="none" poster="/assets/video-ampc-poster.jpg"><source src="/assets/video-ampc.mp4" type="video/mp4"></video><div><small>Mentalidad comercial</small><h3>Desarrolladora inmobiliaria</h3><p>Entrenamiento de mentalidad y microhábitos para equipos de venta.</p><b>Resultado: equipos enfocados y ventas consistentes.</b></div></article>
-      <article class="cv"><video controls playsinline preload="none" poster="/assets/video-jl-vasquez-poster.jpg"><source src="/assets/video-jl-vasquez.mp4" type="video/mp4"></video><div><small>Venta Letal</small><h3>Grupo empresarial · La Libertad</h3><p>Coaching grupal intensivo con nuestro método de ventas y cierre.</p><b>Resultado: equipo de venta de alto rendimiento.</b></div></article>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="w">
-    <div class="head"><p class="tag">Testimonios</p><h2>Lo que dicen quienes <em>ya confiaron</em></h2></div>
-    <div class="tst">
-      <div class="tq"><p>"Incorporamos perfiles alineados a nuestra cultura y vimos crecimiento directo en ventas. Una de las mejores decisiones como empresa."</p><span>Mueblería · La Libertad</span></div>
-      <div class="tq"><p>"Pasamos de operar por intuición a datos reales: precios sustentados, embudo medible y equipo alineado a KPIs."</p><span>Empresa de servicios · Sistema comercial</span></div>
-      <div class="tq"><p>"Pasamos de terrenos sin movimiento a atraer compradores calificados. Resultados medibles desde el primer mes."</p><span>Grupo inmobiliario · Perú</span></div>
-    </div>
-    <p class="note" style="margin-top:22px">Nombres en reserva por confidencialidad.</p>
-  </div>
-</section>
-
-<section class="alt">
-  <div class="w">
-    <div class="head"><p class="tag">Cómo trabajamos</p><h2>Tres etapas. <em>Resultados medibles.</em></h2></div>
-    <div class="steps">
-      <div class="step"><b>ETAPA 1</b><h3>Diagnóstico</h3><p>Medimos tu proceso y encontramos dónde se pierden las ventas.</p></div>
-      <div class="step"><b>ETAPA 2</b><h3>Sistema</h3><p>Procesos, guiones y KPIs escritos para que todos vendan igual de bien.</p></div>
-      <div class="step"><b>ETAPA 3</b><h3>Acompañamiento</h3><p>Entrenamos al equipo y ajustamos cada mes hasta que se sostenga.</p></div>
-    </div>
-  </div>
-</section>
-
-
-<section>
+<section id="filosofia">
   <div class="w vid">
     <div>
       <p class="tag">Nuestra filosofía</p>
@@ -347,7 +342,122 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
     </div>
   </div>
 </section>
-
+<section class="alt">
+  <div class="w">
+    <div class="head"><p class="tag">Con quién trabajamos</p><h2>Empresas que venden con equipo <em>y quieren crecer con método</em></h2></div>
+    <div class="g3">
+      <article class="card"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div><h3>Inmobiliarias</h3><p>Equipos de asesores que convierten más visitas en separaciones.</p></article>
+      <article class="card"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 3v8a3 3 0 0 0 3 3v7M7 3v6M10 3v8a3 3 0 0 1-3 3M17 21V3c-2 1-3 4-3 7h3"/></svg></div><h3>Restaurantes</h3><p>Atención que vende más, caja estandarizada y marketing que llena mesas.</p></article>
+      <article class="card"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18v13H3zM8 7V4h8v3M3 12h18"/></svg></div><h3>Empresas B2B</h3><p>Procesos, KPIs y seguimiento para equipos que venden a empresas.</p></article>
+    </div>
+    <div class="g4">
+      <div class="svc"><h3>Consultoría comercial</h3><p>Sistema de ventas completo, de 3 a 6 meses.</p></div>
+      <div class="svc"><h3>Talleres in-company</h3><p>Venta Letal, liderazgo, negociación y más.</p></div>
+      <div class="svc"><h3>Mentoría 1 a 1</h3><p>Para gerentes y jefes comerciales.</p></div>
+      <div class="svc"><h3>Conferencias</h3><p>Ventas y liderazgo para tus eventos.</p></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="w">
+    <div class="head"><p class="tag">¿Para quién es?</p><h2>Trabajamos con pocas empresas <em>y las elegimos bien</em></h2></div>
+    <div class="fit">
+      <div class="card yes"><h3>Es para ti si…</h3><ul>
+        <li>Tienes un equipo de ventas, o lo estás armando, y quieres que venda con método.</li>
+        <li>Eres dueño o gerente y vas a involucrarte en el proceso.</li>
+        <li>Estás dispuesto a medir: metas, reportes y KPIs cada semana.</li>
+        <li>Buscas resultados que se sostengan, no un impulso de un mes.</li>
+        <li>Vendes en Trujillo o el norte del Perú, presencial o por videollamada.</li>
+      </ul></div>
+      <div class="card no"><h3>No es para ti si…</h3><ul>
+        <li>Buscas una charla motivacional de un día.</li>
+        <li>Esperas resultados sin que tu equipo cambie sus hábitos.</li>
+        <li>No vas a medir ni pedir reportes a tu equipo.</li>
+        <li>Quieres que alguien venda por ti en lugar de formar a tu gente.</li>
+        <li>Buscas una solución mágica que no exija trabajo.</li>
+      </ul></div>
+    </div>
+    <p class="note" style="margin-top:22px">Los resultados dependen de que tu equipo aplique el plan. Nosotros ponemos el método, el entrenamiento y el seguimiento; tu equipo pone el trabajo.</p>
+  </div>
+</section>
+<section class="alt">
+  <div class="w case">
+    <div>
+      <p class="tag">Caso real · Seguridad inteligente</p>
+      <h2 style="margin:14px 0 30px">De cumplir la meta <em>a superarla</em></h2>
+      <div class="bars" aria-label="Cumplimiento de meta trimestral antes y después">
+        <div class="bar"><small>Antes: cumplimiento habitual <b>90–100%</b></small><div class="track"><i style="width:73%"></i><span class="goal" title="Meta 100%"></span></div></div>
+        <div class="bar"><small>Con nuestra gestión <b>124–126%</b></small><div class="track up"><i style="width:96%"></i><span class="goal"></span></div></div>
+        <p class="note">La línea blanca marca el 100% de la meta.</p>
+      </div>
+    </div>
+    <blockquote>"Las grandes oportunidades rara vez se ganan insistiendo más. Se ganan con estructura, presencia constante y confianza."<cite>Ventas en Frecuencia · Método Frecuencia Comercial™</cite></blockquote>
+  </div>
+</section>
+<section>
+  <div class="w">
+    <div class="head"><p class="tag">Transformaciones reales</p><h2>Así se ve la consultoría <em>en acción</em></h2></div>
+    <div class="cases">
+      <article class="cv"><video controls playsinline preload="none" poster="/assets/video-kazator-poster.jpg"><source src="/assets/video-kazator.mp4" type="video/mp4"></video><div><small>Strategy Pricing</small><h3>Empresa de servicios B2B</h3><p>Estrategia de precios y estructura comercial para crecer de forma predecible.</p><b>Resultado: modelo de pricing sostenible y automatizado.</b></div></article>
+      <article class="cv"><video controls playsinline preload="none" poster="/assets/video-ampc-poster.jpg"><source src="/assets/video-ampc.mp4" type="video/mp4"></video><div><small>Mentalidad comercial</small><h3>Desarrolladora inmobiliaria</h3><p>Entrenamiento de mentalidad y microhábitos para equipos de venta.</p><b>Resultado: equipos enfocados y ventas consistentes.</b></div></article>
+      <article class="cv"><video controls playsinline preload="none" poster="/assets/video-jl-vasquez-poster.jpg"><source src="/assets/video-jl-vasquez.mp4" type="video/mp4"></video><div><small>Venta Letal</small><h3>Grupo empresarial · La Libertad</h3><p>Coaching grupal intensivo con nuestro método de ventas y cierre.</p><b>Resultado: equipo de venta de alto rendimiento.</b></div></article>
+    </div>
+  </div>
+</section>
+<section class="alt">
+  <div class="w">
+    <div class="head"><p class="tag">Testimonios</p><h2>Lo que dicen quienes <em>ya confiaron</em></h2></div>
+    <div class="tst">
+      <div class="tq"><p>"Incorporamos perfiles alineados a nuestra cultura y vimos crecimiento directo en ventas. Una de las mejores decisiones como empresa."</p><span>Mueblería · La Libertad</span></div>
+      <div class="tq"><p>"Pasamos de operar por intuición a datos reales: precios sustentados, embudo medible y equipo alineado a KPIs."</p><span>Empresa de servicios · Sistema comercial</span></div>
+      <div class="tq"><p>"Pasamos de terrenos sin movimiento a atraer compradores calificados. Resultados medibles desde el primer mes."</p><span>Grupo inmobiliario · Perú</span></div>
+    </div>
+    <p class="note" style="margin-top:22px">Nombres en reserva por confidencialidad.</p>
+  </div>
+</section>
+<section>
+  <div class="w">
+    <div class="head"><p class="tag">Cómo trabajamos</p><h2>La hoja de ruta: <em>cada etapa deja algo funcionando</em></h2><p class="lead">No te llevas apuntes ni presentaciones: te llevas herramientas aplicadas a tu equipo real.</p></div>
+    <div class="road">
+      <div><b>MES 1</b><h3>Diagnóstico</h3><p>Medimos tu proceso, tu embudo y a cada vendedor para encontrar dónde se pierden las ventas.</p><p class="get"><em>Te llevas</em>Informe de diagnóstico y plan de trabajo de 6 meses.</p></div>
+      <div><b>MES 2</b><h3>Sistema</h3><p>Escribimos cómo se vende en tu empresa: guiones, protocolos de atención y de seguimiento.</p><p class="get"><em>Te llevas</em>Kit comercial y manual de objeciones de tu rubro.</p></div>
+      <div><b>MES 3</b><h3>Equipo</h3><p>Inducción y mentoría a cada asesor, con roleplays del método Venta Letal.</p><p class="get"><em>Te llevas</em>Un equipo entrenado y con plan individual de mejora.</p></div>
+      <div><b>MESES 4 A 6</b><h3>Acompañamiento</h3><p>Reuniones mensuales, revisión de KPIs y ajustes hasta que el sistema se sostenga solo.</p><p class="get"><em>Te llevas</em>Tablero de KPIs y un sistema que no depende de una sola persona.</p></div>
+    </div>
+    <div class="able">
+      <h3>Al terminar, tu equipo podrá:</h3>
+      <ul>
+        <li>Seguir un mismo proceso de venta, de la primera llamada al cierre.</li>
+        <li>Responder las objeciones de tu rubro con argumentos preparados.</li>
+        <li>Hacer seguimiento a cada prospecto con fechas y responsables.</li>
+        <li>Medir su avance semana a semana con KPIs claros.</li>
+        <li>Incorporar nuevos vendedores sin empezar de cero.</li>
+        <li>Llegar a la meta por método, no por suerte.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="alt">
+  <div class="w">
+    <div class="head"><p class="tag">Antes y después</p><h2>Lo que cambia cuando <em>vendes en frecuencia</em></h2></div>
+    <div class="ba">
+      <div class="card bef"><h3>Antes</h3><ul>
+        <li>Las ventas dependen del ánimo del mes.</li>
+        <li>Cada vendedor improvisa su propio discurso.</li>
+        <li>Los prospectos se enfrían sin seguimiento.</li>
+        <li>Las decisiones se toman por intuición.</li>
+        <li>La meta es una sorpresa a fin de mes.</li>
+      </ul></div>
+      <div class="card aft"><h3>Después</h3><ul>
+        <li>Un proceso comercial que todo el equipo sigue.</li>
+        <li>Guiones y manual de objeciones escritos.</li>
+        <li>Seguimiento con fechas y responsables.</li>
+        <li>Decisiones con KPIs reales.</li>
+        <li>La meta se ve venir semana a semana.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
 <section>
   <div class="w ceo">
     <img src="/assets/image-02.png" alt="Bruno Noriega Montenegro, CEO de BMD Consulting">
@@ -363,8 +473,6 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
     </div>
   </div>
 </section>
-
-
 <section class="alt">
   <div class="w">
     <div class="head"><p class="tag">Nuestro equipo</p><h2>Especialistas propios <em>en cada área</em></h2></div>
@@ -376,9 +484,29 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
     </div>
   </div>
 </section>
-
 <section>
   <div class="w">
+    <div class="inc">
+      <div>
+        <p class="tag">Consultoría comercial</p>
+        <h2 style="margin-top:12px">Todo lo que <em>incluye</em></h2>
+        <ul>
+          <li>Diagnóstico completo de tu proceso y de tu equipo.</li>
+          <li>Kit comercial: guiones, protocolos de atención y seguimiento.</li>
+          <li>Manual de objeciones de tu rubro.</li>
+          <li>Inducción y mentoría a cada asesor.</li>
+          <li>Entrenamiento con el método Venta Letal.</li>
+          <li>Tablero de KPIs y reuniones mensuales de seguimiento.</li>
+          <li>Compromiso compartido a los 90 días.</li>
+        </ul>
+      </div>
+      <div class="side">
+        <small>Próximos inicios</small>
+        <b>1 de diciembre</b>
+        <p>Empezamos con un diagnóstico gratuito de 20 minutos para ver si podemos ayudarte.</p>
+        <a class="btn" href="#agenda">Solicitar diagnóstico</a>
+      </div>
+    </div>
     <div class="book">
       <img src="/assets/image-03.jpg" alt="Libro Ventas en Frecuencia">
       <div><p class="tag">El libro del método</p><h3>Ventas en Frecuencia</h3><p>21 capítulos con el método Frecuencia Comercial™. Lee el primero gratis.</p>
