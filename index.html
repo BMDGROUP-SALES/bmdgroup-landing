@@ -264,14 +264,30 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
 .inc .side small{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700}
 .inc .side b{font-family:var(--serif);font-size:clamp(2rem,4vw,2.6rem);line-height:1}
 .inc .side p{color:var(--muted);font-size:.9rem}
+.sv6{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:900px){.sv6{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.sv6{grid-template-columns:1fr}}
+.sv6 .card{border-top:3px solid var(--gold);grid-template-rows:auto auto auto 1fr auto}
+.sv6 ul{list-style:none;display:grid;gap:6px;margin:4px 0 6px;color:var(--muted);font-size:.9rem;align-content:start}
+.sv6 li{padding-left:20px;position:relative}
+.sv6 li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:700}
+.sv6 .btn{justify-self:start;padding:12px 18px;font-size:.88rem}
+.ctab{display:grid;grid-template-columns:1.4fr auto;gap:24px;align-items:center;border:1px solid var(--gold);background:linear-gradient(135deg,rgba(201,168,76,.14),rgba(201,168,76,.02));padding:clamp(22px,4vw,40px);margin-top:48px}
+.ctab h3{font-size:1.6rem}.ctab p{color:var(--muted);margin-top:8px}
+.ctab .acts{display:flex;flex-wrap:wrap;gap:12px}
+@media (max-width:860px){.ctab{grid-template-columns:1fr}}
+.navl{display:flex;align-items:center;gap:22px}
+.navl a.lk{color:var(--fg);text-decoration:none;font-size:.9rem;opacity:.85}
+.navl a.lk:hover{color:var(--gold);opacity:1}
+@media (max-width:760px){.navl a.lk{display:none}}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "BMD Consulting", "description": "Consultoría comercial, talleres y mentoría para equipos de ventas en Trujillo y el norte del Perú.", "url": "https://bmdgroup.org.pe/", "image": "https://bmdgroup.org.pe/assets/og-consulting.jpg", "logo": "https://bmdgroup.org.pe/assets/bmd-consulting-isotipo.jpg", "telephone": "+51922529675", "email": "direcciongeneral@bmdgroup.org.pe", "address": {"@type": "PostalAddress", "streetAddress": "Calle Las Begonias Mz. 1 Lote 20, Of. 301, Urb. Jardines del Golf", "addressLocality": "Trujillo", "addressRegion": "La Libertad", "addressCountry": "PE"}, "areaServed": "Norte del Perú", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "19:00"}], "founder": {"@type": "Person", "name": "Bruno Noriega Montenegro", "sameAs": "https://www.linkedin.com/in/bruno-renato-noriega-montenegro-b7b93b232"}, "parentOrganization": {"@type": "Organization", "name": "BMDT GROUP S.A.C.", "legalName": "BMDT GROUP S.A.C.", "taxID": "20616750012"}, "sameAs": ["https://www.linkedin.com/company/139873966/", "https://www.linkedin.com/in/bruno-renato-noriega-montenegro-b7b93b232", "https://www.instagram.com/bmdconsulting.pe/", "https://www.tiktok.com/@bmdconsulting"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "BMD Consulting", "description": "Consultoría estratégica, ventas, marketing, atención al cliente, procesos y talleres in-company para empresas en Trujillo y el norte del Perú.", "url": "https://bmdgroup.org.pe/", "image": "https://bmdgroup.org.pe/assets/og-consulting.jpg", "logo": "https://bmdgroup.org.pe/assets/bmd-consulting-isotipo.jpg", "telephone": "+51922529675", "email": "direcciongeneral@bmdgroup.org.pe", "address": {"@type": "PostalAddress", "streetAddress": "Calle Las Begonias Mz. 1 Lote 20, Of. 301, Urb. Jardines del Golf", "addressLocality": "Trujillo", "addressRegion": "La Libertad", "addressCountry": "PE"}, "areaServed": "Norte del Perú", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "19:00"}], "founder": {"@type": "Person", "name": "Bruno Noriega Montenegro", "sameAs": "https://www.linkedin.com/in/bruno-renato-noriega-montenegro-b7b93b232"}, "parentOrganization": {"@type": "Organization", "name": "BMDT GROUP S.A.C.", "legalName": "BMDT GROUP S.A.C.", "taxID": "20616750012"}, "sameAs": ["https://www.linkedin.com/company/139873966/", "https://www.linkedin.com/in/bruno-renato-noriega-montenegro-b7b93b232", "https://www.instagram.com/bmdconsulting.pe/", "https://www.tiktok.com/@bmdconsulting"]}</script>
 </head>
 <body>
 <nav>
   <div class="w nav">
     <a class="brand" href="#top"><img src="/assets/bmd-consulting-isotipo.jpg" alt="Isotipo de BMD Consulting"><div><b>BMD <span>Consulting</span></b><small>Parte de BMDT Group</small></div></a>
-    <a class="btn" href="#agenda">Solicitar diagnóstico</a>
+    <div class="navl"><a class="lk" href="#servicios">Servicios</a><a class="lk" href="#servicios" data-svc="Talleres in-company">Talleres</a><a class="btn" href="#agenda">Solicitar diagnóstico</a></div>
   </div>
 </nav>
 
@@ -319,6 +335,23 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
       <p>¿Llegar a la meta se siente como cuestión de suerte cada mes?</p>
     </div>
     <p class="close-line">Si respondiste que sí a dos o más, el problema no es tu gente: <b>es que tu equipo no tiene un sistema.</b> Eso es exactamente lo que construimos con el método Frecuencia Comercial™.</p>
+  </div>
+</section>
+<section id="servicios">
+  <div class="w">
+    <div class="head"><p class="tag">Servicios</p><h2>Todo lo que tu empresa necesita para vender más, <em>en un solo equipo</em></h2><p class="lead">Elige por dónde empezar. En el diagnóstico gratuito vemos juntos qué frente te está costando más ventas.</p></div>
+    <div class="sv6">
+      <article class="card"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Consultoría estratégica</h3><p>Detectamos los cuellos de botella de tu negocio y armamos el plan para crecer con orden.</p><ul><li>Diagnóstico de ventas, marketing y operación</li><li>Plan de trabajo con prioridades y metas</li><li>Acompañamiento semanal del dueño o gerente</li></ul><a class="btn ghost" href="#agenda" data-svc="Consultoría estratégica">Quiero un plan para mi empresa</a></article>
+      <article class="card"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></div><h3>Sistema de ventas</h3><p>Tu equipo vende con un mismo método, de la primera consulta al cierre.</p><ul><li>Guiones, objeciones y cierre</li><li>Ventas cruzadas y upselling</li><li>Seguimiento por WhatsApp y KPIs</li></ul><a class="btn ghost" href="#agenda" data-svc="Sistema de ventas">Quiero vender más</a></article>
+      <article class="card"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11v2a1 1 0 0 0 1 1h3l5 4V6L7 10H4a1 1 0 0 0-1 1zM16 8a5 5 0 0 1 0 8M19 5a9 9 0 0 1 0 14"/></svg></div><h3>Marketing y redes</h3><p>Publicidad y contenido que atraen clientes reales, no solo likes.</p><ul><li>Estrategia y calendario de contenido</li><li>Campañas en Meta con presupuesto controlado</li><li>Promociones que se miden en ventas</li></ul><a class="btn ghost" href="#agenda" data-svc="Marketing y redes">Quiero más clientes</a></article>
+      <article class="card"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg></div><h3>Atención al cliente</h3><p>Estandarizamos cómo se recibe, se atiende y se despide a cada cliente.</p><ul><li>Protocolo de bienvenida y saludo</li><li>Capacitación de mozos, vendedores y recepción</li><li>Calidad de servicio medible</li></ul><a class="btn ghost" href="#agenda" data-svc="Atención y calidad de servicio">Quiero mejorar la atención</a></article>
+      <article class="card"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="6" height="6"/><rect x="15" y="15" width="6" height="6"/><path d="M9 6h6a3 3 0 0 1 3 3v6"/></svg></div><h3>Procesos y flujos</h3><p>Ordenamos el trabajo para que cada área sepa qué hacer, cuándo y cómo.</p><ul><li>Flujos de atención, pedidos y caja</li><li>Roles, responsables y manuales</li><li>Indicadores para no depender de una sola persona</li></ul><a class="btn ghost" href="#agenda" data-svc="Procesos y flujos">Quiero ordenar mi operación</a></article>
+      <article class="card"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5h18v11H3zM8 21l4-5 4 5M7 9h6M7 12h10"/></svg></div><h3>Talleres in-company</h3><p>Entrenamiento práctico para tu equipo, con casos de tu propio negocio.</p><ul><li>Venta Letal: ventas y cierre</li><li>Liderazgo, negociación y comunicación</li><li>Habilidades blandas y atención</li></ul><a class="btn ghost" href="#agenda" data-svc="Talleres in-company">Quiero un taller para mi equipo</a></article>
+    </div>
+    <div class="ctab">
+      <div><h3>¿No sabes por dónde empezar?</h3><p>En 20 minutos detectamos tus 3 cuellos de botella principales y te decimos qué servicio te conviene. Sin costo y sin compromiso.</p></div>
+      <div class="acts"><a class="btn" href="#agenda">Solicitar diagnóstico gratuito</a><a class="btn ghost" href="https://wa.me/51922529675?text=Hola%20BMD%20Consulting%2C%20quiero%20saber%20qu%C3%A9%20servicio%20le%20conviene%20a%20mi%20empresa" target="_blank" rel="noopener">Escribir por WhatsApp</a></div>
+    </div>
   </div>
 </section>
 <section id="filosofia">
@@ -435,6 +468,10 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
         <li>Llegar a la meta por método, no por suerte.</li>
       </ul>
     </div>
+    <div class="ctab">
+      <div><h3>Ventas, marketing, atención y procesos, trabajando juntos</h3><p>Consultoría estratégica, talleres y acompañamiento para que tu negocio funcione con sistema. Empieza con un diagnóstico gratuito.</p></div>
+      <div class="acts"><a class="btn" href="#agenda">Quiero mi diagnóstico</a><a class="btn ghost" href="#servicios">Ver servicios</a></div>
+    </div>
   </div>
 </section>
 <section class="alt">
@@ -533,13 +570,14 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
         <div><label for="a-e">Empresa</label><input id="a-e" autocomplete="organization" placeholder="Tu empresa"></div>
       </div>
       <div class="row">
-        <div><label for="a-r">Rubro</label><select id="a-r"><option>Inmobiliaria</option><option>Restaurante / comida</option><option>Empresa B2B</option><option>Otro</option></select></div>
+        <div><label for="a-r">Rubro</label><select id="a-r"><option>Inmobiliaria</option><option>Restaurante / comida</option><option>Comercio / tienda</option><option>Empresa B2B</option><option>Condominio / asociación</option><option>Otro</option></select></div>
         <div><label for="a-m">Modalidad</label><select id="a-m"><option>Videollamada</option><option>Llamada</option><option>Presencial en Trujillo</option></select></div>
       </div>
       <div class="row">
         <div><label for="a-t">Tamaño del equipo comercial</label><select id="a-t"><option value="">Elige una opción</option><option>1 a 3 vendedores</option><option>4 a 10 vendedores</option><option>11 a 25 vendedores</option><option>Más de 25 vendedores</option></select></div>
         <div><label for="a-v">Ventas al mes</label><select id="a-v"><option value="">Elige una opción</option><option>Menos de S/ 50 mil</option><option>S/ 50 mil a 150 mil</option><option>S/ 150 mil a 500 mil</option><option>Más de S/ 500 mil</option></select></div>
       </div>
+      <div><label for="a-s">¿Qué te interesa?</label><select id="a-s"><option>Aún no sé, quiero el diagnóstico</option><option>Consultoría estratégica</option><option>Sistema de ventas</option><option>Marketing y redes</option><option>Atención y calidad de servicio</option><option>Procesos y flujos</option><option>Talleres in-company</option></select></div>
       <div><label>Día preferido</label><div class="chips" id="a-days"></div></div>
       <div><label>Franja (hora de Perú)</label><div class="chips" id="a-hours"></div></div>
       <p class="sum" id="a-sum" aria-live="polite"></p>
@@ -582,15 +620,16 @@ footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);fo
   function rd(){var b=$("a-days");b.innerHTML="";days.forEach(function(x,i){if(!slots(x).length)return;b.appendChild(chip("<small>"+DI[x.getDay()]+"</small>"+x.getDate()+" "+ME[x.getMonth()],st.d===i,function(){st.d=i;st.h=null;rd();rh();upd()}))})}
   function rh(){var b=$("a-hours");b.innerHTML="";if(st.d===null){b.innerHTML='<span class="note">Primero elige un día.</span>';return}slots(days[st.d]).forEach(function(m){b.appendChild(chip(hm(m),st.h===m,function(){st.h=m;rh();upd()}))})}
   function upd(){
-    var x=days[st.d],t="Hola BMD Consulting, quiero solicitar un cupo para el diagnóstico comercial de 20 minutos.\nNombre: "+$("a-n").value.trim()+"\nEmpresa: "+$("a-e").value.trim()+"\nRubro: "+$("a-r").value+"\nEquipo: "+$("a-t").value+"\nVentas al mes: "+$("a-v").value+"\nModalidad: "+$("a-m").value;
+    var x=days[st.d],t="Hola BMD Consulting, quiero solicitar un cupo para el diagnóstico comercial de 20 minutos.\nNombre: "+$("a-n").value.trim()+"\nEmpresa: "+$("a-e").value.trim()+"\nRubro: "+$("a-r").value+"\nEquipo: "+$("a-t").value+"\nVentas al mes: "+$("a-v").value+"\nModalidad: "+$("a-m").value+"\nMe interesa: "+$("a-s").value;
     if(x&&st.h!==null){t+="\nPreferencia: "+DL[x.getDay()]+" "+x.getDate()+" de "+ME[x.getMonth()]+", "+hm(st.h)+" (hora de Perú)";$("a-sum").textContent="Solicitas: "+DL[x.getDay()]+" "+x.getDate()+" de "+ME[x.getMonth()]+", "+hm(st.h).toLowerCase()+". Sujeto a confirmación."}else{$("a-sum").textContent=""}
     if(usedCalc)t+="\n"+calcMsg;
     $("a-send").href="https://wa.me/51922529675?text="+encodeURIComponent(t);
   }
   $("calc-cta").addEventListener("click",function(){usedCalc=true;upd()});
-  ["a-n","a-e","a-r","a-m","a-t","a-v"].forEach(function(i){$(i).addEventListener("input",upd);$(i).addEventListener("change",upd)});
-  $("a-send").addEventListener("click",function(e){if(!$("a-n").value.trim()||!$("a-e").value.trim()||!$("a-t").value||!$("a-v").value||st.d===null||st.h===null){e.preventDefault();$("a-err").hidden=false}else{$("a-err").hidden=true;if(window.bmdTrack)bmdTrack("Schedule",{rubro:$("a-r").value})}});
+  ["a-n","a-e","a-r","a-m","a-t","a-v","a-s"].forEach(function(i){$(i).addEventListener("input",upd);$(i).addEventListener("change",upd)});
+  $("a-send").addEventListener("click",function(e){if(!$("a-n").value.trim()||!$("a-e").value.trim()||!$("a-t").value||!$("a-v").value||st.d===null||st.h===null){e.preventDefault();$("a-err").hidden=false}else{$("a-err").hidden=true;if(window.bmdTrack)bmdTrack("Schedule",{rubro:$("a-r").value,servicio:$("a-s").value})}});
   $("calc-cta").addEventListener("click",function(){if(window.bmdTrack)bmdTrack("Lead",{origen:"calculadora"})});
+  document.querySelectorAll("[data-svc]").forEach(function(a){a.addEventListener("click",function(){var v=a.getAttribute("data-svc"),sel=$("a-s");if(a.getAttribute("href")==="#agenda"){for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===v){sel.selectedIndex=i}}upd();if(window.bmdTrack)bmdTrack("InteresServicio",{servicio:v})}})});
   rd();rh();calc();
 })();
 </script>
