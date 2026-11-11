@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Sapia Grupo Inmobiliario | Lotes y departamentos en La Libertad</title>
-<meta name="description" content="Sapia Grupo Inmobiliario: comercialización de bienes raíces y desarrollo inmobiliario en La Libertad. Colinas del Golf, Arenas Exclusive y Terrazas de San Isidro. Sabiduría · Confianza · Patrimonio."/>
+<meta name="description" content="Sapia Grupo Inmobiliario: comercialización de bienes raíces y desarrollo inmobiliario en La Libertad. Colinas del Golf, Arenas Exclusive, Terrazas de San Isidro y Norte Azul. Sabiduría · Confianza · Patrimonio."/>
 <meta property="og:title" content="Sapia Grupo Inmobiliario"/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://bmdgroup.org.pe/sapia/"/>
@@ -48,8 +48,8 @@
   .brand svg{width:42px;height:44px}
   .brand-name{font-family:var(--serif);font-size:1.55rem;font-weight:700;letter-spacing:.18em;color:var(--white);line-height:1}
   .brand-sub{font-size:.55rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-top:.25rem}
-  .nav-links{display:flex;align-items:center;gap:1.8rem;list-style:none}
-  .nav-links a{text-decoration:none;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gray)}
+  .nav-links{display:flex;align-items:center;gap:1.3rem;list-style:none}
+  .nav-links a{text-decoration:none;white-space:nowrap;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gray)}
   .nav-links a:hover{color:var(--white)}
   .nav-links .btn{color:var(--navy);padding:.6rem 1.1rem;font-size:.75rem}
   .burger{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
@@ -76,7 +76,7 @@
   .pil p{color:var(--gray);font-size:.95rem}
 
   /* PROYECTOS */
-  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+  .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:3rem}
   .proj{background:var(--navy2);border:1px solid rgba(201,168,76,.16);display:flex;flex-direction:column;overflow:hidden}
   .proj-media{height:230px;position:relative;overflow:hidden;background:var(--navy3)}
   .proj-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
@@ -119,6 +119,8 @@
 
   #arenas{background:var(--navy)}
   #terrazas{background:var(--navy2)}
+  #norteazul{background:var(--navy)}
+  .gal-casas{grid-template-columns:1fr 1fr!important;grid-auto-rows:220px!important}
   .tl{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.2rem}
   .tl div{border-top:2px solid var(--gold);padding-top:.8rem}
   .tl b{display:block;font-family:var(--serif);font-size:1.25rem;color:var(--gold-l)}
@@ -263,6 +265,7 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <li><a href="#colinas">Colinas del Golf</a></li>
     <li><a href="#arenas">Arenas</a></li>
     <li><a href="#terrazas">Terrazas</a></li>
+    <li><a href="#norteazul">Norte Azul</a></li>
     <li><a href="#proceso">Cómo comprar</a></li>
     <li><a class="btn btn-gold" href="https://wa.me/51941684329?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20los%20proyectos%20de%20Sapia" target="_blank" rel="noopener">Agenda tu visita</a></li>
   </ul>
@@ -274,14 +277,14 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
     <div class="tag">Sabiduría · Confianza · Patrimonio</div>
     <div class="xs-badge"><i></i>Visitas guiadas a Colinas del Golf con movilidad gratis desde Trujillo</div>
     <h1>Bienes raíces para construir <em>patrimonio</em> que trasciende</h1>
-    <p>Comercializamos proyectos inmobiliarios seleccionados en La Libertad: lotes de campo, lotes entre campo y playa, y departamentos de estreno. Te acompañamos desde la primera visita hasta la firma.</p>
+    <p>Comercializamos proyectos inmobiliarios seleccionados en La Libertad: lotes de campo, lotes entre campo y playa, residenciales cerrados y departamentos de estreno. Te acompañamos desde la primera visita hasta la firma.</p>
     <div class="btns">
       <a class="btn btn-gold" href="https://wa.me/51941684329?text=Hola%2C%20quiero%20agendar%20una%20visita%20con%20Sapia" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Agenda tu visita</a>
       <a class="btn btn-line" href="#proyectos">Ver proyectos →</a>
     </div>
     <div class="hero-facts">
-      <div><b>3</b><span>Proyectos en cartera</span></div>
-      <div><b>140 m²</b><span>Lotes desde</span></div>
+      <div><b>4</b><span>Proyectos en cartera</span></div>
+      <div><b>120 m²</b><span>Lotes desde</span></div>
       <div><b>7 días</b><span>Visitas a la semana</span></div>
     </div>
   </div>
@@ -367,6 +370,23 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
         <div class="btns">
           <a class="btn btn-gold" href="https://wa.me/51941684329?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20Terrazas%20de%20San%20Isidro" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Consultar</a>
           <a class="btn btn-line" href="#terrazas">Ver proyecto</a>
+        </div>
+      </div>
+    </article>
+    <article class="proj reveal">
+      <div class="proj-media"><img src="assets/norteazul-portico.jpg" alt="Pórtico de ingreso de Norte Azul Residencial Country Club" loading="lazy" decoding="async"/><span class="badge">Nuevo</span></div>
+      <div class="proj-body">
+        <div class="proj-loc">Pacasmayo · La Libertad</div>
+        <h3>Norte Azul</h3>
+        <ul>
+          <li>Residencial cerrado con club privado</li>
+          <li>Lotes desde 120 m², 374 lotes en 1.ª etapa</li>
+          <li>Te regalamos los planos de tu casa</li>
+        </ul>
+        <div class="price">Consulta disponibilidad<small>Precios y formas de pago por WhatsApp</small></div>
+        <div class="btns">
+          <a class="btn btn-gold" href="https://wa.me/51941684329?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20Norte%20Azul%20en%20Pacasmayo" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Consultar</a>
+          <a class="btn btn-line" href="#norteazul">Ver proyecto</a>
         </div>
       </div>
     </article>
@@ -526,6 +546,61 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
       <div class="chips">
         <span>UPN</span><span>Mall Plaza</span><span>Makro y Precio Uno</span><span>Innova Schools San Isidro</span><span>New Body San Isidro</span><span>Restaurantes</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="norteazul">
+  <div class="col-head">
+    <div class="reveal">
+      <div class="tag">Residencial Country Club · Pacasmayo</div>
+      <h2 style="margin-top:1rem">Norte Azul: <em>residencial cerrado</em> con club privado</h2>
+    </div>
+    <p class="muted reveal">Un desarrollo residencial planificado con visión de crecimiento y orden urbano, en una zona de expansión de Pacasmayo, a 3 minutos de la ciudad por la Panamericana Norte. Prioriza amplitud, proyección de valorización y calidad de vida.</p>
+  </div>
+
+  <div class="gallery reveal" data-gal="norteazul">
+    <button class="big" data-i="0"><img src="assets/norteazul-club-aereo.jpg" alt="Vista aérea del club con piscina y canchas" loading="lazy" decoding="async"/></button>
+    <button data-i="1"><img src="assets/norteazul-portico.jpg" alt="Pórtico de ingreso iluminado" loading="lazy" decoding="async"/></button>
+    <button data-i="2"><img src="assets/norteazul-calle.jpg" alt="Calle interna del residencial" loading="lazy" decoding="async"/></button>
+    <button data-i="3"><img src="assets/norteazul-resort.jpg" alt="Resort con segunda piscina" loading="lazy" decoding="async"/></button>
+    <button data-i="4"><img src="assets/norteazul-eventos.jpg" alt="Zona para eventos" loading="lazy" decoding="async"/></button>
+    <button class="wide" data-i="5"><img src="assets/norteazul-conciertos.jpg" alt="Zona de conciertos y piscina" loading="lazy" decoding="async"/></button>
+    <button class="wide" data-i="6"><img src="assets/norteazul-parques.jpg" alt="Parques modernos" loading="lazy" decoding="async"/></button>
+  </div>
+
+  <div class="col-info">
+    <div class="reveal">
+      <h3 style="font-size:1.6rem;margin-bottom:1.2rem">Una habilitación urbana privada</h3>
+      <div class="feat">
+        <div><b>Lotes desde 120 m²</b><span>374 lotes en la primera etapa</span></div>
+        <div><b>Servicios completos</b><span>Contará con agua, desagüe, luz, pistas y veredas</span></div>
+        <div><b>Te regalamos los planos</b><span>4 modelos de casa diseñados para el proyecto</span></div>
+        <div><b>Facilidades de pago</b><span>Consulta las opciones por WhatsApp</span></div>
+      </div>
+      <h3 style="font-size:1.6rem;margin:2.2rem 0 1.2rem">Club privado</h3>
+      <div class="chips">
+        <span>Zona de conciertos y piscina</span><span>Zona para eventos</span><span>Sala de juegos</span><span>3 canchas de grass sintético</span><span>2 canchas multiusos</span><span>2 canchas de frontón</span><span>1 cancha de tenis</span><span>Resort con segunda piscina</span><span>Mirador</span><span>Parques modernos</span>
+      </div>
+      <div class="docs">
+        <h4>Documentación en regla</h4>
+        <p>Copia literal, zonificación urbana, estudio de suelos y resolución de aprobación del proyecto de energía eléctrica.</p>
+      </div>
+      <div class="btns" style="margin-top:2rem">
+        <a class="btn btn-gold" href="https://wa.me/51941684329?text=Hola%2C%20quiero%20agendar%20una%20visita%20a%20Norte%20Azul" target="_blank" rel="noopener"><svg><use href="#wa"/></svg>Agendar visita a Norte Azul</a>
+      </div>
+    </div>
+    <div class="reveal">
+      <h3 style="font-size:1.6rem;margin-bottom:1.2rem">Casas modelo con planos de regalo</h3>
+      <div class="gallery gal-casas" data-gal="norteazul-casas" style="margin-top:0">
+        <button data-i="0"><img src="assets/norteazul-casa-nuna.jpg" alt="Casa Nuna, medianera de 120 m²" loading="lazy" decoding="async"/></button>
+        <button data-i="1"><img src="assets/norteazul-casa-illari.jpg" alt="Casa Illari, medianera de 120 m²" loading="lazy" decoding="async"/></button>
+        <button data-i="2"><img src="assets/norteazul-casa-kala.jpg" alt="Casa Kala, medianera de 120 m²" loading="lazy" decoding="async"/></button>
+        <button data-i="3"><img src="assets/norteazul-casa-kuraq.jpg" alt="Casa Kuraq, en esquina de 240 m²" loading="lazy" decoding="async"/></button>
+      </div>
+      <p class="muted" style="font-size:.92rem;margin-top:1rem">Nuna, Illari y Kala: casas medianeras de 120 m² en tres pisos. Kuraq: casa en esquina de 240 m².</p>
+      <button class="mapbtn" data-gal="norteazul-mapa" data-i="0" style="margin-top:1.5rem"><img src="assets/norteazul-ubicacion.jpg" alt="Ubicación de Norte Azul a 3 minutos de Pacasmayo" loading="lazy" decoding="async"/></button>
+      <p class="muted" style="font-size:.92rem;margin-top:1rem">Cerca de la playa Puémape, el malecón y el Cristo de Pacasmayo, Tottus y el bosque El Cañoncillo.</p>
     </div>
   </div>
 </section>
